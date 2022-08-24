@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const Scoreboard = props => {
   /*
@@ -10,7 +10,7 @@ const Scoreboard = props => {
     passing.
   */
   return (
-    <div id={'scoreboard'} data-testid="scoreboard">
+    <div id={"scoreboard"} data-testid="scoreboard">
       ${props.score}
     </div>
   );

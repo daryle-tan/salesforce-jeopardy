@@ -1,12 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-const Clue = props => {
-  // show $ value of clue OR
-  // the Clue question itself OR
-  // empty screen if it was already answered
-  return 'hi';
-};
+const Clue = ({ selectQuestion, clueObject }) => (
+  <div onClick={() => selectQuestion(clueObject)} className="clueValue">
+    ${clueObject.value}
+  </div>
+);
 
 Clue.propTypes = {
   selected: PropTypes.bool,

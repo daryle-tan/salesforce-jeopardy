@@ -1,4 +1,4 @@
-# The Answer is React
+# Salesforce Jeopardy
 
 ## Objectives
 

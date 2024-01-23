@@ -15,13 +15,13 @@ export default function App() {
   return (
     <div id="app">
       <Gameboard
-        categories={this.state.categories}
-        answeredQuestions={this.state.answeredQuestions}
-        currentQuestion={this.state.currentQuestion}
-        selectQuestion={this.selectQuestion}
+        categories={categories}
+        answeredQuestions={answeredQuestions}
+        currentQuestion={currentQuestion}
+        selectQuestion={selectQuestion}
       />
-      <Scoreboard score={this.state.score} />
-      <Response submitResponse={this.handleResponse} />
+      <Scoreboard score={score} />
+      <Response submitResponse={handleResponse} />
     </div>
   )
 }

@@ -1,12 +1,16 @@
 @font-face {
-  font-family: 'ITC Korinna';
-  src: url('//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.eot');
-  src: url('//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.eot?#iefix')
-      format('embedded-opentype'),
-    url('//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.woff2') format('woff2'),
-    url('//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.woff') format('woff'),
-    url('//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.ttf') format('truetype'),
-    url('//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.svg#ITC Korinna') format('svg');
+  font-family: "ITC Korinna";
+  src: url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.eot");
+  src: url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/e3e3a81b2544f4508a75573a04e0cafa.svg#ITC Korinna")
+      format("svg");
 }
 
 :root {
@@ -17,16 +21,18 @@
 body,
 ul {
   margin: 0;
-  font-family: 'ITC Korinna';
+  font-family: "ITC Korinna";
   font-weight: 800;
 }
 
 #app {
   display: grid;
+  border: 1px solid black;
   grid-template-columns: repeat(12, 1fr);
 }
 
 #gameboard {
+  border: 1px solid black;
   grid-column: 2 / 9;
 }
 
@@ -76,7 +82,7 @@ ul {
   margin: 20px 0;
   outline: 5px solid black;
   background-color: var(--jepColor);
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 #scoreboard {

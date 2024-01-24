@@ -1,6 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Categories from './Categories'
+import React from "react"
+import Categories from "./Categories.js"
 
 const Gameboard = (props) => {
   return (
@@ -19,16 +18,9 @@ const Gameboard = (props) => {
       {/* was a question clicked?  */}
       {/* Yes? Show clue */}
       {/* No? Show Categories */}
+      Hi
     </div>
   )
-};
+}
 
-
-Gameboard.propTypes = {
-  currentQuestion: PropTypes.object,
-  selectQuestion: PropTypes.func,
-  categories: PropTypes.array,
-  answeredQuestions: PropTypes.array
-};
-
-export default Gameboard;
+export default Gameboard

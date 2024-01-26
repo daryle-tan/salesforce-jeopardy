@@ -26,9 +26,9 @@ export default class Response extends Component {
         <input
           type="text"
           placeholder="Answers go here!"
-          value={this.state.userResponse}
-          onChange={this.recordResponse}
-          onKeyDown={this.submitResponse}
+          // value={this.state.userResponse}
+          // onChange={this.recordResponse}
+          // onKeyDown={this.submitResponse}
           // onSubmit={this.recordResponse}
         />
       </div>

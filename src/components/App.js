@@ -12,17 +12,22 @@ export default function App() {
     answeredQuestions: [],
     score: 0,
   })
+  const [score, setScore] = useState(0)
 
   return (
-    <div id="app">
-      <Gameboard
-      // categories={categories}
-      // answeredQuestions={answeredQuestions}
-      // currentQuestion={currentQuestion}
-      // selectQuestion={selectQuestion}
-      />
-      {/* <Scoreboard score={score} />
-      <Response submitResponse={handleResponse} /> */}
-    </div>
+    <>
+      <div id="app">
+        <Gameboard
+        // categories={categories}
+        // answeredQuestions={answeredQuestions}
+        // currentQuestion={currentQuestion}
+        // selectQuestion={selectQuestion}
+        />
+        <Scoreboard score={score} />
+      </div>
+      <div id="responseContainer">
+        <Response />
+      </div>
+    </>
   )
 }

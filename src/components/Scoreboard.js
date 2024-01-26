@@ -9,8 +9,8 @@ const Scoreboard = (props) => {
     passing.
   */
   return (
-    <div id={"scoreboard"} data-testid="scoreboard">
-      ${props.score}
+    <div id="scoreboard" data-testid="scoreboard">
+      $0
     </div>
   )
 }

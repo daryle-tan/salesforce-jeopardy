@@ -4,6 +4,7 @@ import Gameboard from "./Gameboard.js"
 import Scoreboard from "./Scoreboard.js"
 import Response from "./Response.js"
 import "../styles/styles.css"
+import Navbar from "./Navbar.js"
 
 export default function App() {
   const [gameState, setGameState] = useState({
@@ -16,6 +17,9 @@ export default function App() {
 
   return (
     <>
+      <div id="navContainer">
+        <Navbar />
+      </div>
       <div id="app">
         <Gameboard
         // categories={categories}

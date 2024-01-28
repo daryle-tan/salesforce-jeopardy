@@ -46,13 +46,18 @@ ul {
   flex-direction: column;
   justify-content: center;
   background-color: var(--jepColor);
-  color: white;
+  color: yellow;
   font-size: 1.25em;
   border: 3px solid black;
   text-align: center;
   width: 11vw;
   height: 11vh;
   padding: 3.5px;
+  cursor: pointer;
+}
+
+.categories:hover {
+  color: orange;
 }
 
 .category {
@@ -99,8 +104,8 @@ ul {
   border: 4px solid black;
   grid-column: 11;
   align-self: center;
-  width: 200px;
-  height: 74px;
+  width: 150px;
+  height: 64px;
   color: white;
   font-size: 3em;
 }

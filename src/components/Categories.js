@@ -1,7 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import Category from "./Category.js"
 
-const Categories = (props) => {
+const Categories = () => {
+  const [category200, setCategory200] = useState(false)
+  const [category400, setCategory400] = useState(false)
+  const [category600, setCategory600] = useState(false)
+  const [category800, setCategory800] = useState(false)
+  const [category1000, setCategory1000] = useState(false)
+
+  const openCategoryModal = () => {
+    setCategory200((prev) => !prev)
+    console.log("hi")
+  }
   return (
     <>
       <div className="categories">
@@ -21,7 +31,9 @@ const Categories = (props) => {
       <div className="categories">Productivity & Collaboration</div>
       <div className="categories">Data & Analytics Management</div>
       <div className="categories">Workflow / Process Automation</div>
-      <div className="categories">$200</div>
+      <div className="categories" onClick={openCategoryModal}>
+        $200
+      </div>
       <div className="categories">$200</div>
       <div className="categories">$200</div>
       <div className="categories">$200</div>

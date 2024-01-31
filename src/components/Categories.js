@@ -31,7 +31,11 @@ const Categories = () => {
       <div className="categories">Productivity & Collaboration</div>
       <div className="categories">Data & Analytics Management</div>
       <div className="categories">Workflow / Process Automation</div>
-      <div className="categories" onClick={openCategoryModal}>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
         $200
       </div>
       <div className="categories">$200</div>

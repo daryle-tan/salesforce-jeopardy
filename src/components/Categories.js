@@ -72,6 +72,7 @@ const Categories = () => {
       <div className="categories">$1000</div>
       <div className="categories">$1000</div>
       <div className="categories">$1000</div>
+      <Category />
     </>
   )
 }

@@ -29,6 +29,7 @@ export default function App() {
         />
         <Scoreboard score={score} />
       </div>
+
       <div id="responseContainer">
         <Response />
       </div>

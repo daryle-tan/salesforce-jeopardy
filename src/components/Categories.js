@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Category from "./Category.js"
 
-const Categories = () => {
+const Categories = ({}) => {
   const [category200, setCategory200] = useState(false)
   const [category400, setCategory400] = useState(false)
   const [category600, setCategory600] = useState(false)
@@ -72,7 +72,10 @@ const Categories = () => {
       <div className="categories">$1000</div>
       <div className="categories">$1000</div>
       <div className="categories">$1000</div>
-      <Category />
+      <Category
+        openCategoryModal={openCategoryModal}
+        category200={category200}
+      />
     </>
   )
 }

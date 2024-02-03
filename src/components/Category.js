@@ -11,14 +11,14 @@ const Category = ({ category200, openCategoryModal }) => {
     <>
       {category200 ? (
         <div className="category" data-testid="category">
-          <div className="categoryOverlay">
-            <div className="categoryModal">
-              <button className="modalButton" onClick={openCategoryModal}>
-                X
-              </button>
-              Hi
-            </div>
+          <div className="categoryOverlay"> </div>
+          <div className="categoryModal">
+            <button className="modalButton" onClick={openCategoryModal}>
+              X
+            </button>
+            Hi
           </div>
+
           {/* {props.clues.map((clue) => (
         <Clue
           key={clue.id}

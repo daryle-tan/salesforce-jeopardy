@@ -101,8 +101,8 @@ ul {
   background-color: rgb(255, 255, 255);
   color: rgb(41, 80, 146);
   padding: 50px;
-  z-index: 1000;
-  width: 35vw;
+  z-index: 10;
+  width: 75vw;
   height: 70vh;
   flex-wrap: wrap;
   border: 1px solid black;

@@ -44,28 +44,52 @@ const Categories = ({}) => {
       <div className="categories">$200</div>
       <div className="categories">$200</div>
       <div className="categories">$200</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $400
+      </div>
       <div className="categories">$400</div>
       <div className="categories">$400</div>
       <div className="categories">$400</div>
       <div className="categories">$400</div>
       <div className="categories">$400</div>
       <div className="categories">$400</div>
-      <div className="categories">$400</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $600
+      </div>
       <div className="categories">$600</div>
       <div className="categories">$600</div>
       <div className="categories">$600</div>
       <div className="categories">$600</div>
       <div className="categories">$600</div>
       <div className="categories">$600</div>
-      <div className="categories">$600</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $800
+      </div>
       <div className="categories">$800</div>
       <div className="categories">$800</div>
       <div className="categories">$800</div>
       <div className="categories">$800</div>
       <div className="categories">$800</div>
       <div className="categories">$800</div>
-      <div className="categories">$800</div>
-      <div className="categories">$1000</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $1000
+      </div>
       <div className="categories">$1000</div>
       <div className="categories">$1000</div>
       <div className="categories">$1000</div>

@@ -83,12 +83,12 @@ ul {
 .categoryOverlay {
   display: flex;
   position: fixed;
-  opacity: 0.5;
+  opacity: 0.9;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: grey;
+  background-color: black;
   z-index: 1000;
   overflow-y: hidden;
 }
@@ -101,7 +101,7 @@ ul {
   background-color: rgb(255, 255, 255);
   color: rgb(41, 80, 146);
   padding: 50px;
-  z-index: 10;
+  z-index: 1000;
   width: 75vw;
   height: 70vh;
   flex-wrap: wrap;

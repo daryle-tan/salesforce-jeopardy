@@ -10,23 +10,25 @@ const Category = ({ category200, openCategoryModal }) => {
   return (
     <>
       {category200 ? (
-        <div className="category" data-testid="category">
+        <>
           <div className="categoryOverlay"> </div>
-          <div className="categoryModal">
-            <button className="modalButton" onClick={openCategoryModal}>
-              X
-            </button>
-            Hi
-          </div>
+          <div className="category" data-testid="category">
+            <div className="categoryModal">
+              <button className="modalButton" onClick={openCategoryModal}>
+                X
+              </button>
+              Hi
+            </div>
 
-          {/* {props.clues.map((clue) => (
+            {/* {props.clues.map((clue) => (
         <Clue
           key={clue.id}
           clueObject={clue}
           selectQuestion={props.selectQuestion}
         />
       ))} */}
-        </div>
+          </div>
+        </>
       ) : null}
     </>
   )

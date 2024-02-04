@@ -30,9 +30,9 @@ export default function App() {
         <Scoreboard score={score} />
       </div>
 
-      <div id="responseContainer">
+      {/* <div id="responseContainer">
         <Response />
-      </div>
+      </div> */}
     </>
   )
 }

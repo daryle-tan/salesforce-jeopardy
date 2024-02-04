@@ -11,22 +11,68 @@ const Category = ({ category200, openCategoryModal }) => {
     <>
       {category200 ? (
         <>
-          <div className="categoryOverlay"> </div>
-          <div className="category" data-testid="category">
-            <div className="categoryModal">
+          <div className="categoryOverlay"></div>
+
+          <div className="categoryModal">
+            <div className="closeButtonContainer">
               <button className="modalButton" onClick={openCategoryModal}>
                 X
               </button>
-              Hi
+            </div>
+            <div className="question">
+              <p>Choose an Option:</p>
             </div>
 
-            {/* {props.clues.map((clue) => (
-        <Clue
-          key={clue.id}
-          clueObject={clue}
-          selectQuestion={props.selectQuestion}
-        />
-      ))} */}
+            <div className="category" data-testid="category">
+              {/* <div className="answer"> */}
+              <form>
+                <div className="formContainer">
+                  <input
+                    type="radio"
+                    id="option1"
+                    name="picklist"
+                    value="option1"
+                  />
+                  <label htmlFor="option1">Option 1</label>
+                  <br />
+                </div>
+                <div className="formContainer">
+                  <input
+                    type="radio"
+                    id="option2"
+                    name="picklist"
+                    value="option2"
+                  />
+                  <label htmlFor="option2">Option 2</label>
+                  <br />
+                </div>
+
+                <div className="formContainer">
+                  <input
+                    type="radio"
+                    id="option3"
+                    name="picklist"
+                    value="option3"
+                  />
+                  <label htmlFor="option3">Option 3</label>
+                  <br />
+                </div>
+
+                <div className="formContainer">
+                  <input
+                    type="radio"
+                    id="option4"
+                    name="picklist"
+                    value="option4"
+                  />
+                  <label htmlFor="option4">Option 4</label>
+                </div>
+                <div className="submitContainer">
+                  <button type="submit">Submit Answer</button>
+                </div>
+              </form>
+              {/* </div> */}
+            </div>
           </div>
         </>
       ) : null}

@@ -14,7 +14,7 @@ const Categories = ({}) => {
   }
   return (
     <>
-      <div className="categories">
+      <div className="categoriesTitle">
         {/* {props.categories.map((category) => (
         <Category
           key={category.id}
@@ -25,12 +25,14 @@ const Categories = ({}) => {
       ))} */}
         Configuration & Setup
       </div>
-      <div className="categories">Object Manager & Lightning App Builder</div>
-      <div className="categories">Sales & Marketing Applications</div>
-      <div className="categories">Service & Support Applications</div>
-      <div className="categories">Productivity & Collaboration</div>
-      <div className="categories">Data & Analytics Management</div>
-      <div className="categories">Workflow / Process Automation</div>
+      <div className="categoriesTitle">
+        Object Manager & Lightning App Builder
+      </div>
+      <div className="categoriesTitle">Sales & Marketing Applications</div>
+      <div className="categoriesTitle">Service & Support Applications</div>
+      <div className="categoriesTitle">Productivity & Collaboration</div>
+      <div className="categoriesTitle">Data & Analytics Management</div>
+      <div className="categoriesTitle">Workflow / Process Automation</div>
       <div
         className="categories"
         category200={category200}

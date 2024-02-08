@@ -29,7 +29,55 @@ ul {
 #app {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 4em;
+  margin-top: 2em;
+}
+
+.navbarContainer {
+  border-bottom: 2px solid yellow;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.tabs {
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  position: relative;
+  width: 50%;
+}
+
+.certTab {
+  float: left;
+  background-color: rgb(51, 160, 160);
+  border: 2px solid yellow;
+  border-bottom: none; /* Makes the active tab look part of the content area */
+  padding: 10px 20px;
+  border-radius: 20px 50px 0 0; /* Rounds the top corners */
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  position: relative; /* Enable z-index to work */
+  margin-right: -10px; /* Overlap tabs */
+}
+
+.certTab:hover {
+  background: #eee; /* Hover effect for tabs */
+}
+
+.active,
+.certTab:hover {
+  background: rgb(142, 234, 222);
+  border-bottom: none;
+}
+.certTab:first-child {
+  z-index: 3;
+}
+.certTab:nth-child(2) {
+  z-index: 2; /* Behind the first tab */
+}
+
+.certTab:last-child {
+  z-index: 1; /* Behind the second tab */
 }
 
 #gameboard {
@@ -55,6 +103,7 @@ ul {
   min-width: 11vw;
   min-height: 80px;
   padding: 3.5px;
+  cursor: default;
 }
 .categories {
   display: flex;

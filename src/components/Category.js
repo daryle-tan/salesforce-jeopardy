@@ -1,5 +1,4 @@
 import React from "react"
-import Clue from "./Clue.js"
 
 const Category = ({ category200, openCategoryModal }) => {
   if (category200) {
@@ -24,7 +23,6 @@ const Category = ({ category200, openCategoryModal }) => {
             </div>
 
             <div className="category" data-testid="category">
-              {/* <div className="answer"> */}
               <form>
                 <div className="formContainer">
                   <input
@@ -71,7 +69,6 @@ const Category = ({ category200, openCategoryModal }) => {
                   <button type="submit">Submit Answer</button>
                 </div>
               </form>
-              {/* </div> */}
             </div>
           </div>
         </>

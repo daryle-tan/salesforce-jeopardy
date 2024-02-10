@@ -255,18 +255,12 @@ ul {
   font-size: 3em;
 }
 
-#response {
-  grid-row: 2;
-  grid-column: 4 / 7;
-  justify-self: center;
-}
-
-#responseContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
 body.active-modal {
   overflow: hidden;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
 }

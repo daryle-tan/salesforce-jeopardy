@@ -1,8 +1,10 @@
 import React from "react"
+import { categories } from "../testdata.js"
 
 const Category = ({ category200, openCategoryModal }) => {
   if (category200) {
     document.body.classList.add("active-modal")
+    console.log(categories)
   } else {
     document.body.classList.remove("active-modal")
   }
@@ -19,7 +21,7 @@ const Category = ({ category200, openCategoryModal }) => {
               </button>
             </div>
             <div className="question">
-              <p>Choose an Option:</p>
+              <p>{categories[0].clues[0].question}:</p>
             </div>
 
             <div className="category" data-testid="category">
@@ -31,7 +33,9 @@ const Category = ({ category200, openCategoryModal }) => {
                     name="picklist"
                     value="option1"
                   />
-                  <label htmlFor="option1">Option 1</label>
+                  <label htmlFor="option1">
+                    {categories[0].clues[0].answer}
+                  </label>
                   <br />
                 </div>
                 <div className="formContainer">
@@ -41,7 +45,9 @@ const Category = ({ category200, openCategoryModal }) => {
                     name="picklist"
                     value="option2"
                   />
-                  <label htmlFor="option2">Option 2</label>
+                  <label htmlFor="option2">
+                    {categories[0].clues[0].option1}
+                  </label>
                   <br />
                 </div>
 
@@ -52,7 +58,9 @@ const Category = ({ category200, openCategoryModal }) => {
                     name="picklist"
                     value="option3"
                   />
-                  <label htmlFor="option3">Option 3</label>
+                  <label htmlFor="option3">
+                    {categories[0].clues[0].option2}
+                  </label>
                   <br />
                 </div>
 
@@ -63,7 +71,9 @@ const Category = ({ category200, openCategoryModal }) => {
                     name="picklist"
                     value="option4"
                   />
-                  <label htmlFor="option4">Option 4</label>
+                  <label htmlFor="option4">
+                    {categories[0].clues[0].option3}
+                  </label>
                 </div>
                 <div className="submitContainer">
                   <button type="submit">Submit Answer</button>

@@ -21,7 +21,7 @@ const Category = ({ category200, openCategoryModal }) => {
               </button>
             </div>
             <div className="question">
-              <p>{categories[0].clues[0].question}:</p>
+              <p className="questionP">{categories[0].clues[0].question}</p>
             </div>
 
             <div className="category" data-testid="category">

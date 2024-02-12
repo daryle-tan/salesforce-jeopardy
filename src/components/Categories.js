@@ -14,17 +14,7 @@ const Categories = ({}) => {
   }
   return (
     <>
-      <div className="categoriesTitle">
-        {/* {props.categories.map((category) => (
-        <Category
-          key={category.id}
-          title={category.title}
-          clues={category.clues}
-          selectQuestion={props.selectQuestion}
-        />
-      ))} */}
-        Configuration & Setup
-      </div>
+      <div className="categoriesTitle">Configuration & Setup</div>
       <div className="categoriesTitle">
         Object Manager & Lightning App Builder
       </div>
@@ -40,12 +30,48 @@ const Categories = ({}) => {
       >
         $200
       </div>
-      <div className="categories">$200</div>
-      <div className="categories">$200</div>
-      <div className="categories">$200</div>
-      <div className="categories">$200</div>
-      <div className="categories">$200</div>
-      <div className="categories">$200</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $200
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $200
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $200
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $200
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $200
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $200
+      </div>
       <div
         className="categories"
         category200={category200}
@@ -53,12 +79,48 @@ const Categories = ({}) => {
       >
         $400
       </div>
-      <div className="categories">$400</div>
-      <div className="categories">$400</div>
-      <div className="categories">$400</div>
-      <div className="categories">$400</div>
-      <div className="categories">$400</div>
-      <div className="categories">$400</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $400
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $400
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $400
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $400
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $400
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $400
+      </div>
       <div
         className="categories"
         category200={category200}
@@ -66,12 +128,48 @@ const Categories = ({}) => {
       >
         $600
       </div>
-      <div className="categories">$600</div>
-      <div className="categories">$600</div>
-      <div className="categories">$600</div>
-      <div className="categories">$600</div>
-      <div className="categories">$600</div>
-      <div className="categories">$600</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $600
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $600
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $600
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $600
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $600
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $600
+      </div>
       <div
         className="categories"
         category200={category200}
@@ -79,12 +177,48 @@ const Categories = ({}) => {
       >
         $800
       </div>
-      <div className="categories">$800</div>
-      <div className="categories">$800</div>
-      <div className="categories">$800</div>
-      <div className="categories">$800</div>
-      <div className="categories">$800</div>
-      <div className="categories">$800</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $800
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $800
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $800
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $800
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $800
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $800
+      </div>
       <div
         className="categories"
         category200={category200}
@@ -92,12 +226,48 @@ const Categories = ({}) => {
       >
         $1000
       </div>
-      <div className="categories">$1000</div>
-      <div className="categories">$1000</div>
-      <div className="categories">$1000</div>
-      <div className="categories">$1000</div>
-      <div className="categories">$1000</div>
-      <div className="categories">$1000</div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $1000
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $1000
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $1000
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $1000
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $1000
+      </div>
+      <div
+        className="categories"
+        category200={category200}
+        onClick={openCategoryModal}
+      >
+        $1000
+      </div>
       <Category
         openCategoryModal={openCategoryModal}
         category200={category200}

@@ -83,6 +83,7 @@ const Category = ({ category200, openCategoryModal }) => {
           </div>
         </>
       ) : null}
+      {/* correct is true show Correct otherwise show Incorrect */}
     </>
   )
 }

@@ -6,12 +6,14 @@ export const categories = [
     clues: [
       {
         id: 87696,
+        points: 200,
         answer: "Atlantis",
         question:
           'In 1912 Heinrich Schliemann\'s grandson Paul claimed falsely that he had proof of finding this "lost continent"',
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,
+        explanation: "Thera",
       },
       {
         id: 87702,

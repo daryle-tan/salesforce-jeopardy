@@ -130,13 +130,12 @@ ul {
 
 .categories:hover {
   color: orange;
+  transform: scale(1.1);
 }
 
 .category {
   display: flex;
   flex-direction: column;
-  /* justify-content: first baseline; */
-  /* align-items: flex-start; */
   text-align: start;
   flex-grow: 1;
   width: 90%;
@@ -215,10 +214,6 @@ ul {
   background-color: rgba(92, 92, 92, 0.15);
   color: red;
 }
-/* 
-.answer {
-  display: flex;
-} */
 
 .formContainer {
   display: flex;

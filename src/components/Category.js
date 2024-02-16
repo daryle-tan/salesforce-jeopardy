@@ -1,5 +1,7 @@
 import React from "react"
 import { categories } from "../testdata.js"
+import Correct from "./Correct.js"
+import { Incorrect } from "./Incorrect.js"
 
 const Category = ({ category200, openCategoryModal }) => {
   if (category200) {
@@ -81,6 +83,8 @@ const Category = ({ category200, openCategoryModal }) => {
               </form>
             </div>
           </div>
+          {/* <Correct openCategoryModal={openCategoryModal} /> */}
+          {/* <Incorrect openCategoryModal={openCategoryModal} /> */}
         </>
       ) : null}
       {/* correct is true show Correct otherwise show Incorrect */}

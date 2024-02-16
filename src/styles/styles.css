@@ -274,3 +274,23 @@ body.active-modal {
   justify-content: center;
   margin: 2rem;
 }
+
+.incorrectHeader {
+  color: red;
+}
+.arrow {
+  color: black;
+}
+.incorrectAnswer {
+  color: red;
+  text-decoration: line-through black 3px;
+}
+
+.correctHeader {
+  color: green;
+}
+.correctAnswer {
+  background-color: green;
+  color: white;
+  padding: 3px;
+}

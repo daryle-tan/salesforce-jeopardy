@@ -26,7 +26,10 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
                 name="picklist"
                 value="option1"
               />
-              <label htmlFor="option1">{categories[0].clues[0].answer}</label>
+              <label htmlFor="option1" className="answerForIncorrect">
+                {categories[0].clues[0].answer}{" "}
+                <span className="arrow"> &lt;-- Correct Answer</span>
+              </label>
               <br />
             </div>
             <div className="formContainer">
@@ -36,7 +39,9 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
                 name="picklist"
                 value="option2"
               />
-              <label htmlFor="option2">{categories[0].clues[0].option1}</label>
+              <label htmlFor="option2" className="incorrectAnswer">
+                {categories[0].clues[0].option1}
+              </label>
               <br />
             </div>
 
@@ -47,7 +52,9 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
                 name="picklist"
                 value="option3"
               />
-              <label htmlFor="option3">{categories[0].clues[0].option2}</label>
+              <label htmlFor="option3" className="incorrectAnswer">
+                {categories[0].clues[0].option2}
+              </label>
               <br />
             </div>
 
@@ -58,7 +65,9 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
                 name="picklist"
                 value="option4"
               />
-              <label htmlFor="option4">{categories[0].clues[0].option3}</label>
+              <label htmlFor="option4" className="incorrectAnswer">
+                {categories[0].clues[0].option3}
+              </label>
             </div>
             <div className="submitContainer">
               <p>Explanation: {categories[0].clues[0].explanation}</p>

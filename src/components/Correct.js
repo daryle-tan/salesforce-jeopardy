@@ -26,7 +26,9 @@ function Correct({ category200, openCategoryModal }) {
                 name="picklist"
                 value="option1"
               />
-              <label htmlFor="option1">{categories[0].clues[0].answer}</label>
+              <label htmlFor="option1" className="correctAnswer">
+                {categories[0].clues[0].answer}
+              </label>
               <br />
             </div>
             <div className="formContainer">

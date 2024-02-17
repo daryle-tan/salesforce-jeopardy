@@ -7,10 +7,14 @@ const Categories = ({}) => {
   const [category600, setCategory600] = useState(false)
   const [category800, setCategory800] = useState(false)
   const [category1000, setCategory1000] = useState(false)
+  const [selectedAnswer, setSelectedAnswer] = useState(false)
+  const [incorrectAnswer, setIncorrectAnswer] = useState(false)
 
   const openCategoryModal = () => {
     setCategory200((prev) => !prev)
-    console.log("hi")
+    setSelectedAnswer(false)
+    setIncorrectAnswer(false)
+    console.log("closed")
   }
   return (
     <>
@@ -271,6 +275,10 @@ const Categories = ({}) => {
       <Category
         openCategoryModal={openCategoryModal}
         category200={category200}
+        selectedAnswer={selectedAnswer}
+        setSelectedAnswer={setSelectedAnswer}
+        incorrectAnswer={incorrectAnswer}
+        setIncorrectAnswer={setIncorrectAnswer}
       />
     </>
   )

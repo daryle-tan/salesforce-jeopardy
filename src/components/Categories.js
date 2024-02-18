@@ -9,13 +9,56 @@ const Categories = ({}) => {
   const [category1000, setCategory1000] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState(false)
   const [incorrectAnswer, setIncorrectAnswer] = useState(false)
+  const [categoryId, setCategoryId] = useState(null)
+  const values = [
+    "$200",
+    "$200",
+    "$200",
+    "$200",
+    "$200",
+    "$200",
+    "$200",
+    "$400",
+    "$400",
+    "$400",
+    "$400",
+    "$400",
+    "$400",
+    "$400",
+    "$600",
+    "$600",
+    "$600",
+    "$600",
+    "$600",
+    "$600",
+    "$600",
+    "$800",
+    "$800",
+    "$800",
+    "$800",
+    "$800",
+    "$800",
+    "$800",
+    "$1000",
+    "$1000",
+    "$1000",
+    "$1000",
+    "$1000",
+    "$1000",
+    "$1000",
+  ]
+  const [hasBeenAnswered, setHasBeenAnswered] = useState([
+    { answered: false, id: null },
+  ])
 
-  const openCategoryModal = () => {
+  const openCategoryModal = (categoryId) => {
     setCategory200((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
     console.log("closed")
+    setCategoryId(categoryId)
   }
+
   return (
     <>
       <div className="categoriesTitle">Configuration & Setup</div>
@@ -27,251 +70,28 @@ const Categories = ({}) => {
       <div className="categoriesTitle">Productivity & Collaboration</div>
       <div className="categoriesTitle">Data & Analytics Management</div>
       <div className="categoriesTitle">Workflow / Process Automation</div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $200
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $200
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $200
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $200
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $200
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $200
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $200
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $400
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $400
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $400
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $400
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $400
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $400
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $400
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $600
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $600
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $600
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $600
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $600
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $600
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $600
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $800
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $800
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $800
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $800
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $800
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $800
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $800
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $1000
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $1000
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $1000
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $1000
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $1000
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $1000
-      </div>
-      <div
-        className="categories"
-        category200={category200}
-        onClick={openCategoryModal}
-      >
-        $1000
-      </div>
+      {values.map((value, i) =>
+        hasBeenAnswered[i] &&
+        hasBeenAnswered[i].answered &&
+        hasBeenAnswered[i].id ? (
+          <div
+            key={i}
+            id={i}
+            className="categories"
+            category200={category200}
+          ></div>
+        ) : (
+          <div
+            key={i}
+            id={i}
+            className="categories"
+            onClick={openCategoryModal}
+          >
+            {value}
+          </div>
+        ),
+      )}
+
       <Category
         openCategoryModal={openCategoryModal}
         category200={category200}
@@ -279,6 +99,10 @@ const Categories = ({}) => {
         setSelectedAnswer={setSelectedAnswer}
         incorrectAnswer={incorrectAnswer}
         setIncorrectAnswer={setIncorrectAnswer}
+        hasBeenAnswered={hasBeenAnswered}
+        setHasBeenAnswered={setHasBeenAnswered}
+        values={values}
+        categoryId={categoryId}
       />
     </>
   )

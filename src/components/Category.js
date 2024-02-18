@@ -10,10 +10,14 @@ const Category = ({
   setSelectedAnswer,
   incorrectAnswer,
   setIncorrectAnswer,
+  hasBeenAnswered,
+  setHasBeenAnswered,
+  values,
+  categoryId,
 }) => {
   const [selectedOption, setSelectedOption] = useState("")
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (categoryId, event) => {
     event.preventDefault()
 
     if (selectedOption === categories[0].clues[0].answer) {
@@ -21,6 +25,26 @@ const Category = ({
     } else if (selectedOption !== categories[0].clues[0].answer) {
       setIncorrectAnswer(true)
     }
+
+    setHasBeenAnswered((prevState) => {
+      if (!hasBeenAnswered[0].answered && hasBeenAnswered[0].id === null) {
+        return [
+          {
+            answered: true,
+            id: categoryId,
+          },
+        ]
+      } else {
+        return [
+          ...prevState,
+          {
+            answered: true,
+            id: categoryId,
+          },
+        ]
+      }
+    })
+    console.log(categoryId)
   }
 
   if (category200) {
@@ -47,7 +71,7 @@ const Category = ({
             </div>
 
             <div className="category" data-testid="category">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={(e) => handleSubmit(categoryId, e)}>
                 <div className="formContainer">
                   <input
                     type="radio"

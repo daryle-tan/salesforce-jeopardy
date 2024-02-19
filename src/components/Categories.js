@@ -47,9 +47,10 @@ const Categories = ({}) => {
     "$1000",
     "$1000",
   ]
-  const [hasBeenAnswered, setHasBeenAnswered] = useState([
-    { answered: false, id: null },
-  ])
+  const [hasBeenAnswered, setHasBeenAnswered] = useState(
+    // { answered: false, id: null },
+    new Array(values.length).fill({ answered: false, id: null }),
+  )
 
   const openCategoryModal = (categoryId) => {
     setCategory200((prev) => !prev)
@@ -71,9 +72,7 @@ const Categories = ({}) => {
       <div className="categoriesTitle">Data & Analytics Management</div>
       <div className="categoriesTitle">Workflow / Process Automation</div>
       {values.map((value, i) =>
-        hasBeenAnswered[i] &&
-        hasBeenAnswered[i].answered &&
-        hasBeenAnswered[i].id ? (
+        hasBeenAnswered[i].answered ? (
           <div
             key={i}
             id={i}
@@ -101,7 +100,6 @@ const Categories = ({}) => {
         setIncorrectAnswer={setIncorrectAnswer}
         hasBeenAnswered={hasBeenAnswered}
         setHasBeenAnswered={setHasBeenAnswered}
-        values={values}
         categoryId={categoryId}
       />
     </>

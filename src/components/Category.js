@@ -12,7 +12,6 @@ const Category = ({
   setIncorrectAnswer,
   hasBeenAnswered,
   setHasBeenAnswered,
-  values,
   categoryId,
 }) => {
   const [selectedOption, setSelectedOption] = useState("")
@@ -25,26 +24,16 @@ const Category = ({
     } else if (selectedOption !== categories[0].clues[0].answer) {
       setIncorrectAnswer(true)
     }
-
-    setHasBeenAnswered((prevState) => {
-      if (!hasBeenAnswered[0].answered && hasBeenAnswered[0].id === null) {
-        return [
-          {
-            answered: true,
-            id: categoryId,
-          },
-        ]
-      } else {
-        return [
-          ...prevState,
-          {
-            answered: true,
-            id: categoryId,
-          },
-        ]
+    setHasBeenAnswered((prev) => {
+      const newHasBeenAnswered = [...prev]
+      newHasBeenAnswered[categoryId.target.id] = {
+        answered: true,
+        id: categoryId.target.id,
       }
+      return newHasBeenAnswered
     })
-    console.log(categoryId)
+    console.log(categoryId.target.id)
+    console.log(hasBeenAnswered)
   }
 
   if (category200) {

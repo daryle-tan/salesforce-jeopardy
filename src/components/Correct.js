@@ -21,6 +21,7 @@ function Correct({ category200, openCategoryModal }) {
           <form>
             <div className="formContainer">
               <input
+                className="radioButton"
                 type="radio"
                 id="option1"
                 name="picklist"
@@ -33,6 +34,7 @@ function Correct({ category200, openCategoryModal }) {
             </div>
             <div className="formContainer">
               <input
+                className="radioButton"
                 type="radio"
                 id="option2"
                 name="picklist"
@@ -44,6 +46,7 @@ function Correct({ category200, openCategoryModal }) {
 
             <div className="formContainer">
               <input
+                className="radioButton"
                 type="radio"
                 id="option3"
                 name="picklist"
@@ -55,6 +58,7 @@ function Correct({ category200, openCategoryModal }) {
 
             <div className="formContainer">
               <input
+                className="radioButton"
                 type="radio"
                 id="option4"
                 name="picklist"

@@ -21,6 +21,7 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
           <form>
             <div className="formContainer">
               <input
+                className="radioButton"
                 type="radio"
                 id="option1"
                 name="picklist"
@@ -28,12 +29,13 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
               />
               <label htmlFor="option1" className="answerForIncorrect">
                 {categories[0].clues[0].answer}{" "}
-                <span className="arrow"> &lt;-- Correct Answer</span>
+                <span className="arrow"> &#8592; Correct Answer</span>
               </label>
               <br />
             </div>
             <div className="formContainer">
               <input
+                className="radioButton"
                 type="radio"
                 id="option2"
                 name="picklist"
@@ -47,6 +49,7 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
 
             <div className="formContainer">
               <input
+                className="radioButton"
                 type="radio"
                 id="option3"
                 name="picklist"
@@ -60,6 +63,7 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
 
             <div className="formContainer">
               <input
+                className="radioButton"
                 type="radio"
                 id="option4"
                 name="picklist"

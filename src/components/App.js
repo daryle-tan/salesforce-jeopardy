@@ -7,12 +7,6 @@ import "../styles/styles.css"
 import Navbar from "./Navbar.js"
 
 export default function App() {
-  const [gameState, setGameState] = useState({
-    categories,
-    currentQuestion: {},
-    answeredQuestions: [],
-    score: 0,
-  })
   const [score, setScore] = useState(0)
 
   return (
@@ -21,7 +15,7 @@ export default function App() {
         <Navbar />
       </div>
       <div id="app">
-        <Gameboard />
+        <Gameboard score={score} setScore={setScore} />
         <Scoreboard score={score} />
       </div>
 

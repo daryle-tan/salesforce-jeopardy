@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import Category from "./Category.js"
 
-const Categories = ({}) => {
+const Categories = ({ setScore }) => {
   const [category200, setCategory200] = useState(false)
   const [category400, setCategory400] = useState(false)
   const [category600, setCategory600] = useState(false)
@@ -48,7 +48,6 @@ const Categories = ({}) => {
     "$1000",
   ]
   const [hasBeenAnswered, setHasBeenAnswered] = useState(
-    // { answered: false, id: null },
     new Array(values.length).fill({ answered: false, id: null }),
   )
 
@@ -56,7 +55,7 @@ const Categories = ({}) => {
     setCategory200((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
-    console.log("closed")
+    // console.log("closed")
     setCategoryId(categoryId)
   }
 
@@ -98,9 +97,9 @@ const Categories = ({}) => {
         setSelectedAnswer={setSelectedAnswer}
         incorrectAnswer={incorrectAnswer}
         setIncorrectAnswer={setIncorrectAnswer}
-        hasBeenAnswered={hasBeenAnswered}
         setHasBeenAnswered={setHasBeenAnswered}
         categoryId={categoryId}
+        setScore={setScore}
       />
     </>
   )

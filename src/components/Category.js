@@ -10,9 +10,9 @@ const Category = ({
   setSelectedAnswer,
   incorrectAnswer,
   setIncorrectAnswer,
-  hasBeenAnswered,
   setHasBeenAnswered,
   categoryId,
+  setScore,
 }) => {
   const [selectedOption, setSelectedOption] = useState("")
 
@@ -21,6 +21,7 @@ const Category = ({
 
     if (selectedOption === categories[0].clues[0].answer) {
       setSelectedAnswer(true)
+      setScore((prev) => prev + categories[0].clues[0].points)
     } else if (selectedOption !== categories[0].clues[0].answer) {
       setIncorrectAnswer(true)
     }
@@ -32,13 +33,13 @@ const Category = ({
       }
       return newHasBeenAnswered
     })
-    console.log(categoryId.target.id)
-    console.log(hasBeenAnswered)
+    // console.log(categoryId.target.id)
+    // console.log(hasBeenAnswered)
   }
 
   if (category200) {
     document.body.classList.add("active-modal")
-    console.log(categories)
+    // console.log(categories)
   } else {
     document.body.classList.remove("active-modal")
   }
@@ -63,6 +64,7 @@ const Category = ({
               <form onSubmit={(e) => handleSubmit(categoryId, e)}>
                 <div className="formContainer">
                   <input
+                    className="radioBtn"
                     type="radio"
                     id="option1"
                     name="picklist"
@@ -78,6 +80,7 @@ const Category = ({
                 </div>
                 <div className="formContainer">
                   <input
+                    className="radioBtn"
                     type="radio"
                     id="option2"
                     name="picklist"
@@ -94,6 +97,7 @@ const Category = ({
 
                 <div className="formContainer">
                   <input
+                    className="radioBtn"
                     type="radio"
                     id="option3"
                     name="picklist"
@@ -110,6 +114,7 @@ const Category = ({
 
                 <div className="formContainer">
                   <input
+                    className="radioBtn"
                     type="radio"
                     id="option4"
                     name="picklist"
@@ -123,7 +128,9 @@ const Category = ({
                   </label>
                 </div>
                 <div className="submitContainer">
-                  <button type="submit">Submit Answer</button>
+                  <button type="submit" className="submitButton">
+                    Submit Answer
+                  </button>
                 </div>
               </form>
             </div>

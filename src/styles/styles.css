@@ -226,6 +226,13 @@ ul {
   margin-top: 10rem;
 }
 
+.radioBtn {
+  cursor: pointer;
+}
+.submitButton {
+  cursor: pointer;
+}
+
 .clueValue {
   color: gold;
   font-size: 2.5em;
@@ -293,4 +300,7 @@ body.active-modal {
   background-color: green;
   color: white;
   padding: 3px;
+}
+.radioButton {
+  pointer-events: none;
 }

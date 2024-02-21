@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Category from "./Category.js"
+import { categories } from "../testdata.js"
 
 const Categories = ({ setScore }) => {
   const [category200, setCategory200] = useState(false)
@@ -55,7 +56,7 @@ const Categories = ({ setScore }) => {
     setCategory200((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
-    // console.log("closed")
+    console.log(categoryId, category200, categories)
     setCategoryId(categoryId)
   }
 

@@ -58,10 +58,42 @@ const Categories = ({ setScore }) => {
     setCategory200((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
-    console.log(categoryId, category200, categories)
+    console.log(categoryId.target.id, category200, categories)
     setCategoryId(categoryId)
-    // setSelectedCategoryIndex(categoryId)
-    // setSelectedClueIndex(categoryId)
+
+    if (categoryId.target.id <= 0 && categoryId.target.id >= 6) {
+      return 0
+    } else if (categoryId.target.id <= 7 && categoryId.target.id >= 14) {
+      return 1
+    } else if (categoryId.target.id <= 15 && categoryId.target.id >= 21) {
+      return 2
+    } else if (categoryId.target.id <= 22 && categoryId.target.id >= 28) {
+      return 3
+    } else if (categoryId.target.id <= 29 && categoryId.target.id >= 35) {
+      return 4
+    }
+    values.forEach((value) => {
+      switch (value) {
+        case "200":
+          setSelectedClueIndex(0)
+          break
+        case "400":
+          setSelectedClueIndex(1)
+          break
+        case "600":
+          setSelectedClueIndex(2)
+          break
+        case "800":
+          setSelectedClueIndex(3)
+          break
+        case "1000":
+          setSelectedClueIndex(4)
+          break
+        default:
+          break
+      }
+    })
+    console.log(selectedClueIndex)
   }
 
   return (
@@ -106,7 +138,7 @@ const Categories = ({ setScore }) => {
         categoryId={categoryId}
         setScore={setScore}
         // selectedCategoryIndex={selectedCategoryIndex}
-        // selectedClueIndex={selectedClueIndex}
+        selectedClueIndex={selectedClueIndex}
       />
     </>
   )

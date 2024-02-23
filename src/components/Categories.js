@@ -11,6 +11,8 @@ const Categories = ({ setScore }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(false)
   const [incorrectAnswer, setIncorrectAnswer] = useState(false)
   const [categoryId, setCategoryId] = useState(null)
+  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(null)
+  const [selectedClueIndex, setSelectedClueIndex] = useState(null)
   const values = [
     "$200",
     "$200",
@@ -58,6 +60,8 @@ const Categories = ({ setScore }) => {
     setIncorrectAnswer(false)
     console.log(categoryId, category200, categories)
     setCategoryId(categoryId)
+    // setSelectedCategoryIndex(categoryId)
+    // setSelectedClueIndex(categoryId)
   }
 
   return (
@@ -101,6 +105,8 @@ const Categories = ({ setScore }) => {
         setHasBeenAnswered={setHasBeenAnswered}
         categoryId={categoryId}
         setScore={setScore}
+        // selectedCategoryIndex={selectedCategoryIndex}
+        // selectedClueIndex={selectedClueIndex}
       />
     </>
   )

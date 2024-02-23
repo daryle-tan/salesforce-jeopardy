@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { React, useEffect, useState } from "react"
 import { categories } from "../testdata.js"
 import Correct from "./Correct.js"
 import { Incorrect } from "./Incorrect.js"
@@ -46,7 +46,7 @@ const Category = ({
 
   return (
     <>
-      {category200 && (
+      {category200 ? (
         <>
           <div className="categoryOverlay"></div>
 
@@ -57,98 +57,94 @@ const Category = ({
               </button>
             </div>
 
-            {categories.map(
-              (category, i) =>
-                // category[i] === categoryId.target.id ?
-                category.clues.map((clue, j) => (
-                  <>
-                    <div className="question">
-                      <p className="questionP">{clue.question}</p>
+            {categories.map((category, i) => (
+              <>
+                <div className="question">
+                  <p className="questionP">{category[i].clues[i].question}</p>
+                </div>
+
+                <div className="category" data-testid="category">
+                  <form onSubmit={(e) => handleSubmit(categoryId, e)}>
+                    <>
+                      <div className="formContainer">
+                        <input
+                          className="radioBtn"
+                          type="radio"
+                          id="option1"
+                          name="picklist"
+                          value={category[i].clues[i].answer}
+                          onChange={(e) => {
+                            setSelectedOption(e.target.value)
+                          }}
+                        />
+                        <label htmlFor="option1">
+                          {category[i].clues[i].answer}
+                        </label>
+                        <br />
+                      </div>
+                      <div className="formContainer">
+                        <input
+                          className="radioBtn"
+                          type="radio"
+                          id="option2"
+                          name="picklist"
+                          value={category[i].clues[i].option1}
+                          onChange={(e) => {
+                            setSelectedOption(e.target.value)
+                          }}
+                        />
+                        <label htmlFor="option2">
+                          {category[i].clues[i].option1}
+                        </label>
+                        <br />
+                      </div>
+
+                      <div className="formContainer">
+                        <input
+                          className="radioBtn"
+                          type="radio"
+                          id="option3"
+                          name="picklist"
+                          value={category[i].clues[i].option2}
+                          onChange={(e) => {
+                            setSelectedOption(e.target.value)
+                          }}
+                        />
+                        <label htmlFor="option3">
+                          {category[i].clues[i].option2}
+                        </label>
+                        <br />
+                      </div>
+
+                      <div className="formContainer">
+                        <input
+                          className="radioBtn"
+                          type="radio"
+                          id="option4"
+                          name="picklist"
+                          value={category[i].clues[i].option3}
+                          onChange={(e) => {
+                            setSelectedOption(e.target.value)
+                          }}
+                        />
+                        <label htmlFor="option4">
+                          {category[i].clues[i].option3}
+                        </label>
+                      </div>
+                    </>
+
+                    <div className="submitContainer">
+                      <button type="submit" className="submitButton">
+                        Submit Answer
+                      </button>
                     </div>
-
-                    <div className="category" data-testid="category">
-                      <form onSubmit={(e) => handleSubmit(categoryId, e)}>
-                        <div className="formContainer">
-                          <input
-                            className="radioBtn"
-                            type="radio"
-                            id={`option1-${i}-${j}`}
-                            name={`picklist-${i}-${j}`}
-                            value={clue.answer}
-                            onChange={(e) => {
-                              setSelectedOption(e.target.value)
-                            }}
-                          />
-                          <label htmlFor={`option1-${i}-${j}`}>
-                            {clue.answer}
-                          </label>
-                          <br />
-                        </div>
-                        <div className="formContainer">
-                          <input
-                            className="radioBtn"
-                            type="radio"
-                            id={`option2-${i}-${j}`}
-                            name={`picklist-${i}-${j}`}
-                            value={clue.option1}
-                            onChange={(e) => {
-                              setSelectedOption(e.target.value)
-                            }}
-                          />
-                          <label htmlFor={`option2-${i}-${j}`}>
-                            {clue.option1}
-                          </label>
-                          <br />
-                        </div>
-
-                        <div className="formContainer">
-                          <input
-                            className="radioBtn"
-                            type="radio"
-                            id={`option3-${i}-${j}`}
-                            name={`picklist-${i}-${j}`}
-                            value={clue.option2}
-                            onChange={(e) => {
-                              setSelectedOption(e.target.value)
-                            }}
-                          />
-                          <label htmlFor={`option3-${i}-${j}`}>
-                            {clue.option2}
-                          </label>
-                          <br />
-                        </div>
-
-                        <div className="formContainer">
-                          <input
-                            className="radioBtn"
-                            type="radio"
-                            id={`option4-${i}-${j}`}
-                            name={`picklist-${i}-${j}`}
-                            value={clue.option3}
-                            onChange={(e) => {
-                              setSelectedOption(e.target.value)
-                            }}
-                          />
-                          <label htmlFor={`option4-${i}-${j}`}>
-                            {clue.option3}
-                          </label>
-                        </div>
-
-                        <div className="submitContainer">
-                          <button type="submit" className="submitButton">
-                            Submit Answer
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </>
-                )),
-              // : null,
-            )}
+                  </form>
+                </div>
+              </>
+            ))}
           </div>
         </>
-      )}
-
+      ) : null}
       <div>
         {!selectedAnswer && incorrectAnswer ? (
           <Incorrect openCategoryModal={openCategoryModal} />

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { categories } from "../testdata.js"
 import Correct from "./Correct.js"
 import { Incorrect } from "./Incorrect.js"
@@ -16,31 +16,35 @@ const Category = ({
   selectedClueIndex,
 }) => {
   const [selectedOption, setSelectedOption] = useState("")
+  // const id = Number(categoryId)
 
   const handleSubmit = (categoryId, event) => {
     event.preventDefault()
 
-    if (selectedOption === categories[0].clues[0].answer) {
+    if (
+      selectedOption === categories[categoryId].clues[selectedClueIndex].answer
+    ) {
       setSelectedAnswer(true)
-      setScore((prev) => prev + categories[0].clues[0].points)
-    } else if (selectedOption !== categories[0].clues[0].answer) {
+      setScore(
+        (prev) => prev + categories[categoryId].clues[selectedClueIndex].points,
+      )
+    } else if (
+      selectedOption !== categories[categoryId].clues[selectedClueIndex].answer
+    ) {
       setIncorrectAnswer(true)
     }
     setHasBeenAnswered((prev) => {
       const newHasBeenAnswered = [...prev]
-      newHasBeenAnswered[categoryId.target.id] = {
+      newHasBeenAnswered[categoryId] = {
         answered: true,
-        id: categoryId.target.id,
+        id: categoryId,
       }
       return newHasBeenAnswered
     })
-    // console.log(categoryId.target.id)
-    // console.log(hasBeenAnswered)
   }
 
   if (category200) {
     document.body.classList.add("active-modal")
-    // console.log(categories)
   } else {
     document.body.classList.remove("active-modal")
   }
@@ -59,10 +63,7 @@ const Category = ({
             </div>
             <div className="question">
               <p className="questionP">
-                {
-                  categories[categoryId.target.id].clues[selectedClueIndex]
-                    .question
-                }
+                {categories[categoryId].clues[selectedClueIndex].question}
               </p>
             </div>
 
@@ -75,18 +76,14 @@ const Category = ({
                     id="option1"
                     name="picklist"
                     value={
-                      categories[categoryId.target.id].clues[selectedClueIndex]
-                        .answer
+                      categories[categoryId].clues[selectedClueIndex].answer
                     }
                     onChange={(e) => {
                       setSelectedOption(e.target.value)
                     }}
                   />
                   <label htmlFor="option1">
-                    {
-                      categories[categoryId.target.id].clues[selectedClueIndex]
-                        .answer
-                    }
+                    {categories[categoryId].clues[selectedClueIndex].answer}
                   </label>
                   <br />
                 </div>
@@ -97,18 +94,14 @@ const Category = ({
                     id="option2"
                     name="picklist"
                     value={
-                      categories[categoryId.target.id].clues[selectedClueIndex]
-                        .option1
+                      categories[categoryId].clues[selectedClueIndex].option1
                     }
                     onChange={(e) => {
                       setSelectedOption(e.target.value)
                     }}
                   />
                   <label htmlFor="option2">
-                    {
-                      categories[categoryId.target.id].clues[selectedClueIndex]
-                        .option1
-                    }
+                    {categories[categoryId].clues[selectedClueIndex].option1}
                   </label>
                   <br />
                 </div>
@@ -120,18 +113,14 @@ const Category = ({
                     id="option3"
                     name="picklist"
                     value={
-                      categories[categoryId.target.id].clues[selectedClueIndex]
-                        .option2
+                      categories[categoryId].clues[selectedClueIndex].option2
                     }
                     onChange={(e) => {
                       setSelectedOption(e.target.value)
                     }}
                   />
                   <label htmlFor="option3">
-                    {
-                      categories[categoryId.target.id].clues[selectedClueIndex]
-                        .option2
-                    }
+                    {categories[categoryId].clues[selectedClueIndex].option2}
                   </label>
                   <br />
                 </div>
@@ -143,18 +132,14 @@ const Category = ({
                     id="option4"
                     name="picklist"
                     value={
-                      categories[categoryId.target.id].clues[selectedClueIndex]
-                        .option3
+                      categories[categoryId].clues[selectedClueIndex].option3
                     }
                     onChange={(e) => {
                       setSelectedOption(e.target.value)
                     }}
                   />
                   <label htmlFor="option4">
-                    {
-                      categories[categoryId.target.id].clues[selectedClueIndex]
-                        .option3
-                    }
+                    {categories[categoryId].clues[selectedClueIndex].option3}
                   </label>
                 </div>
                 <div className="submitContainer">
@@ -169,9 +154,17 @@ const Category = ({
       ) : null}
       <div>
         {!selectedAnswer && incorrectAnswer ? (
-          <Incorrect openCategoryModal={openCategoryModal} />
+          <Incorrect
+            openCategoryModal={openCategoryModal}
+            categoryId={categoryId}
+            selectedClueIndex={selectedClueIndex}
+          />
         ) : selectedAnswer && !incorrectAnswer ? (
-          <Correct openCategoryModal={openCategoryModal} />
+          <Correct
+            openCategoryModal={openCategoryModal}
+            categoryId={categoryId}
+            selectedClueIndex={selectedClueIndex}
+          />
         ) : null}
       </div>
     </>

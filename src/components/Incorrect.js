@@ -1,7 +1,11 @@
 import React from "react"
 import { categories } from "../testdata.js"
 
-export const Incorrect = ({ category200, openCategoryModal }) => {
+export const Incorrect = ({
+  categoryId,
+  selectedClueIndex,
+  openCategoryModal,
+}) => {
   return (
     <>
       <div className="categoryOverlay"></div>
@@ -14,7 +18,9 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
         </div>
         <h1 className="incorrectHeader">Incorrect.</h1>
         <div className="question">
-          <p className="questionP">{categories[0].clues[0].question}</p>
+          <p className="questionP">
+            {categories[categoryId].clues[selectedClueIndex].question}
+          </p>
         </div>
 
         <div className="category" data-testid="category">
@@ -28,7 +34,7 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
                 value="option1"
               />
               <label htmlFor="option1" className="answerForIncorrect">
-                {categories[0].clues[0].answer}{" "}
+                {categories[categoryId].clues[selectedClueIndex].answer}{" "}
                 <span className="arrow"> &#8592; Correct Answer</span>
               </label>
               <br />
@@ -42,7 +48,7 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
                 value="option2"
               />
               <label htmlFor="option2" className="incorrectAnswer">
-                {categories[0].clues[0].option1}
+                {categories[categoryId].clues[selectedClueIndex].option1}
               </label>
               <br />
             </div>
@@ -56,7 +62,7 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
                 value="option3"
               />
               <label htmlFor="option3" className="incorrectAnswer">
-                {categories[0].clues[0].option2}
+                {categories[categoryId].clues[selectedClueIndex].option2}
               </label>
               <br />
             </div>
@@ -70,11 +76,14 @@ export const Incorrect = ({ category200, openCategoryModal }) => {
                 value="option4"
               />
               <label htmlFor="option4" className="incorrectAnswer">
-                {categories[0].clues[0].option3}
+                {categories[categoryId].clues[selectedClueIndex].option3}
               </label>
             </div>
             <div className="submitContainer">
-              <p>Explanation: {categories[0].clues[0].explanation}</p>
+              <p>
+                Explanation:{" "}
+                {categories[categoryId].clues[selectedClueIndex].explanation}
+              </p>
             </div>
           </form>
         </div>

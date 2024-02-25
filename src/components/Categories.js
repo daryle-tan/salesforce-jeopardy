@@ -1,17 +1,12 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Category from "./Category.js"
 import { categories } from "../testdata.js"
 
 const Categories = ({ setScore }) => {
   const [category200, setCategory200] = useState(false)
-  const [category400, setCategory400] = useState(false)
-  const [category600, setCategory600] = useState(false)
-  const [category800, setCategory800] = useState(false)
-  const [category1000, setCategory1000] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState(false)
   const [incorrectAnswer, setIncorrectAnswer] = useState(false)
   const [categoryId, setCategoryId] = useState(null)
-  const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(null)
   const [selectedClueIndex, setSelectedClueIndex] = useState(null)
   const values = [
     "$200",
@@ -54,48 +49,62 @@ const Categories = ({ setScore }) => {
     new Array(values.length).fill({ answered: false, id: null }),
   )
 
+  useEffect(() => {
+    if (categoryId) {
+      console.log(
+        "categoryId:",
+        categoryId,
+        "selectedClueIndex:",
+        selectedClueIndex,
+      )
+    }
+  }, [selectedClueIndex])
+
   const openCategoryModal = (categoryId) => {
+    const id = Number(categoryId.target.id)
     setCategory200((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
-    console.log(categoryId.target.id, category200, categories)
+
     setCategoryId(categoryId)
 
-    if (categoryId.target.id <= 0 && categoryId.target.id >= 6) {
-      return 0
-    } else if (categoryId.target.id <= 7 && categoryId.target.id >= 14) {
-      return 1
-    } else if (categoryId.target.id <= 15 && categoryId.target.id >= 21) {
-      return 2
-    } else if (categoryId.target.id <= 22 && categoryId.target.id >= 28) {
-      return 3
-    } else if (categoryId.target.id <= 29 && categoryId.target.id >= 35) {
-      return 4
-    }
-    values.forEach((value) => {
-      switch (value) {
-        case "200":
-          setSelectedClueIndex(0)
-          break
-        case "400":
-          setSelectedClueIndex(1)
-          break
-        case "600":
-          setSelectedClueIndex(2)
-          break
-        case "800":
-          setSelectedClueIndex(3)
-          break
-        case "1000":
-          setSelectedClueIndex(4)
-          break
-        default:
-          break
-      }
-    })
-    console.log(selectedClueIndex)
-  }
+    console.log("id:", id, "category:", category200, "categories:", categories)
+    switch (id) {
+      case (0, 7, 14, 21, 28):
+        setCategoryId(0)
+        break
+      case (1, 8, 15, 22, 29):
+        setCategoryId(1)
+        break
+      case (2, 9, 16, 23, 30):
+        setCategoryId(2)
+        break
+      case (3, 10, 17, 24, 31):
+        setCategoryId(3)
+        break
+      case (4, 11, 18, 25, 32):
+        setCategoryId(4)
+        break
+      case (5, 12, 19, 26, 33):
+        setCategoryId(5)
+        break
+      case (6, 13, 20, 27, 34):
+        setCategoryId(6)
 
+        if (id >= 0 && id <= 6) {
+          setSelectedClueIndex(0)
+        } else if (id >= 7 && id <= 13) {
+          setSelectedClueIndex(1)
+        } else if (id >= 14 && id <= 20) {
+          setSelectedClueIndex(2)
+        } else if (id >= 21 && id <= 27) {
+          setSelectedClueIndex(3)
+        } else if (id >= 28 && id <= 34) {
+          setSelectedClueIndex(4)
+        }
+        console.log("selectedClueIndex:", selectedClueIndex)
+    }
+  }
   return (
     <>
       <div className="categoriesTitle">Configuration & Setup</div>
@@ -137,11 +146,9 @@ const Categories = ({ setScore }) => {
         setHasBeenAnswered={setHasBeenAnswered}
         categoryId={categoryId}
         setScore={setScore}
-        // selectedCategoryIndex={selectedCategoryIndex}
         selectedClueIndex={selectedClueIndex}
       />
     </>
   )
 }
-
 export default Categories

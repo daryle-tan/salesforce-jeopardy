@@ -58,7 +58,7 @@ const Categories = ({ setScore }) => {
         selectedClueIndex,
       )
     }
-  }, [selectedClueIndex])
+  }, [selectedClueIndex, categoryId])
 
   const openCategoryModal = (categoryId) => {
     const id = Number(categoryId.target.id)
@@ -66,44 +66,55 @@ const Categories = ({ setScore }) => {
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
 
-    setCategoryId(categoryId)
-
-    console.log("id:", id, "category:", category200, "categories:", categories)
-    switch (id) {
-      case (0, 7, 14, 21, 28):
-        setCategoryId(0)
-        break
-      case (1, 8, 15, 22, 29):
-        setCategoryId(1)
-        break
-      case (2, 9, 16, 23, 30):
-        setCategoryId(2)
-        break
-      case (3, 10, 17, 24, 31):
-        setCategoryId(3)
-        break
-      case (4, 11, 18, 25, 32):
-        setCategoryId(4)
-        break
-      case (5, 12, 19, 26, 33):
-        setCategoryId(5)
-        break
-      case (6, 13, 20, 27, 34):
-        setCategoryId(6)
-
-        if (id >= 0 && id <= 6) {
-          setSelectedClueIndex(0)
-        } else if (id >= 7 && id <= 13) {
-          setSelectedClueIndex(1)
-        } else if (id >= 14 && id <= 20) {
-          setSelectedClueIndex(2)
-        } else if (id >= 21 && id <= 27) {
-          setSelectedClueIndex(3)
-        } else if (id >= 28 && id <= 34) {
-          setSelectedClueIndex(4)
-        }
-        console.log("selectedClueIndex:", selectedClueIndex)
+    if (id === 0 || 7 || 14 || 21 || 28) {
+      setCategoryId(0)
+    } else if (id === 1 || 8 || 15 || 22 || 29) {
+      setCategoryId(1)
+    } else if (id === 2 || 9 || 16 || 23 || 30) {
+      setCategoryId(2)
+    } else if (id === 3 || 10 || 17 || 24 || 31) {
+      setCategoryId(3)
+    } else if (id === 4 || 11 || 18 || 25 || 32) {
+      setCategoryId(4)
+    } else if (id === 5 || 12 || 19 || 26 || 33) {
+      setCategoryId(5)
+    } else if (id === 6 || 13 || 20 || 27 || 34) {
+      setCategoryId(6)
     }
+
+    const hasClueAtIndexZero = categories.some((category) => category.clues[0])
+    const hasClueAtIndexOne = categories.some((category) => category.clues[1])
+    const hasClueAtIndexTwo = categories.some((category) => category.clues[2])
+    const hasClueAtIndexThree = categories.some((category) => category.clues[3])
+    const hasClueAtIndexFour = categories.some((category) => category.clues[4])
+    const hasClueAtIndexFive = categories.some((category) => category.clues[5])
+    const hasClueAtIndexSix = categories.some((category) => category.clues[6])
+
+    if (hasClueAtIndexZero) {
+      setSelectedClueIndex(0)
+    } else if (hasClueAtIndexOne) {
+      setSelectedClueIndex(1)
+    } else if (hasClueAtIndexTwo) {
+      setSelectedClueIndex(2)
+    } else if (hasClueAtIndexThree) {
+      setSelectedClueIndex(3)
+    } else if (hasClueAtIndexFour) {
+      setSelectedClueIndex(4)
+    } else if (hasClueAtIndexFive) {
+      setSelectedClueIndex(5)
+    } else if (hasClueAtIndexSix) {
+      setSelectedClueIndex(6)
+    }
+
+    console.log("selectedClueIndex:", selectedClueIndex)
+    console.log(
+      "categoryId:",
+      categoryId,
+      "category:",
+      category200,
+      "categories:",
+      categories,
+    )
   }
   return (
     <>

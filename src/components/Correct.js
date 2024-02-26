@@ -43,10 +43,7 @@ function Correct({ categoryId, selectedClueIndex, openCategoryModal }) {
                 value="option2"
               />
               <label htmlFor="option2">
-                {
-                  categories[categoryId.target.id].clues[selectedClueIndex]
-                    .option1
-                }
+                {categories[categoryId].clues[selectedClueIndex].option1}
               </label>
               <br />
             </div>
@@ -60,10 +57,7 @@ function Correct({ categoryId, selectedClueIndex, openCategoryModal }) {
                 value="option3"
               />
               <label htmlFor="option3">
-                {
-                  categories[categoryId.target.id].clues[selectedClueIndex]
-                    .option2
-                }
+                {categories[categoryId].clues[selectedClueIndex].option2}
               </label>
               <br />
             </div>

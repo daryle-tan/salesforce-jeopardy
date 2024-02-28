@@ -8,6 +8,7 @@ function Navbar() {
         <div className="certTab active">Administrator</div>
         <div className="certTab">Platform App Builder</div>
         <div className="certTab">Developer I</div>
+        {/* <div className="overlay">Coming soon</div> */}
       </div>
     </div>
   )

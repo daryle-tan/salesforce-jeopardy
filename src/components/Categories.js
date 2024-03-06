@@ -82,28 +82,57 @@ const Categories = ({ setScore }) => {
       setCategoryId(6)
     }
 
-    const hasClueAtIndexZero = categories.some((category) => category.clues[0])
-    const hasClueAtIndexOne = categories.some((category) => category.clues[1])
-    const hasClueAtIndexTwo = categories.some((category) => category.clues[2])
-    const hasClueAtIndexThree = categories.some((category) => category.clues[3])
-    const hasClueAtIndexFour = categories.some((category) => category.clues[4])
-    const hasClueAtIndexFive = categories.some((category) => category.clues[5])
-    const hasClueAtIndexSix = categories.some((category) => category.clues[6])
-
-    if (hasClueAtIndexZero) {
+    if (
+      id === 0 ||
+      id === 1 ||
+      id === 2 ||
+      id === 3 ||
+      id === 4 ||
+      id === 5 ||
+      id === 6
+    ) {
       setSelectedClueIndex(0)
-    } else if (hasClueAtIndexOne) {
+    } else if (
+      id === 7 ||
+      id === 8 ||
+      id === 9 ||
+      id === 10 ||
+      id === 11 ||
+      id === 12 ||
+      id === 13
+    ) {
       setSelectedClueIndex(1)
-    } else if (hasClueAtIndexTwo) {
+    } else if (
+      id === 14 ||
+      id === 15 ||
+      id === 16 ||
+      id === 17 ||
+      id === 18 ||
+      id === 19 ||
+      id === 20
+    ) {
       setSelectedClueIndex(2)
-    } else if (hasClueAtIndexThree) {
+    } else if (
+      id === 21 ||
+      id === 22 ||
+      id === 23 ||
+      id === 24 ||
+      id === 25 ||
+      id === 26 ||
+      id === 27
+    ) {
       setSelectedClueIndex(3)
-    } else if (hasClueAtIndexFour) {
+    } else if (
+      id === 4 ||
+      id === 28 ||
+      id === 29 ||
+      id === 30 ||
+      id === 31 ||
+      id === 32 ||
+      id === 33 ||
+      id === 34
+    ) {
       setSelectedClueIndex(4)
-    } else if (hasClueAtIndexFive) {
-      setSelectedClueIndex(5)
-    } else if (hasClueAtIndexSix) {
-      setSelectedClueIndex(6)
     }
 
     console.log(

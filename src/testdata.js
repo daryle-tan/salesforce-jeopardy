@@ -292,9 +292,8 @@ export const categories = [
       },
       {
         points: 400,
-        answer: '"The buck stops here"',
-        question:
-          "It was the 4-word motto Truman kept on his desk in the Oval Office",
+        answer: " stops",
+        question: " Oval Office",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,
@@ -302,9 +301,8 @@ export const categories = [
       },
       {
         points: 600,
-        answer: "Missouri",
-        question:
-          "Each May 8 this state officially celebrates Harry Truman's birthday",
+        answer: "Show Me state",
+        question: "Harry Truman's birthday",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,
@@ -312,9 +310,9 @@ export const categories = [
       },
       {
         points: 800,
-        answer: "August (of 1945)",
+        answer: "yup",
         question:
-          'It\'s the month Truman began a famous speech with the line "We have just dropped a new bomb..."',
+          'famous speech with the line "We have just dropped a new bomb..."',
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,
@@ -322,9 +320,8 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: "Thomas Dewey",
-        question:
-          "He was the last person beaten by Harry Truman in an election",
+        answer: "Thomas ",
+        question: "He was the last person beaten ",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,
@@ -347,9 +344,8 @@ export const categories = [
       },
       {
         points: 400,
-        answer: '"The buck stops here"',
-        question:
-          "It was the 4-word motto Truman kept on his desk in the Oval Office",
+        answer: " buck stops ",
+        question: " 4-word motto Truman kept on his desk in the Oval Office",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,
@@ -357,9 +353,8 @@ export const categories = [
       },
       {
         points: 600,
-        answer: "Missouri",
-        question:
-          "Each May 8 this state officially celebrates Harry Truman's birthday",
+        answer: "Miss",
+        question: "this state officially celebrates Harry Truman's birthday",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,
@@ -367,7 +362,7 @@ export const categories = [
       },
       {
         points: 800,
-        answer: "August (of 1945)",
+        answer: "August",
         question:
           'It\'s the month Truman began a famous speech with the line "We have just dropped a new bomb..."',
         option1: 200,
@@ -377,9 +372,8 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: "Thomas Dewey",
-        question:
-          "He was the last person beaten by Harry Truman in an election",
+        answer: " Dewey",
+        question: " last person beaten by Harry Truman in an election",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,

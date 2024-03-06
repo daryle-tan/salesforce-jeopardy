@@ -283,8 +283,8 @@ export const categories = [
     clues: [
       {
         points: 200,
-        answer: "vice prespointsent",
-        question: "In 1945 Harry served just 83 days in this job",
+        answer: "Galileo",
+        question: "Who invented gravity?",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,
@@ -338,8 +338,8 @@ export const categories = [
     clues: [
       {
         points: 200,
-        answer: "vice prespointsent",
-        question: "In 1945 Harry served just 83 days in this job",
+        answer: "Satoshi Nakamoto",
+        question: "Who invented bitcoin?",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
         option3: 11508,

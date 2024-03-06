@@ -66,19 +66,19 @@ const Categories = ({ setScore }) => {
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
 
-    if (id === 0 || 7 || 14 || 21 || 28) {
+    if (id === 0 || id === 7 || id === 14 || id === 21 || id === 28) {
       setCategoryId(0)
-    } else if (id === 1 || 8 || 15 || 22 || 29) {
+    } else if (id === 1 || id === 8 || id === 15 || id === 22 || id === 29) {
       setCategoryId(1)
-    } else if (id === 2 || 9 || 16 || 23 || 30) {
+    } else if (id === 2 || id === 9 || id === 16 || id === 23 || id === 30) {
       setCategoryId(2)
-    } else if (id === 3 || 10 || 17 || 24 || 31) {
+    } else if (id === 3 || id === 10 || id === 17 || id === 24 || id === 31) {
       setCategoryId(3)
-    } else if (id === 4 || 11 || 18 || 25 || 32) {
+    } else if (id === 4 || id === 11 || id === 18 || id === 25 || id === 32) {
       setCategoryId(4)
-    } else if (id === 5 || 12 || 19 || 26 || 33) {
+    } else if (id === 5 || id === 12 || id === 19 || id === 26 || id === 33) {
       setCategoryId(5)
-    } else if (id === 6 || 13 || 20 || 27 || 34) {
+    } else if (id === 6 || id === 13 || id === 20 || id === 27 || id === 34) {
       setCategoryId(6)
     }
 

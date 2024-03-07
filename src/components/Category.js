@@ -14,9 +14,9 @@ const Category = ({
   categoryId,
   setScore,
   selectedClueIndex,
+  idx,
 }) => {
   const [selectedOption, setSelectedOption] = useState("")
-  // const id = Number(categoryId)
 
   const handleSubmit = (categoryId, event) => {
     event.preventDefault()
@@ -33,11 +33,12 @@ const Category = ({
     ) {
       setIncorrectAnswer(true)
     }
+    // console.log(idx)
     setHasBeenAnswered((prev) => {
       const newHasBeenAnswered = [...prev]
-      newHasBeenAnswered[categoryId] = {
+      newHasBeenAnswered[idx] = {
         answered: true,
-        id: categoryId,
+        id: idx,
       }
       return newHasBeenAnswered
     })

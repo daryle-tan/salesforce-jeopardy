@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Category from "./Category.js"
 import { categories } from "../testdata.js"
+import { set } from "date-fns"
 
 const Categories = ({ setScore }) => {
   const [category200, setCategory200] = useState(false)
@@ -8,6 +9,7 @@ const Categories = ({ setScore }) => {
   const [incorrectAnswer, setIncorrectAnswer] = useState(false)
   const [categoryId, setCategoryId] = useState(null)
   const [selectedClueIndex, setSelectedClueIndex] = useState(null)
+  const [idx, setIdx] = useState(null)
   const values = [
     "$200",
     "$200",
@@ -50,18 +52,17 @@ const Categories = ({ setScore }) => {
   )
 
   useEffect(() => {
-    // if (category200) {
     console.log(
       "categoryId:",
       categoryId,
       "selectedClueIndex:",
       selectedClueIndex,
     )
-    // }
   }, [selectedClueIndex, categoryId, category200])
 
   const openCategoryModal = (categoryId) => {
     const id = Number(categoryId.target.id)
+    setIdx(id)
     setCategory200((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
@@ -161,12 +162,7 @@ const Categories = ({ setScore }) => {
       <div className="categoriesTitle">Workflow / Process Automation</div>
       {values.map((value, i) =>
         hasBeenAnswered[i].answered ? (
-          <div
-            key={i}
-            id={i}
-            className="categories"
-            category200={category200}
-          ></div>
+          <div key={i} id={i} className="categories"></div>
         ) : (
           <div
             key={i}
@@ -190,6 +186,7 @@ const Categories = ({ setScore }) => {
         categoryId={categoryId}
         setScore={setScore}
         selectedClueIndex={selectedClueIndex}
+        idx={idx}
       />
     </>
   )

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { categories } from "../testdata.js"
 import Correct from "./Correct.js"
 import { Incorrect } from "./Incorrect.js"
@@ -17,6 +17,31 @@ const Category = ({
   idx,
 }) => {
   const [selectedOption, setSelectedOption] = useState("")
+
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array]
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      const temp = shuffledArray[i]
+      shuffledArray[i] = shuffledArray[j]
+      shuffledArray[j] = temp
+    }
+    console.log("change")
+    return shuffledArray
+  }
+
+  useEffect(() => {
+    setShuffledOptions(
+      shuffleArray([
+        categories[categoryId].clues[selectedClueIndex].answer,
+        categories[categoryId].clues[selectedClueIndex].option1,
+        categories[categoryId].clues[selectedClueIndex].option2,
+        categories[categoryId].clues[selectedClueIndex].option3,
+      ]),
+    )
+  }, [categoryId, selectedClueIndex])
+
+  const [shuffledOptions, setShuffledOptions] = useState([])
 
   const handleSubmit = (categoryId, event) => {
     event.preventDefault()
@@ -70,79 +95,22 @@ const Category = ({
 
             <div className="category" data-testid="category">
               <form onSubmit={(e) => handleSubmit(categoryId, e)}>
-                <div className="formContainer">
-                  <input
-                    className="radioBtn"
-                    type="radio"
-                    id="option1"
-                    name="picklist"
-                    value={
-                      categories[categoryId].clues[selectedClueIndex].answer
-                    }
-                    onChange={(e) => {
-                      setSelectedOption(e.target.value)
-                    }}
-                  />
-                  <label htmlFor="option1">
-                    {categories[categoryId].clues[selectedClueIndex].answer}
-                  </label>
-                  <br />
-                </div>
-                <div className="formContainer">
-                  <input
-                    className="radioBtn"
-                    type="radio"
-                    id="option2"
-                    name="picklist"
-                    value={
-                      categories[categoryId].clues[selectedClueIndex].option1
-                    }
-                    onChange={(e) => {
-                      setSelectedOption(e.target.value)
-                    }}
-                  />
-                  <label htmlFor="option2">
-                    {categories[categoryId].clues[selectedClueIndex].option1}
-                  </label>
-                  <br />
-                </div>
-
-                <div className="formContainer">
-                  <input
-                    className="radioBtn"
-                    type="radio"
-                    id="option3"
-                    name="picklist"
-                    value={
-                      categories[categoryId].clues[selectedClueIndex].option2
-                    }
-                    onChange={(e) => {
-                      setSelectedOption(e.target.value)
-                    }}
-                  />
-                  <label htmlFor="option3">
-                    {categories[categoryId].clues[selectedClueIndex].option2}
-                  </label>
-                  <br />
-                </div>
-
-                <div className="formContainer">
-                  <input
-                    className="radioBtn"
-                    type="radio"
-                    id="option4"
-                    name="picklist"
-                    value={
-                      categories[categoryId].clues[selectedClueIndex].option3
-                    }
-                    onChange={(e) => {
-                      setSelectedOption(e.target.value)
-                    }}
-                  />
-                  <label htmlFor="option4">
-                    {categories[categoryId].clues[selectedClueIndex].option3}
-                  </label>
-                </div>
+                {shuffledOptions.map((option, index) => (
+                  <div className="formContainer" key={index}>
+                    <input
+                      className="radioBtn"
+                      type="radio"
+                      id={`option${index + 1}`}
+                      name="picklist"
+                      value={option}
+                      onChange={(e) => {
+                        setSelectedOption(e.target.value)
+                      }}
+                    />
+                    <label htmlFor={`option${index + 1}`}>{option}</label>
+                    <br />
+                  </div>
+                ))}
                 <div className="submitContainer">
                   <button type="submit" className="submitButton">
                     Submit Answer

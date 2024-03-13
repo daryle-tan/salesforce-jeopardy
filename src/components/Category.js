@@ -17,6 +17,7 @@ const Category = ({
   idx,
 }) => {
   const [selectedOption, setSelectedOption] = useState("")
+  const [shuffledOptions, setShuffledOptions] = useState([])
 
   const shuffleArray = (array) => {
     const shuffledArray = [...array]
@@ -40,8 +41,6 @@ const Category = ({
       ]),
     )
   }, [categoryId, selectedClueIndex])
-
-  const [shuffledOptions, setShuffledOptions] = useState([])
 
   const handleSubmit = (categoryId, event) => {
     event.preventDefault()

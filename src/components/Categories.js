@@ -7,8 +7,8 @@ const Categories = ({ setScore }) => {
   const [category200, setCategory200] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState(false)
   const [incorrectAnswer, setIncorrectAnswer] = useState(false)
-  const [categoryId, setCategoryId] = useState(null)
-  const [selectedClueIndex, setSelectedClueIndex] = useState(null)
+  const [categoryId, setCategoryId] = useState(0)
+  const [selectedClueIndex, setSelectedClueIndex] = useState(0)
   const [idx, setIdx] = useState(null)
   const values = [
     "$200",

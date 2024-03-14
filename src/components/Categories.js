@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react"
 import Category from "./Category.js"
 import { categories } from "../testdata.js"
-import { set } from "date-fns"
 
-const Categories = ({ setScore }) => {
+const Categories = ({ setScore, setCluesAnswered, cluesAnswered }) => {
   const [category200, setCategory200] = useState(false)
   const [selectedAnswer, setSelectedAnswer] = useState(false)
   const [incorrectAnswer, setIncorrectAnswer] = useState(false)
@@ -57,8 +56,10 @@ const Categories = ({ setScore }) => {
       categoryId,
       "selectedClueIndex:",
       selectedClueIndex,
+      "cluesAnswered:",
+      cluesAnswered,
     )
-  }, [selectedClueIndex, categoryId, category200])
+  }, [selectedClueIndex, categoryId, category200, cluesAnswered])
 
   const openCategoryModal = (categoryId) => {
     const id = Number(categoryId.target.id)
@@ -187,6 +188,7 @@ const Categories = ({ setScore }) => {
         setScore={setScore}
         selectedClueIndex={selectedClueIndex}
         idx={idx}
+        setCluesAnswered={setCluesAnswered}
       />
     </>
   )

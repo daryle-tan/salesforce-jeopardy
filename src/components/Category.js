@@ -15,6 +15,7 @@ const Category = ({
   setScore,
   selectedClueIndex,
   idx,
+  setCluesAnswered,
 }) => {
   const [selectedOption, setSelectedOption] = useState("")
   const [shuffledOptions, setShuffledOptions] = useState([])
@@ -58,6 +59,7 @@ const Category = ({
       setIncorrectAnswer(true)
     }
     // console.log(idx)
+    setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {
       const newHasBeenAnswered = [...prev]
       newHasBeenAnswered[idx] = {

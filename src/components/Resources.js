@@ -17,7 +17,7 @@ const Resources = ({ score }) => {
           </p>
           <button onClick={handleRefresh}>Restart Game</button>
         </div>
-      ) : score < 17850 ? (
+      ) : score < 18900 ? (
         <div>
           <p>Your Score: {((score / 21000) * 100).toFixed(0)}%</p>
           <p>

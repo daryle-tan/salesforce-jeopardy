@@ -4,17 +4,19 @@ import Resources from "./Resources.js"
 
 const Gameboard = ({ setScore, score }) => {
   const [cluesAnswered, setCluesAnswered] = useState(0)
-
+  const [category, setCategory] = useState(false)
   return (
     <div id="gameboard">
-      {cluesAnswered < 35 ? (
+      {cluesAnswered > 35 && !category ? (
+        <Resources score={score} />
+      ) : (
         <Categories
           setScore={setScore}
           setCluesAnswered={setCluesAnswered}
           cluesAnswered={cluesAnswered}
+          category={category}
+          setCategory={setCategory}
         />
-      ) : (
-        <Resources score={score} />
       )}
     </div>
   )

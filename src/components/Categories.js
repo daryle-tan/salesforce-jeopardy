@@ -2,8 +2,13 @@ import React, { useEffect, useState } from "react"
 import Category from "./Category.js"
 import { categories } from "../testdata.js"
 
-const Categories = ({ setScore, setCluesAnswered, cluesAnswered }) => {
-  const [category200, setCategory200] = useState(false)
+const Categories = ({
+  setScore,
+  setCluesAnswered,
+  cluesAnswered,
+  category,
+  setCategory,
+}) => {
   const [selectedAnswer, setSelectedAnswer] = useState(false)
   const [incorrectAnswer, setIncorrectAnswer] = useState(false)
   const [categoryId, setCategoryId] = useState(0)
@@ -59,12 +64,12 @@ const Categories = ({ setScore, setCluesAnswered, cluesAnswered }) => {
       "cluesAnswered:",
       cluesAnswered,
     )
-  }, [selectedClueIndex, categoryId, category200, cluesAnswered])
+  }, [selectedClueIndex, categoryId, category, cluesAnswered])
 
   const openCategoryModal = (categoryId) => {
     const id = Number(categoryId.target.id)
     setIdx(id)
-    setCategory200((prev) => !prev)
+    setCategory((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
 
@@ -141,7 +146,7 @@ const Categories = ({ setScore, setCluesAnswered, cluesAnswered }) => {
       "categoryId:",
       categoryId,
       "category:",
-      category200,
+      category,
       "categories:",
       categories,
       "id:",
@@ -178,7 +183,7 @@ const Categories = ({ setScore, setCluesAnswered, cluesAnswered }) => {
 
       <Category
         openCategoryModal={openCategoryModal}
-        category200={category200}
+        category={category}
         selectedAnswer={selectedAnswer}
         setSelectedAnswer={setSelectedAnswer}
         incorrectAnswer={incorrectAnswer}

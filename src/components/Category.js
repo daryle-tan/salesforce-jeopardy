@@ -4,7 +4,7 @@ import Correct from "./Correct.js"
 import { Incorrect } from "./Incorrect.js"
 
 const Category = ({
-  category200,
+  category,
   openCategoryModal,
   selectedAnswer,
   setSelectedAnswer,
@@ -58,7 +58,7 @@ const Category = ({
     ) {
       setIncorrectAnswer(true)
     }
-    // console.log(idx)
+
     setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {
       const newHasBeenAnswered = [...prev]
@@ -70,7 +70,7 @@ const Category = ({
     })
   }
 
-  if (category200) {
+  if (category) {
     document.body.classList.add("active-modal")
   } else {
     document.body.classList.remove("active-modal")
@@ -78,7 +78,7 @@ const Category = ({
 
   return (
     <>
-      {category200 ? (
+      {category ? (
         <>
           <div className="categoryOverlay"></div>
 

@@ -7,7 +7,7 @@ const Gameboard = ({ setScore, score }) => {
   const [category, setCategory] = useState(false)
   return (
     <div id="gameboard">
-      {cluesAnswered > 35 && !category ? (
+      {cluesAnswered > 34 && !category ? (
         <Resources score={score} />
       ) : (
         <Categories

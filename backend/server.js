@@ -23,6 +23,38 @@ const pool = new pg.Pool({
     : {}),
 })
 
+app.get("/api/categories", (req, res, next) => {
+  pool
+    .query("SELECT * FROM categories")
+    .then((response) => {
+      res.send(response.rows)
+    })
+    .catch(next)
+})
+
+app.get("/api/categories/:id", (req, res, next) => {
+  const id = req.params.id
+  pool
+    .query("SELECT * FROM categories WHERE id = $1;", [id])
+    .then((response) => {
+      const asset = response.rows[0]
+      if (asset) {
+        res.send(asset)
+      } else {
+        res.sendStatus(404)
+      }
+    })
+    .catch(next)
+})
+
+app.use((err, req, res, next) => {
+  console.log(err)
+  return res
+    .set("content-type", "text/plain")
+    .status(500)
+    .send("Internal Server Error")
+})
+
 app.listen(PORT, () => {
   console.log(`listening to ${PORT}`)
 })

@@ -1,4 +1,5 @@
-DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS categories CASCADE;
+DROP TABLE IF EXISTS clues CASCADE;
 
 -- Create a table for categories
 CREATE TABLE categories (
@@ -65,6 +66,6 @@ INSERT INTO clues (category_id, points, answer, question, option1, option2, opti
     (5, 400, 'the vice prespointsent', 'In 1973 Spiro served just 8 months in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Lightning Experience'),
     (5, 600, 'vice prespointsent', 'In 1989 Dan served just 69 days in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Salesforce Mobile'),
     (5, 800, 'vice prespointsent', 'In 1974 Gerald served just 8 months in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Salesforce Connect'),
-    (5, 1000, 'vice prespointsent', 'In 1974 Nelson served just 8 months in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Salesforce Connect'),
+    (5, 1000, 'vice prespointsent', 'In 1974 Nelson served just 8 months in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Salesforce Connect');
 
 

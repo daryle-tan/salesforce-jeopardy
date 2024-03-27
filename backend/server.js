@@ -47,9 +47,9 @@ app.get("/api/categories/:id", (req, res, next) => {
     .catch(next)
 })
 
-app.get("/api/categories", (req, res, next) => {
+app.get("/api/clues", (req, res, next) => {
   pool
-    .query("SELECT * FROM categories")
+    .query("SELECT * FROM clues")
     .then((response) => {
       res.send(response.rows)
     })

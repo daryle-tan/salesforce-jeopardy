@@ -1,26 +1,28 @@
 import express from "express"
-import pg from "pg"
 import cors from "cors"
 import dotenv from "dotenv"
+import pkg from "pg"
+const { Pool } = pkg
 
 dotenv.config()
 
 const app = express()
-const PORT = process.env.PORT
+const { DATABASE_URL, NODE_ENV, PORT, pw } = process.env
 
 app.use(express.json())
 app.use(cors())
 app.use(express.static("public"))
 
-const pool = new pg.Pool({
-  connectionString: process.env.DATABASE_URL,
-  ...(process.env.NODE_ENV === "production"
-    ? {
-        ssl: {
-          rejectUnauthorized: false,
-        },
-      }
-    : {}),
+const pool = new Pool({
+  user: "daryletan",
+  host: "localhost",
+  database: "certforce",
+  password: pw,
+  port: 5432,
+  max: 5,
+  connectionTimeoutMillis: 20000,
+  idleTimeoutMillis: 20000,
+  allowExitOnIdle: false,
 })
 
 app.get("/api/categories", (req, res, next) => {

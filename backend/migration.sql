@@ -63,7 +63,11 @@ access and allow the admin to maintain the same field for two different teams.')
 
     -- Service & Support Applications
     (4, 200, 'crimson', 'It''s Harvard''s school color', '200', '2009-07-22T12:00:00.000Z', '11508', 'Mobile'),
-    (4, 400, 'a beet', 'You might blush as red as this plant of the goosefoot family that has an edible red root', '200', '2009-07-22T12:00:00.000Z', '11508', 'Validation Rule'),
+    (4, 400, ['Web-to-case','Email-to-case', 'Process Builder'] 'Ursa Major Solar needs a case to be automatically created.
+Which three features can an administrator use to accomplish this goal?
+Choose 3 options.', 'Web-to-case', 'Email-to-case', 'Process Builder', 'Setup Web-to-Case or Email-to-Case to automatically capture cases from your website and customer
+emails. 
+Configure a process to create records automatically with process builder'),
     (4, 600, 'ruby', 'The name of this gem precedes "throated hummingbird", as seen here', '200', '2009-07-22T12:00:00.000Z', '11508', 'Flow'),
     (4, 800, 'brick red', 'This shade of red whose name includes a building block has been a Crayola color since 1949', '200', '2009-07-22T12:00:00.000Z', '11508', 'Process Builder'),
     (4, 1000, 'vermillion', 'This shade of scarlet gets its name from the Latin for "worm"', '200', '2009-07-22T12:00:00.000Z', '11508', 'Service Cloud'),
@@ -81,7 +85,11 @@ Choose 2 options.', 'Emails', 'Teams', 'Groups', 'A chatter group allows for dis
 
     -- Data & Analytics Management
     (3, 200, '12', '2, 3 or this number means you rolled craps, so give up the dice already', '200', '2009-07-22T12:00:00.000Z', '11508', 'App Manager'),
-    (3, 400, '3', 'In Yahtzee if you lose a pair of the dice you need to play, you''re left with this many', '200', '2009-07-22T12:00:00.000Z', '11508', 'Quick Action'),
+    (3, 400, ['Metric', 'Gauge'] 'Ursa Major Solar uses data from the grand total of a custom report to create their
+dashboard.
+Which two components will populate the grand total properly?
+Choose 2 options', 'Bar chart', 'Line chart', 'List view', 'Use a metric when you have one key value to display.
+Use a gauge when you have a single value that you want to show within a range of custom values.'),
     (3, 600, '$75', 'Roll your pair of dice & land on Luxury Tax on a classic Monopoly board & you lose this much cash', '200', '2009-07-22T12:00:00.000Z', '11508', 'List View'),
     (3, 800, '<i>High Rollers</i>', 'If your toss of the dice couldn''t knock off the last number on this game show that I once hosted, you lost', '200', '2009-07-22T12:00:00.000Z', '11508', 'Reports'),
     (3, 1000, 'the bar', 'If your man is on this 3-letter place in backgammon, your dice roll must correspond to an open point or your turn is lost', '200', '2009-07-22T12:00:00.000Z', '11508', 'Filter'),

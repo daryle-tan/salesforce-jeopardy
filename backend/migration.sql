@@ -128,6 +128,8 @@ being assigned these tasks.
 What should a System Administrator do to correct this issue?', 'Delete the Workflow Rule', 'Edit the permissions on the support manager role ', 'freeze the user record', 'Select an assignee for your task. An assignee can be in the form of a user, role, record owner, record
 creator, opportunity team role, or account team role, depending on the type of record you chose.'),
     (4, 600, 'ruby', 'The name of this gem precedes "throated hummingbird", as seen here', '200', '2009-07-22T12:00:00.000Z', '11508', 'Flow'),
-    (4, 800, 'brick red', 'This shade of red whose name includes a building block has been a Crayola color since 1949', '200', '2009-07-22T12:00:00.000Z', '11508', 'Process Builder'),
+    (4, 800, ['Rule actions can take place immediately or can be time based.','Rules can be evaluated when records are created or edited.'], 'An administrator at Ursa Major Solar is configuring a workflow rule.
+What are two considerations for an administrator in this situation?
+Choose 2 options.', 'Rule actions can take place immediately or can be time based.', 'Rules can be evaluated when records are created or edited.', 'Rule actions are limited to one per workflow rule, and cannot be combined for different scenarios.', 'Workflow rules can be triggered any time a record is saved or created, depending on your rule criteria.'),
     (4, 1000, 'vermillion', 'This shade of scarlet gets its name from the Latin for "worm"', '200', '2009-07-22T12:00:00.000Z', '11508', 'Service Cloud');
    

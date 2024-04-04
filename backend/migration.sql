@@ -64,7 +64,12 @@ unique picklist values.
 What feature allows a System Administrator to maintain the same field for two different
 teams?', 'Page Layout', ' Duplicate Picklists', 'Master Picklist', 'Record types determine which business processes, page layouts, fields and picklist values a user can
 access and allow the admin to maintain the same field for two different teams.'),
-    (2, 800, 'Madeleine Albright', 'Though not tall, this future Secy. of State made a big impression in 1993 as U.S. Ambassador to the United Nations', '7', 'T12:00:00.000Z', '608', 'Email-to-Case'),
+    (2, 800, ['Create two page layouts.','Create two record types.'], 'Universal Containers has two business groups, Products and Services. Both
+groups will be using opportunities to track deals, but different fields are required
+by each group.
+In which two ways should an administrator meet this requirement?
+Choose 2 options.', 'Create two profiles', 'Create two page layouts.', 'Create two record types.', 'By creating two page layouts, you are able to customize what fields are shown for each group based on the
+type of page layout they have access to. By creating two record types, you are able to customize what fields are shown for each group based on the type of record type they have access to.'),
     (2, 1000, 'Mother Teresa', 'In 1928 this diminutive daughter of an Albanian grocer joined the Sisters of Loretto in Ireland', '230', '2009-07-22T12:00:00.000Z', '158', 'Knowledge Article'),
   
   -- Sales & Marketing Applications
@@ -121,7 +126,10 @@ imported.'),
     (3, 1000, 'the bar', 'If your man is on this 3-letter place in backgammon, your dice roll must correspond to an open point or your turn is lost', '200', '2009-07-22T12:00:00.000Z', '11508', 'Filter'),
 
     -- Workflow / Process Automation
-    (4, 200, 'crimson', 'It''s Harvard''s school color', '200', '2009-07-22T12:00:00.000Z', '11508', 'Mobile'),
+    (4, 200, 'Time-Based Workflow Queue', 'Universal Containers created a Time-Based Workflow rule that sends a follow-up
+email to the customer two days after a Case is closed. The System Administrator
+wants to verify that the workflow functions correctly.', 'Case History', 'Workflow Execution Log', 'Time-Based Workflow Queue', 'When a workflow rule that has time-dependent actions is triggered, use the workflow queue to view pending
+actions and cancel them if necessary.'),
     (4, 400, 'Make sure there is only one user in the role.', 'A System Administrator creates a Workflow Rule that assigns a task to a support
 manager role when a case is escalated. The case owner is complaining about
 being assigned these tasks.

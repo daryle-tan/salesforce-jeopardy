@@ -57,7 +57,9 @@ Manage object permissions in permission sets and profiles.'),
 
     -- Object Manager & Lightning App Builder
     (2, 200, '(Margaret) Mitchell', 'This 4''10" author began her epic in 1926 after an injury; David O. Selznick bought the rights & the rest is history', 'A1', '000Z', '4588', 'Permission Set'),
-    (2, 400, 'Bonnie Parker', 'While on the run in the 1930s, this 4''10" bank robber sent poetry & photos of her & Clyde to newspapers', '253', '2009', '1158', 'Fields'),
+    (2, 400, 'Stage Selected Values in the Sales Processes', 'Universal Containers has a sales team focused on renewals. They will use many
+of the same Opportunity fields as other teams, but need different Stage values.
+What should the System Administrator update to support this requirement?', 'Opportunity Record Types', 'Stage Selected Values in the Sales Processes', 'Opportunity Team Members', 'Use multiple business processes to display different picklist values according to each user’s profile.'),
     (2, 600, 'Record Types', 'Universal Containers has a renewals sales team that will use the Opportunity object.
 They want to use many of the same picklist fields that are already defined, but will need
 unique picklist values.
@@ -85,14 +87,15 @@ opportunity sale.
 What should the administrator do to achieve this goal?', 'Create a new custom field on the Opportunity object to track custom sizing options.', 'Use validation rules to ensure sales users select the custom sizing option for appropriate opportunities.', 'Configure a separate custom object to manage custom sizing selections and link it to the Opportunity object through a lookup relationship.', 'Use products and pricebooks to track what is being sold.'),
 
     -- Service & Support Applications
-    (4, 200, 'crimson', 'It''s Harvard''s school color', '200', '2009-07-22T12:00:00.000Z', '11508', 'Mobile'),
+    (4, 200, 'Chatter feed tracking must be enabled for the case object.', 'An administrator at Ursa Major Solar is setting up case feed.
+What should the administrator consider?', 'Universal case feed must be enabled.', 'Email-to-Case must be enabled for the organization.', 'Chatter feed tracking must be enabled for the case object.', 'Case escalation rules must be configured.'),
     (4, 400, ['Web-to-case','Email-to-case', 'Process Builder'] 'Ursa Major Solar needs a case to be automatically created.
 Which three features can an administrator use to accomplish this goal?
 Choose 3 options.', 'Web-to-case', 'Email-to-case', 'Process Builder', 'Setup Web-to-Case or Email-to-Case to automatically capture cases from your website and customer
 emails. 
 Configure a process to create records automatically with process builder'),
     (4, 600, 'ruby', 'The name of this gem precedes "throated hummingbird", as seen here', '200', '2009-07-22T12:00:00.000Z', '11508', 'Flow'),
-    (4, 800, 'brick red', 'This shade of red whose name includes a building block has been a Crayola color since 1949', '200', '2009-07-22T12:00:00.000Z', '11508', 'Process Builder'),
+    (4, 800, 'brick red', 'This shade of red whose name includes a building block has been a Crayola color since 1949', 'The Case object must be set to Private sharing model.', '2009-07-22T12:00:00.000Z', '11508', 'Process Builder'),
     (4, 1000, 'vermillion', 'This shade of scarlet gets its name from the Latin for "worm"', '200', '2009-07-22T12:00:00.000Z', '11508', 'Service Cloud'),
 
     -- Productivity & Collaboration Applications

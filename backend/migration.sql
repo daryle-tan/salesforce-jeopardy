@@ -94,7 +94,10 @@ Which three features can an administrator use to accomplish this goal?
 Choose 3 options.', 'Web-to-case', 'Email-to-case', 'Process Builder', 'Setup Web-to-Case or Email-to-Case to automatically capture cases from your website and customer
 emails. 
 Configure a process to create records automatically with process builder'),
-    (4, 600, 'ruby', 'The name of this gem precedes "throated hummingbird", as seen here', '200', '2009-07-22T12:00:00.000Z', '11508', 'Flow'),
+    (4, 600, 'Assignment rules', 'Which feature should Ursa Major Solar use if they want their support agents who are
+skilled in a particular product line to own cases directly after customers log them from an
+automated channel?', 'Assignment rules', 'Workflow rules', 'Approval processes', 'Assignment rules automate your organization’s lead generation and support processes. Use lead
+assignment rules to specify how leads are assigned to users or queues.'),
     (4, 800, 'brick red', 'This shade of red whose name includes a building block has been a Crayola color since 1949', 'The Case object must be set to Private sharing model.', '2009-07-22T12:00:00.000Z', '11508', 'Process Builder'),
     (4, 1000, 'vermillion', 'This shade of scarlet gets its name from the Latin for "worm"', '200', '2009-07-22T12:00:00.000Z', '11508', 'Service Cloud'),
 

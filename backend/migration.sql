@@ -89,16 +89,19 @@ What should the administrator do to achieve this goal?', 'Create a new custom fi
     -- Service & Support Applications
     (4, 200, 'Chatter feed tracking must be enabled for the case object.', 'An administrator at Ursa Major Solar is setting up case feed.
 What should the administrator consider?', 'Universal case feed must be enabled.', 'Email-to-Case must be enabled for the organization.', 'Chatter feed tracking must be enabled for the case object.', 'Case escalation rules must be configured.'),
-    (4, 400, ['Web-to-case','Email-to-case', 'Process Builder'] 'Ursa Major Solar needs a case to be automatically created.
-Which three features can an administrator use to accomplish this goal?
-Choose 3 options.', 'Web-to-case', 'Email-to-case', 'Process Builder', 'Setup Web-to-Case or Email-to-Case to automatically capture cases from your website and customer
-emails. 
-Configure a process to create records automatically with process builder'),
+    (4, 400, 'Enable Case Comment Notification to Contacts.', 'Customers complain that they do not know when Comments have been added to
+their Cases.
+Which configuration can a System Administrator implement to address this
+concern?', 'Configure workflow rules to send email notifications for new comments on cases.', 'Create a custom field on the Case object to track comments.', 'Enable Case Comment Notification to Contacts.', 'Enabling case comment notifications to contacts notifies contacts when a case comment has been modified or added to a case.'),
     (4, 600, 'Assignment rules', 'Which feature should Ursa Major Solar use if they want their support agents who are
 skilled in a particular product line to own cases directly after customers log them from an
 automated channel?', 'Assignment rules', 'Workflow rules', 'Approval processes', 'Assignment rules automate your organization’s lead generation and support processes. Use lead
 assignment rules to specify how leads are assigned to users or queues.'),
-    (4, 800, 'brick red', 'This shade of red whose name includes a building block has been a Crayola color since 1949', 'The Case object must be set to Private sharing model.', '2009-07-22T12:00:00.000Z', '11508', 'Process Builder'),
+    (4, 800, ['Web-to-case','Email-to-case', 'Process Builder'] 'Ursa Major Solar needs a case to be automatically created.
+Which three features can an administrator use to accomplish this goal?
+Choose 3 options.', 'Web-to-case', 'Email-to-case', 'Process Builder', 'Setup Web-to-Case or Email-to-Case to automatically capture cases from your website and customer
+emails. 
+Configure a process to create records automatically with process builder'),
     (4, 1000, 'vermillion', 'This shade of scarlet gets its name from the Latin for "worm"', '200', '2009-07-22T12:00:00.000Z', '11508', 'Service Cloud'),
 
     -- Productivity & Collaboration Applications

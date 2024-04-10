@@ -32,7 +32,7 @@ INSERT INTO categories (title, clues_count) VALUES
     ('Workflow / Process Automation', 5);
 
 -- Insert data into clues table
-INSERT INTO clues (category_id, points, answer, question, option1, option2, option3, explanation) VALUES
+INSERT INTO clues (category_id, points, answer, question, option1, option2, option3, option4, explanation) VALUES
     -- Configuration & Setup
     (1, 200, ['Unique, 'Required'], 'Ursa Major Solar wants to ensure that unique data is always input into a specific field.
 Which two field properties should the administrator configure?
@@ -77,14 +77,20 @@ type of page layout they have access to. By creating two record types, you are a
   -- Sales & Marketing Applications
     (3, 200, ['Leads','Contacts'], 'Which two objects can be related to Campaign Members?', 'Leads', 'Contacts', 'Roles', 'Campaign members are contacts or leads associated with campaigns.'),
     (3, 400, '3', 'In Yahtzee if you lose a pair of the dice you need to play, you''re left with this many', '200', '2009-07-22T12:00:00.000Z', '11508', 'Quick Action'),
-    (3, 600, '$75', 'Roll your pair of dice & land on Luxury Tax on a classic Monopoly board & you lose this much cash', '200', '2009-07-22T12:00:00.000Z', '11508', 'List View'),
-    (3, 800, 'High Rollers', 'If your toss of the dice couldn''t knock off the last number on this game show that I once hosted, you lost', '200', '2009-07-22T12:00:00.000Z', '11508', 'Reports'),
-    (3, 1000, 'Add custom sizing as a new product in a pricebook.', 'Ursa Major Solar customers are starting to request custom-sized solar panels,
+    (3, 600, 'Add custom sizing as a new product in a pricebook.', 'Ursa Major Solar customers are starting to request custom-sized solar panels,
 which are currently unavailable in the standard inventory. Management has
 decided to add custom sizing as an add-on item in Salesforce.
 The administrator needs to allow sales users to add custom sizing to the total
 opportunity sale.
 What should the administrator do to achieve this goal?', 'Create a new custom field on the Opportunity object to track custom sizing options.', 'Use validation rules to ensure sales users select the custom sizing option for appropriate opportunities.', 'Configure a separate custom object to manage custom sizing selections and link it to the Opportunity object through a lookup relationship.', 'Use products and pricebooks to track what is being sold.'),
+    (3, 800, ['The standard and list price for a product can be listed in more than one currency.','A product can have a different list price in different price books.'], 'Ursa Major Solar is using products and price books.
+
+Which two items should an administrator take into considerations about these
+features?
+Choose 2 options.', 'A product can have a different list price in different price books.', 'The standard and list price for a product can be listed in more than one currency.', 'Products cannot be associated with multiple price books simultaneously.','Price books can only be assigned to specific user profiles and not to roles.
+', 'Each product can exist in multiple price books with different prices and currency.'),
+    (3, 1000, '$75', 'Roll your pair of dice & land on Luxury Tax on a classic Monopoly board & you lose this much cash', '200', '2009-07-22T12:00:00.000Z', '11508', 'List View'),
+ 
 
     -- Service & Support Applications
     (4, 200, 'Chatter feed tracking must be enabled for the case object.', 'An administrator at Ursa Major Solar is setting up case feed.
@@ -105,7 +111,9 @@ Configure a process to create records automatically with process builder'),
     (4, 1000, 'vermillion', 'This shade of scarlet gets its name from the Latin for "worm"', '200', '2009-07-22T12:00:00.000Z', '11508', 'Service Cloud'),
 
     -- Productivity & Collaboration Applications
-    (5, 200, 'vice prespointsent', 'In 1945 Harry served just 83 days in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Chatter'),
+    (5, 200, 'Search the AppExchange for free adoption report apps.', 'The managers at Ursa Major Solar asked the administrator to quickly provide
+access to sales reports and dashboards.
+How can this be done?', 'Search the AppExchange for free adoption report apps.', 'Grant access to individual reports and dashboards based on user roles.', 'Create a custom Visualforce page to display the required reports and dashboards for managers.', 'The Salesforce Adoption Dashboards app can be found on the AppEschange.'),
     (5, 400, 'the vice prespointsent', 'In 1973 Spiro served just 8 months in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Lightning Experience'),
     (5, 600, ['Opportunity Dashboard', 'Chatter groups'], 'Sales representatives at Ursa Major Solar are working on opportunities and need to see
 how their colleagues have effectively managed other opportunities with comparable

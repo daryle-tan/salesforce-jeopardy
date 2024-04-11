@@ -56,17 +56,22 @@ Manage object permissions in permission sets and profiles.'),
     (1, 1000, 'Cibola', 'Antonio de Mendoza, viceroy of New Spain, sent Coronado to find the Seven Cities of this golden land; he didn''t', '222', '2009-07000Z', '11508', 'Roles'),
 
     -- Object Manager & Lightning App Builder
-    (2, 200, '(Margaret) Mitchell', 'This 4''10" author began her epic in 1926 after an injury; David O. Selznick bought the rights & the rest is history', 'A1', '000Z', '4588', 'Permission Set'),
-    (2, 400, 'Stage Selected Values in the Sales Processes', 'Universal Containers has a sales team focused on renewals. They will use many
-of the same Opportunity fields as other teams, but need different Stage values.
-What should the System Administrator update to support this requirement?', 'Opportunity Record Types', 'Stage Selected Values in the Sales Processes', 'Opportunity Team Members', 'Use multiple business processes to display different picklist values according to each user’s profile.'),
-    (2, 600, 'Record Types', 'Universal Containers has a renewals sales team that will use the Opportunity object.
+    (2, 200, 'Record Types', 'Universal Containers has a renewals sales team that will use the Opportunity object.
 They want to use many of the same picklist fields that are already defined, but will need
 unique picklist values.
 What feature allows a System Administrator to maintain the same field for two different
 teams?', 'Page Layout', ' Duplicate Picklists', 'Master Picklist', 'Record types determine which business processes, page layouts, fields and picklist values a user can
 access and allow the admin to maintain the same field for two different teams.'),
-    (2, 800, ['Create two page layouts.','Create two record types.'], 'Universal Containers has two business groups, Products and Services. Both
+    (2, 400, 'Stage Selected Values in the Sales Processes', 'Universal Containers has a sales team focused on renewals. They will use many
+of the same Opportunity fields as other teams, but need different Stage values.
+What should the System Administrator update to support this requirement?', 'Opportunity Record Types', 'Stage Selected Values in the Sales Processes', 'Opportunity Team Members', 'Use multiple business processes to display different picklist values according to each user’s profile.'),
+   (2, 600, ['Page layouts','Record types','Support processes'], 'A company needs its customer service agents to collect and display different
+information on case records based on whether customers are calling in with a
+question, product suggestion, or complaint.
+Which three features should the administrator use to meet this goal?
+Choose 3 options.', 'Page layouts', 'Record types', 'Support processes', 'Workflow rules', 'Page layouts control the layout and related lists on object record pages. Customize the values in record type or business process picklists based on your organization’s unique
+needs. Use multiple business processes to display different picklist values according to each user’s profile.'),
+   (2, 800, ['Create two page layouts.','Create two record types.'], 'Universal Containers has two business groups, Products and Services. Both
 groups will be using opportunities to track deals, but different fields are required
 by each group.
 In which two ways should an administrator meet this requirement?
@@ -128,19 +133,22 @@ Choose 2 options.', 'Emails', 'Teams', 'Groups', 'A chatter group allows for dis
 that has its own ID field for each record.
 What should the System Administrator do to help prevent duplicates during these
 imports?', 'Create a unique field on Accounts', 'Create a new contact for the external account', 'Create a new profile', 'An external ID field contains record identifiers from a system outside of Salesforce.'),
-    (3, 400, ['Metric', 'Gauge'] 'Ursa Major Solar uses data from the grand total of a custom report to create their
+    (3, 400, 'Four as long as the objects have associations', 'Ursa Major Solar is adding objects to a custom report type.
+How many objects, maximum, can be added to this report type?', 'Ten objects can be added to this report type, regardless of their associations.', 'Four as long as the objects have associations', 'There is no limit to the number of objects that can be added to this report type.', 'Only two objects can be added to this report type due to Salesforce limitations.', 'Each report type must specify a primary object and may optionally include other related objects. Up to four
+objects may be linked in a report type.'),
+    (3, 600, ['Metric', 'Gauge'] 'Ursa Major Solar uses data from the grand total of a custom report to create their
 dashboard.
 Which two components will populate the grand total properly?
 Choose 2 options', 'Bar chart', 'Line chart', 'List view', 'Use a metric when you have one key value to display.
 Use a gauge when you have a single value that you want to show within a range of custom values.'),
-    (3, 600, ['Account Name', 'Site fields'], 'A System Administrator will use the Import Wizard to update existing Account
+    (3, 800, ['Account Name', 'Site fields'], 'A System Administrator will use the Import Wizard to update existing Account
 records.
 Which values can the Import Wizard use to find matching records?', 'Account Name', 'Site fields', 'Email Address', 'Match Account Id, Account Name, and Account Site exactly as they appear in the application.'),
-    (3, 800, 'The import process will fail, but only for the records with invalid data.', 'Ursa Major Solar is importing data and has many records that do NOT meet the
+    (3, 1000, 'The import process will fail, but only for the records with invalid data.', 'Ursa Major Solar is importing data and has many records that do NOT meet the
 data validation criteria.
 What will occur?', 'The import process will succeed, and all records, including those with invalid data, will be imported without any issues.', 'The import process will fail for all records, regardless of whether they have valid or invalid data.', 'The import process will fail, but only for the records with invalid data.', 'Salesforce runs validation rules on records before they are imported. Records that fail validation are not
 imported.'),
-    (3, 1000, 'the bar', 'If your man is on this 3-letter place in backgammon, your dice roll must correspond to an open point or your turn is lost', '200', '2009-07-22T12:00:00.000Z', '11508', 'Filter'),
+    
 
     -- Workflow / Process Automation
     (4, 200, 'Time-Based Workflow Queue', 'Universal Containers created a Time-Based Workflow rule that sends a follow-up

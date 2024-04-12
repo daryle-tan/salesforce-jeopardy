@@ -116,10 +116,10 @@ Configure a process to create records automatically with process builder'),
     (4, 1000, 'vermillion', 'This shade of scarlet gets its name from the Latin for "worm"', '200', '2009-07-22T12:00:00.000Z', '11508', 'Service Cloud'),
 
     -- Productivity & Collaboration Applications
-    (5, 200, 'Search the AppExchange for free adoption report apps.', 'The managers at Ursa Major Solar asked the administrator to quickly provide
+    (5, 200, 'Check the all-day event checkbox on the event.', 'How should a sales rep create an all-day event in Salesforce?', 'Check the all-day event checkbox on the event.', 'Set the event start and end times to midnight to indicate an all-day event.', 'Use a specific keyword in the event title, such as "All Day" or "Full Day."','Add the event to a special "All-Day" calendar within Salesforce.', 'Checking the all-day event checkbox sets the start and end times for 24 hours.'),
+    (5, 400, 'Search the AppExchange for free adoption report apps.', 'The managers at Ursa Major Solar asked the administrator to quickly provide
 access to sales reports and dashboards.
 How can this be done?', 'Search the AppExchange for free adoption report apps.', 'Grant access to individual reports and dashboards based on user roles.', 'Create a custom Visualforce page to display the required reports and dashboards for managers.', 'The Salesforce Adoption Dashboards app can be found on the AppEschange.'),
-    (5, 400, 'the vice prespointsent', 'In 1973 Spiro served just 8 months in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Lightning Experience'),
     (5, 600, ['Opportunity Dashboard', 'Chatter groups'], 'Sales representatives at Ursa Major Solar are working on opportunities and need to see
 how their colleagues have effectively managed other opportunities with comparable
 products, competing against the same competitors.

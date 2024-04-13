@@ -81,7 +81,10 @@ type of page layout they have access to. By creating two record types, you are a
   
   -- Sales & Marketing Applications
     (3, 200, ['Leads','Contacts'], 'Which two objects can be related to Campaign Members?', 'Leads', 'Contacts', 'Roles', 'Campaign members are contacts or leads associated with campaigns.'),
-    (3, 400, '3', 'In Yahtzee if you lose a pair of the dice you need to play, you''re left with this many', '200', '2009-07-22T12:00:00.000Z', '11508', 'Quick Action'),
+    (3, 400, ['Custom lead fields can be mapped to account, contact, and opportunity fields.','Standard lead fields are automatically converted to account, contact, and opportunity fields.'], 'Ursa Major Solar (UMS) is configuring the lead conversion process.
+Which two factors should UMS consider before setting up the process?
+Choose 2 options.
+', 'Leads cannot be converted if they have custom fields populated.', 'Conversion of leads only applies to standard Salesforce objects and not custom objects.', 'Custom lead fields can be mapped to account, contact, and opportunity fields.','Standard lead fields are automatically converted to account, contact, and opportunity fields.', 'When leads are converted lead records, standard lead fields map to contact, account, person account, and opportunity fields. Custom fields are map to newly created records. When leads are converted lead records, standard lead fields map to contact, account, person account, and opportunity fields. Custom fields are map to newly created records.'),
     (3, 600, 'Add custom sizing as a new product in a pricebook.', 'Ursa Major Solar customers are starting to request custom-sized solar panels,
 which are currently unavailable in the standard inventory. Management has
 decided to add custom sizing as an add-on item in Salesforce.
@@ -125,7 +128,12 @@ how their colleagues have effectively managed other opportunities with comparabl
 products, competing against the same competitors.
 Which two features should an administrator use to allow for this?
 Choose 2 options.', 'Emails', 'Teams', 'Groups', 'A chatter group allows for discussion and sharing of the dashboard.'),
-    (5, 800, 'vice prespointsent', 'In 1974 Gerald served just 8 months in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Salesforce Connect'),
+    (5, 800, 'Log a separate task, call, or activity on the account.', 'Ursa Major Solar has the following environment and requirements:
+Critical, high-priority accounts have an assigned District Manager, Sales Representative, Inside Sales Representative, and Customer Service Representative.
+The Sales Manager wants to prevent these accounts from being inadvertently contacted more than once on the same day.
+The Sales Manager wants to report on various customer interactions.
+How should the administrator fulfill these requirements?
+', 'Configure an automatic email notification to alert users when they are about to contact a critical account more than once in a day.', 'Implement a time-based workflow to restrict interactions with critical accounts to once per day.', 'Use a custom validation rule to prevent multiple interactions with the same account in a day.','Log a separate task, call, or activity on the account.', 'Use activities to log key touchpoints on customers so that a report can be pulled.'),
     (5, 1000, 'vice prespointsent', 'In 1974 Nelson served just 8 months in this job', '200', '2009-07-22T12:00:00.000Z', '11508', 'Salesforce Connect');
 
     -- Data & Analytics Management
@@ -160,7 +168,9 @@ manager role when a case is escalated. The case owner is complaining about
 being assigned these tasks.
 What should a System Administrator do to correct this issue?', 'Delete the Workflow Rule', 'Edit the permissions on the support manager role ', 'freeze the user record', 'Select an assignee for your task. An assignee can be in the form of a user, role, record owner, record
 creator, opportunity team role, or account team role, depending on the type of record you chose.'),
-    (4, 600, 'ruby', 'The name of this gem precedes "throated hummingbird", as seen here', '200', '2009-07-22T12:00:00.000Z', '11508', 'Flow'),
+    (4, 600, 'Record Triggered-Flow that runs Before save', 'Universal Containers has asked its Administrator to automatically set some fields
+when a Lead is created.
+What is the best way for the administrator to perform this automation?', 'Record Triggered-Flow that runs Before save', 'Use a Process Builder with a scheduled action to update the fields after lead creation.', 'Write an Apex trigger that fires after the lead is inserted to update the fields.','Utilize a workflow rule with field updates based on lead creation criteria.', 'Update new and changed records by using before-save updates in flows.'),
     (4, 800, ['Rule actions can take place immediately or can be time based.','Rules can be evaluated when records are created or edited.'], 'An administrator at Ursa Major Solar is configuring a workflow rule.
 What are two considerations for an administrator in this situation?
 Choose 2 options.', 'Rule actions can take place immediately or can be time based.', 'Rules can be evaluated when records are created or edited.', 'Rule actions are limited to one per workflow rule, and cannot be combined for different scenarios.', 'Workflow rules can be triggered any time a record is saved or created, depending on your rule criteria.'),

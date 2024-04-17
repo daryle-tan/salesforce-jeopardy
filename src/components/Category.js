@@ -53,7 +53,11 @@ const Category = ({
     const answer = categories[categoryId].clues[selectedClueIndex].answer
 
     // Check if every selected option is included in the answer array
-    const isCorrect = selectedOptions.every((option) => answer.includes(option))
+    const isCorrect =
+      selectedOptions.length === answer.length &&
+      selectedOptions
+        .sort()
+        .every((option, index) => option === answer.sort()[index])
 
     if (isCorrect) {
       setSelectedAnswer(true)
@@ -64,7 +68,9 @@ const Category = ({
     } else {
       setIncorrectAnswer(true)
     }
-    console.log("selected option", selectedOption)
+    console.log("selected option", selectedOption, "isCorrect", isCorrect)
+    console.log("selectedOptions:", selectedOptions)
+    console.log("answer:", answer)
     setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {
       const newHasBeenAnswered = [...prev]
@@ -111,7 +117,13 @@ const Category = ({
                       name="picklist"
                       value={option}
                       onChange={(e) => {
-                        setSelectedOption((prev) => [...prev, e.target.value])
+                        if (e.target.checked) {
+                          setSelectedOption((prev) => [...prev, e.target.value])
+                        } else {
+                          setSelectedOption((prev) =>
+                            prev.filter((option) => option !== e.target.value),
+                          )
+                        }
                       }}
                     />
                     <label htmlFor={`option${index + 1}`}>{option}</label>

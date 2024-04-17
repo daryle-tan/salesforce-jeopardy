@@ -49,7 +49,7 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: ["Cibola", 222],
+        answer: ["Cibola", "222"],
         question:
           "Antonio de Mendoza, viceroy of New Spain, sent Coronado to find the Seven Cities of this golden land; he didn't",
         option1: 222,
@@ -77,10 +77,10 @@ export const categories = [
       },
       {
         points: 400,
-        answer: ["Bonnie Parker", 253, "2009"],
+        answer: ["Bonnie Parker", "253", "2009"],
         question:
           "While on the run in the 1930s, this 4'10\" bank robber sent poetry & photos of her & Clyde to newspapers",
-        option1: 253,
+        option1: "253",
         option2: "2009",
         option3: 1158,
         option4: "Bonnie Parker",
@@ -99,7 +99,7 @@ export const categories = [
       },
       {
         points: 800,
-        answer: ["Madeleine Albright", 7, "T12:00:00.000Z"],
+        answer: ["Madeleine Albright", "7", "T12:00:00.000Z"],
         question:
           "Though not tall, this future Secy. of State made a big impression in 1993 as U.S. Ambassador to the United Nations",
         option1: 7,
@@ -110,7 +110,7 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: ["Mother Teresa", 230],
+        answer: ["Mother Teresa", "230"],
         question:
           "In 1928 this diminutive daughter of an Albanian grocer joined the Sisters of Loretto in Ireland",
         option1: 230,
@@ -149,7 +149,7 @@ export const categories = [
       },
       {
         points: 600,
-        answer: ["$75", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["$75", "2009-07-22T12:00:00.000Z", "11508"],
         question:
           "Roll your pair of dice & land on Luxury Tax on a classic Monopoly board & you lose this much cash",
         option1: 200,
@@ -171,7 +171,7 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: ["the bar", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["the bar", "2009-07-22T12:00:00.000Z", "11508"],
         question:
           "If your man is on this 3-letter place in backgammon, your dice roll must correspond to an open point or your turn is lost",
         option1: 200,
@@ -209,7 +209,7 @@ export const categories = [
       },
       {
         points: 600,
-        answer: ["ruby", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["ruby", "2009-07-22T12:00:00.000Z", "11508"],
         question:
           'The name of this gem precedes "throated hummingbird", as seen here',
         option1: 200,
@@ -231,7 +231,7 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: ["vermillion", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["vermillion", "2009-07-22T12:00:00.000Z", "11508"],
         question:
           'This shade of scarlet gets its name from the Latin for "worm"',
         option1: 200,
@@ -269,7 +269,7 @@ export const categories = [
       },
       {
         points: 600,
-        answer: ["Missouri", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["Missouri", "2009-07-22T12:00:00.000Z", "11508"],
         question:
           "Each May 8 this state officially celebrates Harry Truman's birthday",
         option1: 200,
@@ -291,7 +291,7 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: ["Thomas Dewey", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["Thomas Dewey", "2009-07-22T12:00:00.000Z", "11508"],
         question:
           "He was the last person beaten by Harry Truman in an election",
         option1: 200,
@@ -328,7 +328,7 @@ export const categories = [
       },
       {
         points: 600,
-        answer: ["Show Me state", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["Show Me state", "2009-07-22T12:00:00.000Z", "11508"],
         question: "Harry Truman's birthday",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
@@ -349,7 +349,7 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: ["Thomas ", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["Thomas ", "2009-07-22T12:00:00.000Z", "11508"],
         question: "He was the last person beaten ",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
@@ -385,7 +385,7 @@ export const categories = [
       },
       {
         points: 600,
-        answer: ["Miss", "2009-07-22T12:00:00.000Z", 11508],
+        answer: ["Miss", "2009-07-22T12:00:00.000Z", "11508"],
         question: "this state officially celebrates Harry Truman's birthday",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",
@@ -406,7 +406,7 @@ export const categories = [
       },
       {
         points: 1000,
-        answer: [" Dewey", "2009-07-22T12:00:00.000Z", 11508],
+        answer: [" Dewey", "2009-07-22T12:00:00.000Z", "11508"],
         question: " last person beaten by Harry Truman in an election",
         option1: 200,
         option2: "2009-07-22T12:00:00.000Z",

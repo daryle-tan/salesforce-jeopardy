@@ -8,6 +8,7 @@ function Correct({
   selectedOption,
 }) {
   const checkOption = (optionValue) => {
+    optionValue.toString()
     return selectedOption.includes(optionValue)
   }
 

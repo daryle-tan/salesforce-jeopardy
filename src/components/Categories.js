@@ -14,6 +14,7 @@ const Categories = ({
   const [categoryId, setCategoryId] = useState(0)
   const [selectedClueIndex, setSelectedClueIndex] = useState(0)
   const [idx, setIdx] = useState(null)
+  const [selectedOption, setSelectedOption] = useState([])
   const values = [
     "$200",
     "$200",
@@ -72,6 +73,7 @@ const Categories = ({
     setCategory((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
+    setSelectedOption([])
 
     if (id === 0 || id === 7 || id === 14 || id === 21 || id === 28) {
       setCategoryId(0)
@@ -194,6 +196,8 @@ const Categories = ({
         selectedClueIndex={selectedClueIndex}
         idx={idx}
         setCluesAnswered={setCluesAnswered}
+        selectedOption={selectedOption}
+        setSelectedOption={setSelectedOption}
       />
     </>
   )

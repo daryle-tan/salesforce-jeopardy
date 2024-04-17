@@ -28,7 +28,7 @@ export const Incorrect = ({
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="radio"
+                type="checkbox"
                 id="option1"
                 name="picklist"
                 value="option1"
@@ -42,7 +42,7 @@ export const Incorrect = ({
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="radio"
+                type="checkbox"
                 id="option2"
                 name="picklist"
                 value="option2"
@@ -56,7 +56,7 @@ export const Incorrect = ({
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="radio"
+                type="checkbox"
                 id="option3"
                 name="picklist"
                 value="option3"
@@ -70,7 +70,7 @@ export const Incorrect = ({
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="radio"
+                type="checkbox"
                 id="option4"
                 name="picklist"
                 value="option4"

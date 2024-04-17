@@ -1,7 +1,16 @@
 import React from "react"
 import { categories } from "../testdata.js"
 
-function Correct({ categoryId, selectedClueIndex, openCategoryModal }) {
+function Correct({
+  categoryId,
+  selectedClueIndex,
+  openCategoryModal,
+  selectedOption,
+}) {
+  const checkOption = (optionValue) => {
+    return selectedOption.includes(optionValue)
+  }
+
   return (
     <>
       <div className="categoryOverlay"></div>
@@ -24,39 +33,43 @@ function Correct({ categoryId, selectedClueIndex, openCategoryModal }) {
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="radio"
+                type="checkbox"
                 id="option1"
                 name="picklist"
                 value="option1"
               />
-              <label htmlFor="option1" className="correctAnswer">
-                {categories[categoryId].clues[selectedClueIndex].answer}
-              </label>
-              <br />
-            </div>
-            <div className="formContainer">
-              <input
-                className="radioButton"
-                type="radio"
-                id="option2"
-                name="picklist"
-                value="option2"
-              />
-              <label htmlFor="option2">
+              <label
+                htmlFor="option1"
+                className={
+                  checkOption(
+                    categories[categoryId].clues[selectedClueIndex].option1,
+                  )
+                    ? "correctAnswer"
+                    : "category"
+                }
+              >
                 {categories[categoryId].clues[selectedClueIndex].option1}
               </label>
               <br />
             </div>
-
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="radio"
-                id="option3"
+                type="checkbox"
+                id="option2"
                 name="picklist"
-                value="option3"
+                value="option2"
               />
-              <label htmlFor="option3">
+              <label
+                htmlFor="option2"
+                className={
+                  checkOption(
+                    categories[categoryId].clues[selectedClueIndex].option2,
+                  )
+                    ? "correctAnswer"
+                    : "category"
+                }
+              >
                 {categories[categoryId].clues[selectedClueIndex].option2}
               </label>
               <br />
@@ -65,13 +78,45 @@ function Correct({ categoryId, selectedClueIndex, openCategoryModal }) {
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="radio"
+                type="checkbox"
+                id="option3"
+                name="picklist"
+                value="option3"
+              />
+              <label
+                htmlFor="option3"
+                className={
+                  checkOption(
+                    categories[categoryId].clues[selectedClueIndex].option3,
+                  )
+                    ? "correctAnswer"
+                    : "category"
+                }
+              >
+                {categories[categoryId].clues[selectedClueIndex].option3}
+              </label>
+              <br />
+            </div>
+
+            <div className="formContainer">
+              <input
+                className="radioButton"
+                type="checkbox"
                 id="option4"
                 name="picklist"
                 value="option4"
               />
-              <label htmlFor="option4">
-                {categories[categoryId].clues[selectedClueIndex].option3}
+              <label
+                htmlFor="option4"
+                className={
+                  checkOption(
+                    categories[categoryId].clues[selectedClueIndex].option4,
+                  )
+                    ? "correctAnswer"
+                    : "category"
+                }
+              >
+                {categories[categoryId].clues[selectedClueIndex].option4}
               </label>
             </div>
             <div className="submitContainer">

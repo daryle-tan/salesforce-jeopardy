@@ -1,5 +1,4 @@
 import { React, useState } from "react"
-import { categories } from "../testdata.js"
 import Gameboard from "./Gameboard.js"
 import Scoreboard from "./Scoreboard.js"
 import Footer from "./Footer.js"

@@ -16,8 +16,9 @@ const Category = ({
   selectedClueIndex,
   idx,
   setCluesAnswered,
+  selectedOption,
+  setSelectedOption,
 }) => {
-  const [selectedOption, setSelectedOption] = useState("")
   const [shuffledOptions, setShuffledOptions] = useState([])
 
   const shuffleArray = (array) => {
@@ -35,10 +36,10 @@ const Category = ({
   useEffect(() => {
     setShuffledOptions(
       shuffleArray([
-        categories[categoryId].clues[selectedClueIndex].answer,
         categories[categoryId].clues[selectedClueIndex].option1,
         categories[categoryId].clues[selectedClueIndex].option2,
         categories[categoryId].clues[selectedClueIndex].option3,
+        categories[categoryId].clues[selectedClueIndex].option4,
       ]),
     )
   }, [categoryId, selectedClueIndex])
@@ -46,19 +47,24 @@ const Category = ({
   const handleSubmit = (categoryId, event) => {
     event.preventDefault()
 
-    if (
-      selectedOption === categories[categoryId].clues[selectedClueIndex].answer
-    ) {
+    const selectedOptions = Array.isArray(selectedOption)
+      ? selectedOption
+      : [selectedOption]
+    const answer = categories[categoryId].clues[selectedClueIndex].answer
+
+    // Check if every selected option is included in the answer array
+    const isCorrect = selectedOptions.every((option) => answer.includes(option))
+
+    if (isCorrect) {
       setSelectedAnswer(true)
+
       setScore(
         (prev) => prev + categories[categoryId].clues[selectedClueIndex].points,
       )
-    } else if (
-      selectedOption !== categories[categoryId].clues[selectedClueIndex].answer
-    ) {
+    } else {
       setIncorrectAnswer(true)
     }
-
+    console.log("selected option", selectedOption)
     setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {
       const newHasBeenAnswered = [...prev]
@@ -100,12 +106,12 @@ const Category = ({
                   <div className="formContainer" key={index}>
                     <input
                       className="radioBtn"
-                      type="radio"
+                      type="checkbox"
                       id={`option${index + 1}`}
                       name="picklist"
                       value={option}
                       onChange={(e) => {
-                        setSelectedOption(e.target.value)
+                        setSelectedOption((prev) => [...prev, e.target.value])
                       }}
                     />
                     <label htmlFor={`option${index + 1}`}>{option}</label>
@@ -128,12 +134,14 @@ const Category = ({
             openCategoryModal={openCategoryModal}
             categoryId={categoryId}
             selectedClueIndex={selectedClueIndex}
+            selectedOption={selectedOption}
           />
         ) : selectedAnswer && !incorrectAnswer ? (
           <Correct
             openCategoryModal={openCategoryModal}
             categoryId={categoryId}
             selectedClueIndex={selectedClueIndex}
+            selectedOption={selectedOption}
           />
         ) : null}
       </div>

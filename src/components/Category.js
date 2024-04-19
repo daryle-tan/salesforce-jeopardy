@@ -112,7 +112,12 @@ const Category = ({
                   <div className="formContainer" key={index}>
                     <input
                       className="radioBtn"
-                      type="checkbox"
+                      type={
+                        categories[categoryId].clues[selectedClueIndex].answer
+                          .length > 1
+                          ? "checkbox"
+                          : "radio"
+                      }
                       id={`option${index + 1}`}
                       name="picklist"
                       value={option}

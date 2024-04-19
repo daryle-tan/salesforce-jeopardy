@@ -7,8 +7,8 @@ function Correct({
   openCategoryModal,
   selectedOption,
 }) {
-  const checkOption = (optionValue) => {
-    optionValue.toString()
+  const checkOption = (option) => {
+    let optionValue = option.toString()
     return selectedOption.includes(optionValue)
   }
 
@@ -34,7 +34,12 @@ function Correct({
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="checkbox"
+                type={
+                  categories[categoryId].clues[selectedClueIndex].answer
+                    .length > 1
+                    ? "checkbox"
+                    : "radio"
+                }
                 id="option1"
                 name="picklist"
                 value="option1"
@@ -56,7 +61,12 @@ function Correct({
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="checkbox"
+                type={
+                  categories[categoryId].clues[selectedClueIndex].answer
+                    .length > 1
+                    ? "checkbox"
+                    : "radio"
+                }
                 id="option2"
                 name="picklist"
                 value="option2"
@@ -79,7 +89,12 @@ function Correct({
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="checkbox"
+                type={
+                  categories[categoryId].clues[selectedClueIndex].answer
+                    .length > 1
+                    ? "checkbox"
+                    : "radio"
+                }
                 id="option3"
                 name="picklist"
                 value="option3"
@@ -102,7 +117,12 @@ function Correct({
             <div className="formContainer">
               <input
                 className="radioButton"
-                type="checkbox"
+                type={
+                  categories[categoryId].clues[selectedClueIndex].answer
+                    .length > 1
+                    ? "checkbox"
+                    : "radio"
+                }
                 id="option4"
                 name="picklist"
                 value="option4"

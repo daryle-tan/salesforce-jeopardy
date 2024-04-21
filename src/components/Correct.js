@@ -6,6 +6,7 @@ function Correct({
   selectedClueIndex,
   openCategoryModal,
   selectedOption,
+  categories1,
 }) {
   const checkOption = (option) => {
     let optionValue = option.toString()
@@ -24,9 +25,7 @@ function Correct({
         </div>
         <h1 className="correctHeader">Correct!</h1>
         <div className="question">
-          <p className="questionP">
-            {categories[categoryId].clues[selectedClueIndex].question}
-          </p>
+          <p className="questionP">{categories1[selectedClueIndex].question}</p>
         </div>
 
         <div className="category" data-testid="category">
@@ -35,8 +34,7 @@ function Correct({
               <input
                 className="radioButton"
                 type={
-                  categories[categoryId].clues[selectedClueIndex].answer
-                    .length > 1
+                  categories1[selectedClueIndex].answer.length > 1
                     ? "checkbox"
                     : "radio"
                 }
@@ -47,14 +45,12 @@ function Correct({
               <label
                 htmlFor="option1"
                 className={
-                  checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option1,
-                  )
+                  checkOption(categories1[selectedClueIndex].option1)
                     ? "correctAnswer"
                     : "category"
                 }
               >
-                {categories[categoryId].clues[selectedClueIndex].option1}
+                {categories1[selectedClueIndex].option1}
               </label>
               <br />
             </div>
@@ -62,8 +58,7 @@ function Correct({
               <input
                 className="radioButton"
                 type={
-                  categories[categoryId].clues[selectedClueIndex].answer
-                    .length > 1
+                  categories1[selectedClueIndex].answer.length > 1
                     ? "checkbox"
                     : "radio"
                 }
@@ -74,14 +69,12 @@ function Correct({
               <label
                 htmlFor="option2"
                 className={
-                  checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option2,
-                  )
+                  checkOption(categories1[selectedClueIndex].option2)
                     ? "correctAnswer"
                     : "category"
                 }
               >
-                {categories[categoryId].clues[selectedClueIndex].option2}
+                {categories1[selectedClueIndex].option2}
               </label>
               <br />
             </div>
@@ -90,8 +83,7 @@ function Correct({
               <input
                 className="radioButton"
                 type={
-                  categories[categoryId].clues[selectedClueIndex].answer
-                    .length > 1
+                  categories1[selectedClueIndex].answer.length > 1
                     ? "checkbox"
                     : "radio"
                 }
@@ -102,14 +94,12 @@ function Correct({
               <label
                 htmlFor="option3"
                 className={
-                  checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option3,
-                  )
+                  checkOption(categories1[selectedClueIndex].option3)
                     ? "correctAnswer"
                     : "category"
                 }
               >
-                {categories[categoryId].clues[selectedClueIndex].option3}
+                {categories1[selectedClueIndex].option3}
               </label>
               <br />
             </div>
@@ -118,8 +108,7 @@ function Correct({
               <input
                 className="radioButton"
                 type={
-                  categories[categoryId].clues[selectedClueIndex].answer
-                    .length > 1
+                  categories1[selectedClueIndex].answer.length > 1
                     ? "checkbox"
                     : "radio"
                 }
@@ -130,21 +119,16 @@ function Correct({
               <label
                 htmlFor="option4"
                 className={
-                  checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option4,
-                  )
+                  checkOption(categories1[selectedClueIndex].option4)
                     ? "correctAnswer"
                     : "category"
                 }
               >
-                {categories[categoryId].clues[selectedClueIndex].option4}
+                {categories1[selectedClueIndex].option4}
               </label>
             </div>
             <div className="submitContainer">
-              <p>
-                Explanation:{" "}
-                {categories[categoryId].clues[selectedClueIndex].explanation}
-              </p>
+              <p>Explanation: {categories1[selectedClueIndex].explanation}</p>
             </div>
           </form>
         </div>

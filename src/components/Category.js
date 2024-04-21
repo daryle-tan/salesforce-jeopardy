@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import { categories } from "../testdata.js"
 import Correct from "./Correct.js"
 import { Incorrect } from "./Incorrect.js"
+import { categories } from "../testdata.js"
 
 const Category = ({
   category,
@@ -18,8 +18,11 @@ const Category = ({
   setCluesAnswered,
   selectedOption,
   setSelectedOption,
+  setSelectedClueIndex,
 }) => {
   const [shuffledOptions, setShuffledOptions] = useState([])
+  const [categories1, setCategories] = useState([])
+  const [clues, setClues] = useState([])
 
   const shuffleArray = (array) => {
     const shuffledArray = [...array]
@@ -34,15 +37,36 @@ const Category = ({
   }
 
   useEffect(() => {
-    setShuffledOptions(
-      shuffleArray([
-        categories[categoryId].clues[selectedClueIndex].option1,
-        categories[categoryId].clues[selectedClueIndex].option2,
-        categories[categoryId].clues[selectedClueIndex].option3,
-        categories[categoryId].clues[selectedClueIndex].option4,
-      ]),
-    )
-  }, [categoryId, selectedClueIndex])
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://localhost:3001/api/clues")
+        const data = await response.json()
+        console.log(data)
+
+        setCategories(data)
+        // setSelectedClueIndex(data[])
+        console.log("categories1", categories1)
+        console.log("data[5]", data[5])
+
+        // Check if selectedClueIndex is valid and data is available
+        if (selectedClueIndex >= 0 && selectedClueIndex <= data.length) {
+          setShuffledOptions(
+            shuffleArray([
+              categories1[selectedClueIndex].option1,
+              categories1[selectedClueIndex].option2,
+              categories1[selectedClueIndex].option3,
+              categories1[selectedClueIndex].option4,
+            ]),
+          )
+        }
+      } catch (error) {
+        console.error("error", error)
+      }
+    }
+
+    fetchData()
+    // fetchClues()
+  }, [selectedClueIndex, categoryId])
 
   const handleSubmit = (categoryId, event) => {
     event.preventDefault()
@@ -50,7 +74,7 @@ const Category = ({
     const selectedOptions = Array.isArray(selectedOption)
       ? selectedOption
       : [selectedOption]
-    const answer = categories[categoryId].clues[selectedClueIndex].answer
+    const answer = categories1[selectedClueIndex].answer
 
     // Check if every selected option is included in the answer array
     const isCorrect =
@@ -62,9 +86,7 @@ const Category = ({
     if (isCorrect) {
       setSelectedAnswer(true)
 
-      setScore(
-        (prev) => prev + categories[categoryId].clues[selectedClueIndex].points,
-      )
+      setScore((prev) => prev + categories1[selectedClueIndex].points)
     } else {
       setIncorrectAnswer(true)
     }
@@ -90,7 +112,7 @@ const Category = ({
 
   return (
     <>
-      {category ? (
+      {category && categories1[selectedClueIndex] ? (
         <>
           <div className="categoryOverlay"></div>
 
@@ -102,7 +124,7 @@ const Category = ({
             </div>
             <div className="question">
               <p className="questionP">
-                {categories[categoryId].clues[selectedClueIndex].question}
+                {categories1[selectedClueIndex].question}
               </p>
             </div>
 
@@ -113,8 +135,7 @@ const Category = ({
                     <input
                       className="radioBtn"
                       type={
-                        categories[categoryId].clues[selectedClueIndex].answer
-                          .length > 1
+                        categories1[selectedClueIndex].answer.length > 1
                           ? "checkbox"
                           : "radio"
                       }
@@ -152,6 +173,7 @@ const Category = ({
             categoryId={categoryId}
             selectedClueIndex={selectedClueIndex}
             selectedOption={selectedOption}
+            categories1={categories1}
           />
         ) : selectedAnswer && !incorrectAnswer ? (
           <Correct
@@ -159,6 +181,7 @@ const Category = ({
             categoryId={categoryId}
             selectedClueIndex={selectedClueIndex}
             selectedOption={selectedOption}
+            categories1={categories1}
           />
         ) : null}
       </div>

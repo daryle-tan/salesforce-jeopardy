@@ -7,7 +7,7 @@ const { Pool } = pkg
 dotenv.config()
 
 const app = express()
-const { DATABASE_URL, NODE_ENV, PORT, pw } = process.env
+const { PORT, pw } = process.env
 
 app.use(express.json())
 app.use(cors())
@@ -27,7 +27,7 @@ const pool = new Pool({
 
 app.get("/api/categories", (req, res, next) => {
   pool
-    .query("SELECT * FROM categories")
+    .query("SELECT * FROM categories;")
     .then((response) => {
       res.send(response.rows)
     })
@@ -51,7 +51,7 @@ app.get("/api/categories/:id", (req, res, next) => {
 
 app.get("/api/clues", (req, res, next) => {
   pool
-    .query("SELECT * FROM clues")
+    .query("SELECT * FROM clues;")
     .then((response) => {
       res.send(response.rows)
     })

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import Category from "./Category.js"
-import { categories } from "../testdata.js"
+import { set } from "date-fns"
 
 const Categories = ({
   setScore,
@@ -15,6 +15,7 @@ const Categories = ({
   const [selectedClueIndex, setSelectedClueIndex] = useState(0)
   const [idx, setIdx] = useState(null)
   const [selectedOption, setSelectedOption] = useState([])
+  const [dataId, setDataId] = useState(null)
   const values = [
     "$200",
     "$200",
@@ -57,6 +58,18 @@ const Categories = ({
   )
 
   useEffect(() => {
+    // if (data.length > 0) {
+    //   for (let i = 0; i < data.length; i++) {
+    //     // console.log(data[i].id - 1)
+    //     let dataIdx = data[i].id - 1
+    //     if (i == dataIdx) {
+    //       // console.log("I'm Here", i)
+    //       setSelectedClueIndex(dataIdx)
+    //     }
+    //   }
+    // }
+    // console.log("data", data)
+
     console.log(
       "categoryId:",
       categoryId,
@@ -65,83 +78,91 @@ const Categories = ({
       "cluesAnswered:",
       cluesAnswered,
     )
+    // fetchClues()
   }, [selectedClueIndex, categoryId, category, cluesAnswered])
+
+  const getClues = async (id) => {
+    try {
+      const response2 = await fetch("http://localhost:3001/api/clues")
+      const data2 = await response2.json()
+
+      const indexMap = {
+        7: 1,
+        14: 2,
+        21: 3,
+        28: 4,
+        1: 5,
+        8: 6,
+        15: 7,
+        22: 8,
+        29: 9,
+        2: 10,
+        9: 11,
+        16: 12,
+        23: 13,
+        30: 14,
+        3: 15,
+        10: 16,
+        17: 17,
+        24: 18,
+        31: 19,
+        4: 20,
+        11: 21,
+        18: 22,
+        25: 23,
+        32: 24,
+        5: 25,
+        12: 26,
+        19: 27,
+        26: 28,
+        33: 29,
+        6: 30,
+        13: 31,
+        20: 32,
+        27: 33,
+        34: 34,
+      }
+
+      setSelectedClueIndex(indexMap[id] || 0)
+
+      const response = await fetch(`/api/clues/${id}`)
+      const data = await response.json()
+
+      console.log("id", id)
+      if (!response.ok) {
+        throw new Error(data.message || "Could not fetch clues.")
+      }
+      setDataId(data.id)
+      return data
+    } catch (error) {
+      console.error("Error fetching clues:", error)
+    }
+  }
 
   const openCategoryModal = (categoryId) => {
     const id = Number(categoryId.target.id)
+    const clueId = id + 1
     setIdx(id)
     setCategory((prev) => !prev)
     setSelectedAnswer(false)
     setIncorrectAnswer(false)
     setSelectedOption([])
+    getClues(id)
 
     if (id === 0 || id === 7 || id === 14 || id === 21 || id === 28) {
-      setCategoryId(0)
-    } else if (id === 1 || id === 8 || id === 15 || id === 22 || id === 29) {
       setCategoryId(1)
-    } else if (id === 2 || id === 9 || id === 16 || id === 23 || id === 30) {
+    } else if (id === 1 || id === 8 || id === 15 || id === 22 || id === 29) {
       setCategoryId(2)
-    } else if (id === 3 || id === 10 || id === 17 || id === 24 || id === 31) {
+    } else if (id === 2 || id === 9 || id === 16 || id === 23 || id === 30) {
       setCategoryId(3)
-    } else if (id === 4 || id === 11 || id === 18 || id === 25 || id === 32) {
+    } else if (id === 3 || id === 10 || id === 17 || id === 24 || id === 31) {
       setCategoryId(4)
-    } else if (id === 5 || id === 12 || id === 19 || id === 26 || id === 33) {
+    } else if (id === 4 || id === 11 || id === 18 || id === 25 || id === 32) {
       setCategoryId(5)
-    } else if (id === 6 || id === 13 || id === 20 || id === 27 || id === 34) {
+    } else if (id === 5 || id === 12 || id === 19 || id === 26 || id === 33) {
       setCategoryId(6)
-    }
-
-    if (
-      id === 0 ||
-      id === 1 ||
-      id === 2 ||
-      id === 3 ||
-      id === 4 ||
-      id === 5 ||
-      id === 6
-    ) {
-      setSelectedClueIndex(0)
-    } else if (
-      id === 7 ||
-      id === 8 ||
-      id === 9 ||
-      id === 10 ||
-      id === 11 ||
-      id === 12 ||
-      id === 13
-    ) {
-      setSelectedClueIndex(1)
-    } else if (
-      id === 14 ||
-      id === 15 ||
-      id === 16 ||
-      id === 17 ||
-      id === 18 ||
-      id === 19 ||
-      id === 20
-    ) {
-      setSelectedClueIndex(2)
-    } else if (
-      id === 21 ||
-      id === 22 ||
-      id === 23 ||
-      id === 24 ||
-      id === 25 ||
-      id === 26 ||
-      id === 27
-    ) {
-      setSelectedClueIndex(3)
-    } else if (
-      id === 4 ||
-      id === 28 ||
-      id === 29 ||
-      id === 30 ||
-      id === 31 ||
-      id === 32 ||
-      id === 33 ||
-      id === 34
-    ) {
-      setSelectedClueIndex(4)
+    } else if (id === 6 || id === 13 || id === 20 || id === 27 || id === 34) {
+      setCategoryId(7)
     }
 
     console.log(
@@ -149,8 +170,6 @@ const Categories = ({
       categoryId,
       "category:",
       category,
-      "categories:",
-      categories,
       "id:",
       id,
       "selectedClueIndex:",
@@ -198,6 +217,7 @@ const Categories = ({
         setCluesAnswered={setCluesAnswered}
         selectedOption={selectedOption}
         setSelectedOption={setSelectedOption}
+        setSelectedClueIndex={setSelectedClueIndex}
       />
     </>
   )

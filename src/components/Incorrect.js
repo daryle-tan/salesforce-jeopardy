@@ -6,8 +6,9 @@ export const Incorrect = ({
   selectedClueIndex,
   openCategoryModal,
   selectedOption,
+  categories1,
 }) => {
-  const answer = categories[categoryId].clues[selectedClueIndex].answer
+  const answer = categories1[selectedClueIndex].answer
 
   const checkOption = (option) => {
     let optionValue = option.toString()
@@ -26,9 +27,7 @@ export const Incorrect = ({
         </div>
         <h1 className="incorrectHeader">Incorrect.</h1>
         <div className="question">
-          <p className="questionP">
-            {categories[categoryId].clues[selectedClueIndex].question}
-          </p>
+          <p className="questionP">{categories1[selectedClueIndex].question}</p>
         </div>
 
         <div className="category" data-testid="category">
@@ -37,8 +36,7 @@ export const Incorrect = ({
               <input
                 className="radioButton"
                 type={
-                  categories[categoryId].clues[selectedClueIndex].answer
-                    .length > 1
+                  categories1[selectedClueIndex].answer.length > 1
                     ? "checkbox"
                     : "radio"
                 }
@@ -49,18 +47,14 @@ export const Incorrect = ({
               <label
                 htmlFor="option1"
                 className={
-                  checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option1,
-                  )
+                  checkOption(categories1[selectedClueIndex].option1)
                     ? "answerForIncorrect"
                     : "incorrectAnswer"
                 }
               >
-                {categories[categoryId].clues[selectedClueIndex].option1}{" "}
+                {categories1[selectedClueIndex].option1}{" "}
                 <span className="arrow">
-                  {checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option1,
-                  )
+                  {checkOption(categories1[selectedClueIndex].option1)
                     ? "← Correct Answer"
                     : null}
                 </span>
@@ -71,8 +65,7 @@ export const Incorrect = ({
               <input
                 className="radioButton"
                 type={
-                  categories[categoryId].clues[selectedClueIndex].answer
-                    .length > 1
+                  categories1[selectedClueIndex].answer.length > 1
                     ? "checkbox"
                     : "radio"
                 }
@@ -83,18 +76,14 @@ export const Incorrect = ({
               <label
                 htmlFor="option2"
                 className={
-                  checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option2,
-                  )
+                  checkOption(categories1[selectedClueIndex].option2)
                     ? "answerForIncorrect"
                     : "incorrectAnswer"
                 }
               >
-                {categories[categoryId].clues[selectedClueIndex].option2}
+                {categories1[selectedClueIndex].option2}
                 <span className="arrow">
-                  {checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option2,
-                  )
+                  {checkOption(categories1[selectedClueIndex].option2)
                     ? "← Correct Answer"
                     : null}
                 </span>
@@ -106,8 +95,7 @@ export const Incorrect = ({
               <input
                 className="radioButton"
                 type={
-                  categories[categoryId].clues[selectedClueIndex].answer
-                    .length > 1
+                  categories1[selectedClueIndex].answer.length > 1
                     ? "checkbox"
                     : "radio"
                 }
@@ -118,18 +106,14 @@ export const Incorrect = ({
               <label
                 htmlFor="option3"
                 className={
-                  checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option3,
-                  )
+                  checkOption(categories1[selectedClueIndex].option3)
                     ? "answerForIncorrect"
                     : "incorrectAnswer"
                 }
               >
-                {categories[categoryId].clues[selectedClueIndex].option3}
+                {categories1[selectedClueIndex].option3}
                 <span className="arrow">
-                  {checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option3,
-                  )
+                  {checkOption(categories1[selectedClueIndex].option3)
                     ? "← Correct Answer"
                     : null}
                 </span>
@@ -141,8 +125,7 @@ export const Incorrect = ({
               <input
                 className="radioButton"
                 type={
-                  categories[categoryId].clues[selectedClueIndex].answer
-                    .length > 1
+                  categories1[selectedClueIndex].answer.length > 1
                     ? "checkbox"
                     : "radio"
                 }
@@ -153,28 +136,21 @@ export const Incorrect = ({
               <label
                 htmlFor="option4"
                 className={
-                  checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option4,
-                  )
+                  checkOption(categories1[selectedClueIndex].option4)
                     ? "answerForIncorrect"
                     : "incorrectAnswer"
                 }
               >
-                {categories[categoryId].clues[selectedClueIndex].option4}
+                {categories1[selectedClueIndex].option4}
                 <span className="arrow">
-                  {checkOption(
-                    categories[categoryId].clues[selectedClueIndex].option4,
-                  )
+                  {checkOption(categories1[selectedClueIndex].option4)
                     ? "← Correct Answer"
                     : null}
                 </span>
               </label>
             </div>
             <div className="submitContainer">
-              <p>
-                Explanation:{" "}
-                {categories[categoryId].clues[selectedClueIndex].explanation}
-              </p>
+              <p>Explanation: {categories1[selectedClueIndex].explanation}</p>
             </div>
           </form>
         </div>

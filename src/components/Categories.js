@@ -15,7 +15,7 @@ const Categories = ({
   const [selectedClueIndex, setSelectedClueIndex] = useState(0)
   const [idx, setIdx] = useState(null)
   const [selectedOption, setSelectedOption] = useState([])
-  const [dataId, setDataId] = useState(null)
+
   const values = [
     "$200",
     "$200",
@@ -58,27 +58,14 @@ const Categories = ({
   )
 
   useEffect(() => {
-    // if (data.length > 0) {
-    //   for (let i = 0; i < data.length; i++) {
-    //     // console.log(data[i].id - 1)
-    //     let dataIdx = data[i].id - 1
-    //     if (i == dataIdx) {
-    //       // console.log("I'm Here", i)
-    //       setSelectedClueIndex(dataIdx)
-    //     }
-    //   }
-    // }
-    // console.log("data", data)
-
-    console.log(
-      "categoryId:",
-      categoryId,
-      "selectedClueIndex:",
-      selectedClueIndex,
-      "cluesAnswered:",
-      cluesAnswered,
-    )
-    // fetchClues()
+    // console.log(
+    //   "categoryId:",
+    //   categoryId,
+    //   "selectedClueIndex:",
+    //   selectedClueIndex,
+    //   "cluesAnswered:",
+    //   cluesAnswered,
+    // )
   }, [selectedClueIndex, categoryId, category, cluesAnswered])
 
   const getClues = async (id) => {
@@ -125,15 +112,15 @@ const Categories = ({
 
       setSelectedClueIndex(indexMap[id] || 0)
 
-      const response = await fetch(`/api/clues/${id}`)
-      const data = await response.json()
+      // const response = await fetch(`/api/clues/${selectedClueIndex}`)
+      // const data = await response.json()
 
-      console.log("id", id)
-      if (!response.ok) {
-        throw new Error(data.message || "Could not fetch clues.")
-      }
-      setDataId(data.id)
-      return data
+      // console.log("id", id)
+      // if (!response.ok) {
+      //   throw new Error(data.message || "Could not fetch clues.")
+      // }
+      // setDataId(data.id)
+      // return data
     } catch (error) {
       console.error("Error fetching clues:", error)
     }
@@ -141,7 +128,7 @@ const Categories = ({
 
   const openCategoryModal = (categoryId) => {
     const id = Number(categoryId.target.id)
-    const clueId = id + 1
+
     setIdx(id)
     setCategory((prev) => !prev)
     setSelectedAnswer(false)
@@ -165,16 +152,16 @@ const Categories = ({
       setCategoryId(7)
     }
 
-    console.log(
-      "categoryId:",
-      categoryId,
-      "category:",
-      category,
-      "id:",
-      id,
-      "selectedClueIndex:",
-      selectedClueIndex,
-    )
+    // console.log(
+    //   "categoryId:",
+    //   categoryId,
+    //   "category:",
+    //   category,
+    //   "id:",
+    //   id,
+    //   "selectedClueIndex:",
+    //   selectedClueIndex,
+    // )
   }
   return (
     <>

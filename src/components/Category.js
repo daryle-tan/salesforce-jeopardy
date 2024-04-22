@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import Correct from "./Correct.js"
 import { Incorrect } from "./Incorrect.js"
-import { categories } from "../testdata.js"
 
 const Category = ({
   category,
@@ -18,11 +17,9 @@ const Category = ({
   setCluesAnswered,
   selectedOption,
   setSelectedOption,
-  setSelectedClueIndex,
 }) => {
   const [shuffledOptions, setShuffledOptions] = useState([])
   const [categories1, setCategories] = useState([])
-  const [clues, setClues] = useState([])
 
   const shuffleArray = (array) => {
     const shuffledArray = [...array]
@@ -32,7 +29,7 @@ const Category = ({
       shuffledArray[i] = shuffledArray[j]
       shuffledArray[j] = temp
     }
-    console.log("change")
+
     return shuffledArray
   }
 
@@ -41,12 +38,7 @@ const Category = ({
       try {
         const response = await fetch("http://localhost:3001/api/clues")
         const data = await response.json()
-        console.log(data)
-
         setCategories(data)
-        // setSelectedClueIndex(data[])
-        console.log("categories1", categories1)
-        console.log("data[5]", data[5])
 
         // Check if selectedClueIndex is valid and data is available
         if (selectedClueIndex >= 0 && selectedClueIndex <= data.length) {
@@ -65,7 +57,6 @@ const Category = ({
     }
 
     fetchData()
-    // fetchClues()
   }, [selectedClueIndex, categoryId])
 
   const handleSubmit = (categoryId, event) => {
@@ -90,9 +81,9 @@ const Category = ({
     } else {
       setIncorrectAnswer(true)
     }
-    console.log("selected option", selectedOption, "isCorrect", isCorrect)
-    console.log("selectedOptions:", selectedOptions)
-    console.log("answer:", answer)
+    // console.log("selected option", selectedOption, "isCorrect", isCorrect)
+    // console.log("selectedOptions:", selectedOptions)
+    // console.log("answer:", answer)
     setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {
       const newHasBeenAnswered = [...prev]
@@ -122,46 +113,54 @@ const Category = ({
                 X
               </button>
             </div>
-            <div className="question">
-              <p className="questionP">
-                {categories1[selectedClueIndex].question}
-              </p>
-            </div>
+            <div>
+              <div className="question">
+                <p className="questionP">
+                  {categories1[selectedClueIndex].question}
+                </p>
+              </div>
 
-            <div className="category" data-testid="category">
-              <form onSubmit={(e) => handleSubmit(categoryId, e)}>
-                {shuffledOptions.map((option, index) => (
-                  <div className="formContainer" key={index}>
-                    <input
-                      className="radioBtn"
-                      type={
-                        categories1[selectedClueIndex].answer.length > 1
-                          ? "checkbox"
-                          : "radio"
-                      }
-                      id={`option${index + 1}`}
-                      name="picklist"
-                      value={option}
-                      onChange={(e) => {
-                        if (e.target.checked) {
-                          setSelectedOption((prev) => [...prev, e.target.value])
-                        } else {
-                          setSelectedOption((prev) =>
-                            prev.filter((option) => option !== e.target.value),
-                          )
+              <div className="category" data-testid="category">
+                <form onSubmit={(e) => handleSubmit(categoryId, e)}>
+                  {shuffledOptions.map((option, index) => (
+                    <div className="formContainer" key={index}>
+                      <input
+                        className="radioBtn"
+                        type={
+                          categories1[selectedClueIndex].answer.length > 1
+                            ? "checkbox"
+                            : "radio"
                         }
-                      }}
-                    />
-                    <label htmlFor={`option${index + 1}`}>{option}</label>
-                    <br />
+                        id={`option${index + 1}`}
+                        name="picklist"
+                        value={option}
+                        onChange={(e) => {
+                          if (e.target.checked) {
+                            setSelectedOption((prev) => [
+                              ...prev,
+                              e.target.value,
+                            ])
+                          } else {
+                            setSelectedOption((prev) =>
+                              prev.filter(
+                                (option) => option !== e.target.value,
+                              ),
+                            )
+                          }
+                        }}
+                      />
+                      <label htmlFor={`option${index + 1}`}>{option}</label>
+                      <br />
+                    </div>
+                  ))}
+
+                  <div className="submitContainer">
+                    <button type="submit" className="submitButton">
+                      Submit Answer
+                    </button>
                   </div>
-                ))}
-                <div className="submitContainer">
-                  <button type="submit" className="submitButton">
-                    Submit Answer
-                  </button>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </>

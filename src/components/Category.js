@@ -101,6 +101,11 @@ const Category = ({
     document.body.classList.remove("active-modal")
   }
 
+  // const parts = categories1[selectedClueIndex].question.split("?")
+  // const firstPart = parts[0] // Text before the question mark
+  // const secondPart = parts[1]
+  // const stringWithNewLine = `${firstPart}?\n${secondPart.trim()}`
+
   return (
     <>
       {category && categories1[selectedClueIndex] ? (
@@ -116,7 +121,24 @@ const Category = ({
             <div>
               <div className="question">
                 <p className="questionP">
-                  {categories1[selectedClueIndex].question}
+                  {categories1[selectedClueIndex].question
+                    .split("?")
+                    .map((line, index, array) => (
+                      <div key={index}>
+                        <span>
+                          {line.trim()}
+                          {index !== array.length - 1 &&
+                          array[index + 1].trim() !== "" ? (
+                            <>
+                              <br />
+                            </>
+                          ) : (
+                            ""
+                          )}
+                        </span>
+                        {index !== array.length - 1 && <br />}
+                      </div>
+                    ))}
                 </p>
               </div>
 
@@ -149,7 +171,12 @@ const Category = ({
                           }
                         }}
                       />
-                      <label htmlFor={`option${index + 1}`}>{option}</label>
+                      <label
+                        htmlFor={`option${index + 1}`}
+                        className="categoryLabel"
+                      >
+                        {option}
+                      </label>
                       <br />
                     </div>
                   ))}

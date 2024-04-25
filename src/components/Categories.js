@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import Category from "./Category.js"
-import { set } from "date-fns"
 
 const Categories = ({
   setScore,
@@ -57,21 +56,10 @@ const Categories = ({
     new Array(values.length).fill({ answered: false, id: null }),
   )
 
-  useEffect(() => {
-    // console.log(
-    //   "categoryId:",
-    //   categoryId,
-    //   "selectedClueIndex:",
-    //   selectedClueIndex,
-    //   "cluesAnswered:",
-    //   cluesAnswered,
-    // )
-  }, [selectedClueIndex, categoryId, category, cluesAnswered])
-
   const getClues = async (id) => {
     try {
       const response2 = await fetch("http://localhost:3001/api/clues")
-      const data2 = await response2.json()
+      // const data2 = await response2.json()
 
       const indexMap = {
         7: 1,

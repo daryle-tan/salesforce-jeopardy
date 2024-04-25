@@ -149,8 +149,11 @@ export const Incorrect = ({
                 </span>
               </label>
             </div>
-            <div className="submitContainer">
-              <p>Explanation: {categories1[selectedClueIndex].explanation}</p>
+            <div className="explanationContainer">
+              <span>Explanation:</span>
+              <p className="explanation">
+                {categories1[selectedClueIndex].explanation}
+              </p>
             </div>
           </form>
         </div>

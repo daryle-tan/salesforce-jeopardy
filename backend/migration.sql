@@ -153,7 +153,7 @@ wants to verify that the workflow functions correctly.', 'Check the Case record`
 actions and cancel them if necessary.'),
     (7, 400, ARRAY['Make sure there is only one user in the role.'], 'A System Administrator creates a Workflow Rule that assigns a task to a support
 manager role when a case is escalated. The case owner is complaining about being assigned these tasks.
-What should a System Administrator do to correct this issue?', 'Make sure there is only one user in the role.', 'Delete the Workflow Rule', 'Edit the permissions on the support manager role ', 'freeze the user record', 'Select an assignee for your task. An assignee can be in the form of a user, role, record owner, record
+What should a System Administrator do to correct this issue?', 'Make sure there is only one user in the role.', 'Delete the Workflow Rule', 'Edit the permissions on the support manager role ', 'Freeze the user record', 'Select an assignee for your task. An assignee can be in the form of a user, role, record owner, record
 creator, opportunity team role, or account team role, depending on the type of record you chose.'),
     (7, 600, ARRAY['Record Triggered-Flow that runs Before save'], 'Universal Containers has asked its Administrator to automatically set some fields when a Lead is created.
 What is the best way for the administrator to perform this automation?', 'Record Triggered-Flow that runs Before save', 'Use a Process Builder with a scheduled action to update the fields after lead creation.', 'Write an Apex trigger that fires after the lead is inserted to update the fields.','Utilize a workflow rule with field updates based on lead creation criteria.', 'Update new and changed records by using before-save updates in flows.'),

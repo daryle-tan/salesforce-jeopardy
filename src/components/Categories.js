@@ -1,13 +1,7 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 import Category from "./Category.js"
 
-const Categories = ({
-  setScore,
-  setCluesAnswered,
-  cluesAnswered,
-  category,
-  setCategory,
-}) => {
+const Categories = ({ setScore, setCluesAnswered, category, setCategory }) => {
   const [selectedAnswer, setSelectedAnswer] = useState(false)
   const [incorrectAnswer, setIncorrectAnswer] = useState(false)
   const [categoryId, setCategoryId] = useState(0)

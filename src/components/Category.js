@@ -81,9 +81,7 @@ const Category = ({
     } else {
       setIncorrectAnswer(true)
     }
-    // console.log("selected option", selectedOption, "isCorrect", isCorrect)
-    // console.log("selectedOptions:", selectedOptions)
-    // console.log("answer:", answer)
+
     setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {
       const newHasBeenAnswered = [...prev]
@@ -100,11 +98,6 @@ const Category = ({
   } else {
     document.body.classList.remove("active-modal")
   }
-
-  // const parts = categories1[selectedClueIndex].question.split("?")
-  // const firstPart = parts[0] // Text before the question mark
-  // const secondPart = parts[1]
-  // const stringWithNewLine = `${firstPart}?\n${secondPart.trim()}`
 
   return (
     <>

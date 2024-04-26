@@ -2,13 +2,13 @@ import React from "react"
 
 function Contact() {
   return (
-    <div id="container">
+    <div id="contactContainer">
       <header className="header">
         <h1 id="title" className="text-center">
-          Survey Form
+          Get In Touch
         </h1>
         <p id="description" className="text-center">
-          Thank you for taking the time to help us improve
+          Thank you for taking the time to reach out!
         </p>
       </header>
       <form id="survey-form">
@@ -25,119 +25,26 @@ function Contact() {
             required
           />
         </div>
+
         <div className="form-group">
-          <label id="number-label">
-            Age <span className="clue">(optional)</span>
-          </label>
-          <input
-            id="number"
-            type="number"
-            min="10"
-            max="100"
-            placeholder="Age"
-          />
-        </div>
-        <div className="form-group">
-          <p>Which option best describes your current role?</p>
+          <p>Which option best describes your reason for getting in touch?</p>
           <select id="dropdown" name="role" className="form-control" required>
             <option disabled selected value>
-              Select current role
+              Select your interest
             </option>
-            <option value="student">Student</option>
-            <option value="job">Full Time Job</option>
-            <option value="preferNo">Prefer not to say</option>
-            <option value="other">Other</option>
+            <option value="Constructive Feedback">Constructive Feedback</option>
+            <option value="Advertise Here">Advertise Here</option>
+            <option value="Other">Other</option>
           </select>
         </div>
+
         <div className="form-group">
-          <p>Do you like to code?</p>
-          <label>
-            <input
-              name="user-recommend"
-              value="yes"
-              type="radio"
-              className="input-radio"
-              checked
-            />
-            Yes!
-          </label>
-          <label>
-            <input
-              name="user-recommend"
-              value="no"
-              type="radio"
-              className="input-radio"
-            />
-            no...
-          </label>
-        </div>
-        <div className="form-group">
-          <p>
-            What type of programming do you prefer?
-            <span className="clue">(Check all that apply)</span>
-          </p>
-          <label>
-            <input
-              type="checkbox"
-              name="prefer"
-              value="front-end"
-              className="input-checkbox"
-            />
-            Front-end
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="prefer"
-              value="back-end"
-              className="input-checkbox"
-            />
-            Back-end
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="prefer"
-              value="data-visualization"
-              className="input-checkbox"
-            />
-            Data Visualization
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="prefer"
-              value="api"
-              className="input-checkbox"
-            />
-            API
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="prefer"
-              value="devops"
-              className="input-checkbox"
-            />
-            DevOps
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="prefer"
-              value="sql"
-              className="input-checkbox"
-            />
-            SQL
-          </label>
-        </div>
-        <div className="form-group">
-          <p>Any comments or suggestions?</p>
+          <p>Please Add Your Message</p>
           <textarea
             id="comments"
             className="input-textarea"
             name="comment"
-            placeholder="Enter your comment here..."
+            placeholder="Enter your message here..."
           ></textarea>
         </div>
         <div className="form-group">

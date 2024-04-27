@@ -1,14 +1,21 @@
 import React from "react"
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom"
 import "./styles/styles.css"
 import App from "./components/App.js"
+import Contact from "./components/Contact.js"
 import { RecoilRoot } from "recoil"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-const root = ReactDOM.createRoot(document.getElementById("root"))
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <RecoilRoot>
-      <App />
-    </RecoilRoot>
+    <Router>
+      <RecoilRoot>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </RecoilRoot>
+    </Router>
   </React.StrictMode>,
+  document.getElementById("root"),
 )

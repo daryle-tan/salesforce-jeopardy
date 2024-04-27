@@ -74,7 +74,7 @@ groups will be using opportunities to track deals, but different fields are requ
 In which two ways should an administrator meet this requirement?
 Choose 2 options.', 'Create two profiles', 'Create two sales processes', 'Create two page layouts.', 'Create two record types.', 'By creating two page layouts, you are able to customize what fields are shown for each group based on the
 type of page layout they have access to. By creating two record types, you are able to customize what fields are shown for each group based on the type of record type they have access to.'),
-    (2, 1000, ARRAY['The values can be reordered', 'Additional values can be added', 'The standard values can be deleted'], 'The Sales Director of Luna Consulting would like the picklist values of the `Rating` field on the Lead object modified. 
+    (2, 1000, ARRAY['The values can be reordered', 'Additional values can be added', 'The standard values can be deleted'], 'The Sales Director of Luna Consulting would like the picklist values of the "Rating" field on the Lead object modified. 
     What options are available to modify the standard field values?', 'The values can be reordered', 'Additional values can be added', 'The standard values can be deleted', 'New values can be added, but standard values cannot be deleted', 'Picklist values on standard fields can be added, deleted, or reordered.'),
   
   -- Sales & Marketing Applications
@@ -149,7 +149,7 @@ imported.'),
 
     -- Workflow / Process Automation
     (7, 200, ARRAY['Time-Based Workflow Queue'], 'Universal Containers created a Time-Based Workflow rule that sends a follow-up email to the customer two days after a Case is closed. The System Administrator
-wants to verify that the workflow functions correctly.', 'Check the Case record`s Activity History for the email status.','Case History', 'Workflow Execution Log', 'Time-Based Workflow Queue', 'When a workflow rule that has time-dependent actions is triggered, use the workflow queue to view pending
+wants to verify that the workflow functions correctly. How can the System Administrator achieve this?', 'Check the Case record`s Activity History for the email status.','Case History', 'Workflow Execution Log', 'Time-Based Workflow Queue', 'When a workflow rule that has time-dependent actions is triggered, use the workflow queue to view pending
 actions and cancel them if necessary.'),
     (7, 400, ARRAY['Make sure there is only one user in the role.'], 'A System Administrator creates a Workflow Rule that assigns a task to a support
 manager role when a case is escalated. The case owner is complaining about being assigned these tasks.
@@ -161,7 +161,7 @@ What is the best way for the administrator to perform this automation?', 'Record
 What are two considerations for an administrator in this situation?
 Choose 2 options.', 'Rule actions can take place immediately or can be time based.', 'Rules can be evaluated when records are created or edited.', 'Rule actions are limited to one per workflow rule, and cannot be combined for different scenarios.','Workflow rules can only be triggered by manual record updates, not by system events or automation.', 'Workflow rules can be triggered any time a record is saved or created, depending on your rule criteria.'),
     (7, 1000, ARRAY['Assignment', 'Collection Sort', 'Loop'], 'Luna HR Services has a flow that runs on leads from companies with more than 500 employees which are created via data imports, third party integration,
-    and manual input. The flow updates the `Telesales Representative` custom field value of the first 50 leads to Sales Agent A. The flow loops again through the remaining leads that do not have `Telesales Representative` values and updates the field to Sales Rep B, and so on.
+    and manual input. The flow updates the "Teleservices Representative" custom field value of the first 50 leads to Sales Agent A. The flow loops again through the remaining leads that do not have "Teleservices Representative" values and updates the field to Sales Rep B, and so on.
     Which elements are required  to be in the flow?
     Choose 3 answers.', 'Assignment', 'Collection Sort', 'Loop', 'Subflow', 'The autolaunched flow should have at least loop, assignment, and collection sort elements. The Loop element repeatedly runs over items in a collection variable. The Assignment element is used to set values in variables, collection variables, record variables, record collection variables, and global variables. The Collection Sort element can be added to the flow to sort and set the limit of data collected in a collections variable.');
    

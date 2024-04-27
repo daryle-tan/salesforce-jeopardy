@@ -120,6 +120,7 @@ const Category = ({
                       <div key={index}>
                         <span>
                           {line.trim()}
+                          {index !== array.length - 1 ? "?" : ""}
                           {index !== array.length - 1 &&
                           array[index + 1].trim() !== "" ? (
                             <>

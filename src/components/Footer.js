@@ -1,5 +1,6 @@
 import React from "react"
 import Contact from "./Contact.js"
+import { Link } from "react-router-dom"
 
 function Footer() {
   const openContactModal = () => {
@@ -8,9 +9,9 @@ function Footer() {
 
   return (
     <div id="footer" data-testid="response">
-      {/* <a href="mailto:daryle.tan@gmail.com">Contact Us</a> */}
-      <Contact onClick={openContactModal} />
-      <button onClick={openContactModal}>Get In Contact</button>
+      <Link to="/contact" target="_blank">
+        Go In Touch
+      </Link>
     </div>
   )
 }

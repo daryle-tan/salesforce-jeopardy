@@ -62,25 +62,22 @@ const Category = ({
   const handleSubmit = (categoryId, event) => {
     event.preventDefault()
 
-    const selectedOptions = Array.isArray(selectedOption)
-      ? selectedOption
-      : [selectedOption]
     const answer = categories1[selectedClueIndex].answer
-
-    // Check if every selected option is included in the answer array
-    const isCorrect =
-      selectedOptions.length === answer.length &&
-      selectedOptions
+    const isAnswerCorrect =
+      selectedOption.length === answer.length &&
+      selectedOption
         .sort()
         .every((option, index) => option === answer.sort()[index])
 
-    if (isCorrect) {
+    if (isAnswerCorrect) {
       setSelectedAnswer(true)
-
       setScore((prev) => prev + categories1[selectedClueIndex].points)
     } else {
       setIncorrectAnswer(true)
     }
+    console.log("selectedOption Length", selectedOption.length)
+    console.log("selectedOption", selectedOption)
+    console.log("isAnswerCorrect", isAnswerCorrect)
 
     setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {
@@ -151,18 +148,54 @@ const Category = ({
                         name="picklist"
                         value={option}
                         onChange={(e) => {
-                          if (e.target.checked) {
-                            setSelectedOption((prev) => [
-                              ...prev,
-                              e.target.value,
-                            ])
-                          } else {
-                            setSelectedOption((prev) =>
-                              prev.filter(
-                                (option) => option !== e.target.value,
-                              ),
-                            )
-                          }
+                          const optionValue = e.target.value
+                          const isChecked = e.target.checked
+
+                          // console.log("isChecked:", isChecked)
+                          // console.log("optionValue:", optionValue)
+                          // console.log(
+                          //   "categories1[selectedClueIndex].answer",
+                          //   categories1[selectedClueIndex].answer,
+                          // )
+                          setSelectedOption((prevOptions) => {
+                            if (
+                              isChecked &&
+                              e.target.type === "radio" &&
+                              optionValue ==
+                                categories1[selectedClueIndex].answer &&
+                              !prevOptions.includes(optionValue)
+                            ) {
+                              // Add the new option if checked and not already present
+
+                              // console.log("selectedOption", selectedOption)
+                              // console.log("Adding option:", optionValue)
+                              return [...prevOptions, optionValue]
+                            } else if (
+                              isChecked &&
+                              e.target.type === "checkbox" &&
+                              categories1[selectedClueIndex].answer.includes(
+                                optionValue,
+                              )
+                            ) {
+                              // Add the new option if checked
+                              // console.log("optionValue", optionValue)
+                              // console.log("prevOptions", prevOptions)
+                              return [...prevOptions, optionValue]
+                            } else if (
+                              !isChecked &&
+                              e.target.type === "checkbox" &&
+                              prevOptions.includes(optionValue)
+                            ) {
+                              // Remove the option if unchecked
+                              // console.log("selectedOption", selectedOption)
+                              // console.log("Removing option:", optionValue)
+                              return prevOptions.filter(
+                                (option) => option !== optionValue,
+                              )
+                            } else {
+                              return prevOptions
+                            }
+                          })
                         }}
                       />
                       <label

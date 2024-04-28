@@ -134,16 +134,16 @@ const Categories = ({ setScore, setCluesAnswered, category, setCategory }) => {
       setCategoryId(7)
     }
 
-    // console.log(
-    //   "categoryId:",
-    //   categoryId,
-    //   "category:",
-    //   category,
-    //   "id:",
-    //   id,
-    //   "selectedClueIndex:",
-    //   selectedClueIndex,
-    // )
+    console.log(
+      "categoryId:",
+      categoryId,
+      "category:",
+      category,
+      "id:",
+      id,
+      "selectedClueIndex:",
+      selectedClueIndex,
+    )
   }
   return (
     <>

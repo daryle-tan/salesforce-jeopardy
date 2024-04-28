@@ -1,4 +1,6 @@
 import express from "express"
+import bodyParser from "body-parser"
+import nodemailer from "nodemailer"
 import cors from "cors"
 import dotenv from "dotenv"
 import pkg from "pg"
@@ -10,6 +12,7 @@ const app = express()
 const { PORT, pw } = process.env
 
 app.use(express.json())
+app.use(bodyParser.json())
 app.use(cors())
 app.use(express.static("public"))
 

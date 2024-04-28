@@ -1,5 +1,4 @@
 import React from "react"
-import { categories } from "../testdata.js"
 
 function Correct({
   categoryId,

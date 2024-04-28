@@ -93,16 +93,6 @@ const Categories = ({ setScore, setCluesAnswered, category, setCategory }) => {
       }
 
       setSelectedClueIndex(indexMap[id] || 0)
-
-      // const response = await fetch(`/api/clues/${selectedClueIndex}`)
-      // const data = await response.json()
-
-      // console.log("id", id)
-      // if (!response.ok) {
-      //   throw new Error(data.message || "Could not fetch clues.")
-      // }
-      // setDataId(data.id)
-      // return data
     } catch (error) {
       console.error("Error fetching clues:", error)
     }

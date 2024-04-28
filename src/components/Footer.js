@@ -1,16 +1,18 @@
 import React from "react"
-import Contact from "./Contact.js"
 import { Link } from "react-router-dom"
+import { MdOutlineConnectWithoutContact } from "react-icons/md"
 
 function Footer() {
-  const openContactModal = () => {
-    return <Contact onClick={openContactModal} />
-  }
-
   return (
     <div id="footer" data-testid="response">
-      <Link to="/contact" target="_blank">
-        Go In Touch
+      <Link
+        className="linkFooter"
+        to="/contact"
+        target="_blank"
+        title="Get In Touch"
+      >
+        <MdOutlineConnectWithoutContact size={30} />
+        Go In Touch{" "}
       </Link>
     </div>
   )

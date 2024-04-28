@@ -151,51 +151,29 @@ const Category = ({
                           const optionValue = e.target.value
                           const isChecked = e.target.checked
 
+                          setSelectedOption((prevOptions) => {
+                            if (isChecked && e.target.type === "radio") {
+                              // If a new radio option is checked, replace the previous selectedOption
+                              return [optionValue]
+                            } else if (
+                              isChecked &&
+                              e.target.type === "checkbox"
+                            ) {
+                              // If a checkbox is checked, add the new option to selectedOption
+                              return [...prevOptions, optionValue]
+                            } else {
+                              // For other cases, return the current selectedOption
+                              return prevOptions.filter(
+                                (option) => option !== optionValue,
+                              )
+                            }
+                          })
                           // console.log("isChecked:", isChecked)
                           // console.log("optionValue:", optionValue)
                           // console.log(
                           //   "categories1[selectedClueIndex].answer",
                           //   categories1[selectedClueIndex].answer,
                           // )
-                          setSelectedOption((prevOptions) => {
-                            if (
-                              isChecked &&
-                              e.target.type === "radio" &&
-                              optionValue ==
-                                categories1[selectedClueIndex].answer &&
-                              !prevOptions.includes(optionValue)
-                            ) {
-                              // Add the new option if checked and not already present
-
-                              // console.log("selectedOption", selectedOption)
-                              // console.log("Adding option:", optionValue)
-                              return [...prevOptions, optionValue]
-                            } else if (
-                              isChecked &&
-                              e.target.type === "checkbox" &&
-                              categories1[selectedClueIndex].answer.includes(
-                                optionValue,
-                              )
-                            ) {
-                              // Add the new option if checked
-                              // console.log("optionValue", optionValue)
-                              // console.log("prevOptions", prevOptions)
-                              return [...prevOptions, optionValue]
-                            } else if (
-                              !isChecked &&
-                              e.target.type === "checkbox" &&
-                              prevOptions.includes(optionValue)
-                            ) {
-                              // Remove the option if unchecked
-                              // console.log("selectedOption", selectedOption)
-                              // console.log("Removing option:", optionValue)
-                              return prevOptions.filter(
-                                (option) => option !== optionValue,
-                              )
-                            } else {
-                              return prevOptions
-                            }
-                          })
                         }}
                       />
                       <label

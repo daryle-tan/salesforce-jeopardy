@@ -431,3 +431,38 @@ body.active-modal {
   background-color: rgb(32, 190, 61);
   font-weight: bold;
 }
+
+/* Resource */
+.centered-resources {
+  display: flex;
+  /* justify-content: center; */
+  align-items: baseline;
+  width: 80%;
+  height: 65vh;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid black;
+  border-radius: 15px;
+}
+.resourceContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  /* margin-top: 5rem; */
+  /* margin-bottom: 2rem; */
+  padding: 15px;
+}
+.resourceScore {
+  font-family: "ITC Korinna";
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+.resourceBody {
+  font-family: "ITC Korinna";
+  font-size: 20px;
+  text-align: center;
+  height: 30%;
+  margin-bottom: 75px;
+}

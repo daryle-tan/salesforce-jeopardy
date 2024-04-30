@@ -6,19 +6,23 @@ const Gameboard = ({ setScore, score }) => {
   const [cluesAnswered, setCluesAnswered] = useState(0)
   const [category, setCategory] = useState(false)
   return (
-    <div id="gameboard">
+    <>
       {cluesAnswered > 34 && !category ? (
-        <Resources score={score} />
+        <div className="centered-resources">
+          <Resources score={score} />
+        </div>
       ) : (
-        <Categories
-          setScore={setScore}
-          setCluesAnswered={setCluesAnswered}
-          cluesAnswered={cluesAnswered}
-          category={category}
-          setCategory={setCategory}
-        />
+        <div id="gameboard">
+          <Categories
+            setScore={setScore}
+            setCluesAnswered={setCluesAnswered}
+            cluesAnswered={cluesAnswered}
+            category={category}
+            setCategory={setCategory}
+          />
+        </div>
       )}
-    </div>
+    </>
   )
 }
 

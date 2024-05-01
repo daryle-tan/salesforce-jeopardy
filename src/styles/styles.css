@@ -426,6 +426,7 @@ body.active-modal {
   width: 20vw;
   height: 5vh;
   font-size: 20px;
+  font-family: "ITC Korinna";
 }
 .submit-button:hover {
   background-color: rgb(32, 190, 61);
@@ -465,4 +466,18 @@ body.active-modal {
   text-align: center;
   height: 30%;
   margin-bottom: 75px;
+}
+
+a:link,
+a:visited {
+  color: white; /* Change this to your desired color */
+  text-decoration: none; /* Optional: Remove underline */
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+a:hover {
+  color: yellow; /* Change this to your desired active color */
+  border: 2px solid yellow;
 }

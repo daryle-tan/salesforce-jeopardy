@@ -54,7 +54,7 @@ export const Incorrect = ({
                 {categories1[selectedClueIndex].option1}{" "}
                 <span className="arrow">
                   {checkOption(categories1[selectedClueIndex].option1)
-                    ? "← Correct Answer"
+                    ? "← Answer"
                     : null}
                 </span>
               </label>
@@ -83,7 +83,7 @@ export const Incorrect = ({
                 {categories1[selectedClueIndex].option2}
                 <span className="arrow">
                   {checkOption(categories1[selectedClueIndex].option2)
-                    ? "← Correct Answer"
+                    ? "← Answer"
                     : null}
                 </span>
               </label>
@@ -113,7 +113,7 @@ export const Incorrect = ({
                 {categories1[selectedClueIndex].option3}
                 <span className="arrow">
                   {checkOption(categories1[selectedClueIndex].option3)
-                    ? "← Correct Answer"
+                    ? "← Answer"
                     : null}
                 </span>
               </label>
@@ -143,7 +143,7 @@ export const Incorrect = ({
                 {categories1[selectedClueIndex].option4}
                 <span className="arrow">
                   {checkOption(categories1[selectedClueIndex].option4)
-                    ? "← Correct Answer"
+                    ? "← Answer"
                     : null}
                 </span>
               </label>

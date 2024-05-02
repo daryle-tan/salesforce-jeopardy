@@ -13,8 +13,12 @@ export default function App() {
       <div id="navContainer">
         <Navbar />
       </div>
+
       <div id="app">
         <Gameboard score={score} setScore={setScore} />
+      </div>
+
+      <div id="scoreboardContainer">
         <Scoreboard score={score} />
       </div>
       <Footer />

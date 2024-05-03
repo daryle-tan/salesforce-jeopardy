@@ -12,7 +12,7 @@ function Footer() {
         title="Get In Touch"
       >
         <MdOutlineConnectWithoutContact size={30} />
-        Go In Touch{" "}
+        Get In Touch{" "}
       </Link>
     </div>
   )

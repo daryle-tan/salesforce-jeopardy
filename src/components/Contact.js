@@ -32,68 +32,75 @@ function Contact() {
   }
 
   return (
-    <div id="contactContainer">
-      <header className="header">
-        <h1 id="title" className="text-center">
-          Get In Touch
-        </h1>
-        <p id="description" className="text-center">
-          Thank you for taking the time to reach out!
-        </p>
-      </header>
-      <form id="survey-form" onSubmit={onSubmitContact} ref={formRef}>
-        <div className="form-group">
-          <label id="name-label">Name: </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label id="email-label">Email: </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <p className="p-question">
-            Which option best describes your reason for getting in touch?
+    <div id="contactBackground">
+      <div id="contactNavBar">
+        <img src="/Cerforce2.webp" alt="Certforce Logo" className="logo"></img>
+      </div>
+      <div id="contactContainer">
+        <header className="header">
+          <h1 id="title" className="text-center">
+            Get In Touch
+          </h1>
+          <p id="description" className="text-center">
+            Thank you for taking the time to reach out!
           </p>
-          <select className="dropdown" name="interest" required>
-            <option value="" disabled selected hidden>
-              Select your interest
-            </option>
-            <option value="Constructive Feedback">Constructive Feedback</option>
-            <option value="Advertise Here">Advertise Here</option>
-            <option value="Ridiculous Comment">Ridiculous Comment</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
+        </header>
+        <form id="survey-form" onSubmit={onSubmitContact} ref={formRef}>
+          <div className="form-group">
+            <label id="name-label">Name: </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label id="email-label">Email: </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
 
-        <div className="form-group">
-          <p className="p-comment">Please Add Your Message</p>
-          <textarea
-            id="comments"
-            className="input-textarea"
-            name="message"
-            placeholder="Enter your message here..."
-            required
-          ></textarea>
-        </div>
-        <div className="form-button-container">
-          <button id="submit" type="submit" className="submit-button">
-            Submit
-          </button>
-        </div>
-      </form>
+          <div className="form-group">
+            <p className="p-question">
+              Which option best describes your reason for getting in touch?
+            </p>
+            <select className="dropdown" name="interest" required>
+              <option value="" disabled selected hidden>
+                Select your interest
+              </option>
+              <option value="Constructive Feedback">
+                Constructive Feedback
+              </option>
+              <option value="Advertise Here">Advertise Here</option>
+              <option value="Ridiculous Comment">Ridiculous Comment</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <p className="p-comment">Please Add Your Message</p>
+            <textarea
+              id="comments"
+              className="input-textarea"
+              name="message"
+              placeholder="Enter your message here..."
+              required
+            ></textarea>
+          </div>
+          <div className="form-button-container">
+            <button id="submit" type="submit" className="submit-button">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   )
 }

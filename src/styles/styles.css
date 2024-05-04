@@ -18,13 +18,12 @@
   --jepColor: #060ce9;
 }
 
-body,
-ul {
+body {
   margin: 0;
   font-family: "ITC Korinna";
   background: linear-gradient(
     to bottom right,
-    rgb(51, 160, 160),
+    rgb(56, 169, 163),
     rgb(0 192 255)
   );
 }
@@ -44,8 +43,8 @@ ul {
 }
 
 .logo {
-  width: 12vw;
-  height: 12vh;
+  width: 12rem;
+  height: 6rem;
   object-fit: contain;
   margin: 1em 0em 0.5em 0em;
 }
@@ -56,19 +55,17 @@ ul {
   font-size: 18px;
   position: relative;
   width: 50%;
+  margin-right: 80px;
 }
 
 .certTab {
+  position: relative;
   float: left;
-  background-image: linear-gradient(
-    to bottom right,
-    rgb(51, 160, 160),
-    rgb(0 192 255)
-  );
+  background: rgb(51, 160, 160);
   border: 2px solid white;
-  border-bottom: none; /* Makes the active tab look part of the content area */
+  border-bottom: none;
   padding: 10px 20px;
-  border-radius: 20px 20px 0 0; /* Rounds the top corners */
+  border-radius: 20px 20px 0 0;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
   position: relative; /* Enable z-index to work */
@@ -77,13 +74,14 @@ ul {
 }
 
 .certTab:hover {
-  background: #eee; /* Hover effect for tabs */
+  background: #eee;
+  z-index: 5;
 }
 
 .active,
 .certTab:hover {
   background: rgb(142, 234, 222);
-  color: black;
+  color: rebeccapurple;
   border-bottom: none;
 }
 .certTab:first-child {
@@ -95,6 +93,43 @@ ul {
 
 .certTab:last-child {
   z-index: 1; /* Behind the second tab */
+}
+.coming-soon1 {
+  z-index: 3;
+  position: absolute;
+  top: 1%;
+  left: -1%;
+  background: rgba(255, 255, 255, 0.457); /* Semi-transparent background */
+  color: rgb(75, 74, 74);
+  padding: 5px;
+  border-radius: 20px 20px 0 0;
+  width: 96.5%;
+  height: 95%;
+  font-style: italic;
+  text-align: center;
+}
+.coming-soon1:hover {
+  z-index: -1;
+  color: rgb(180, 244, 235);
+}
+.coming-soon2 {
+  z-index: 2;
+  position: absolute;
+  top: 1%;
+  left: -1%;
+  background: rgba(255, 255, 255, 0.457); /* Semi-transparent background */
+  color: rgb(75, 74, 74);
+  padding: 5px;
+  border-radius: 20px 20px 0 0;
+  width: 95%;
+  height: 100%;
+  font-style: italic;
+  text-align: center;
+  font-size: 16px;
+}
+.coming-soon2:hover {
+  z-index: -1;
+  color: rgb(180, 244, 235);
 }
 
 #gameboard {
@@ -325,10 +360,13 @@ body.active-modal {
   flex-direction: row;
   margin: 2rem;
 }
-.linkFooter {
+.contactLink {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  /* margin-left: 15rem; */
 }
 
 /* Correct and Incorrect */
@@ -362,6 +400,22 @@ body.active-modal {
 }
 
 /* Contact Form */
+#contactBackground {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+    to bottom right,
+    rgb(56, 169, 163),
+    rgb(0 192 255)
+  );
+  overflow-y: auto;
+}
+#contactNavbar {
+  width: 100%;
+  height: 100%;
+}
 #contactContainer {
   position: fixed;
   top: 50%;
@@ -455,7 +509,6 @@ body.active-modal {
 /* Resource */
 .centered-resources {
   display: flex;
-  /* justify-content: center; */
   align-items: baseline;
   width: 80%;
   height: 65vh;
@@ -470,8 +523,6 @@ body.active-modal {
   align-items: center;
   height: 100%;
   width: 100%;
-  /* margin-top: 5rem; */
-  /* margin-bottom: 2rem; */
   padding: 15px;
 }
 .resourceScore {
@@ -489,14 +540,14 @@ body.active-modal {
 
 a:link,
 a:visited {
-  color: white; /* Change this to your desired color */
-  text-decoration: none; /* Optional: Remove underline */
+  color: white;
+  text-decoration: none;
   border: 2px solid white;
   border-radius: 10px;
   padding: 5px;
 }
 
 a:hover {
-  color: yellow; /* Change this to your desired active color */
+  color: yellow;
   border: 2px solid yellow;
 }

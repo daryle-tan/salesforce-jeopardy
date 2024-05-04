@@ -6,7 +6,7 @@ function Footer() {
   return (
     <div id="footer" data-testid="response">
       <Link
-        className="linkFooter"
+        className="contactLink"
         to="/contact"
         target="_blank"
         title="Get In Touch"

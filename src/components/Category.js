@@ -75,9 +75,9 @@ const Category = ({
     } else {
       setIncorrectAnswer(true)
     }
-    console.log("selectedOption Length", selectedOption.length)
-    console.log("selectedOption", selectedOption)
-    console.log("isAnswerCorrect", isAnswerCorrect)
+    // console.log("selectedOption Length", selectedOption.length)
+    // console.log("selectedOption", selectedOption)
+    // console.log("isAnswerCorrect", isAnswerCorrect)
 
     setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {

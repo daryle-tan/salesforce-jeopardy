@@ -24,7 +24,27 @@ function Correct({
         </div>
         <h1 className="correctHeader">Correct!</h1>
         <div className="question">
-          <p className="questionP">{categories1[selectedClueIndex].question}</p>
+          <p className="questionP">
+            {categories1[selectedClueIndex].question
+              .split("?")
+              .map((line, index, array) => (
+                <div key={index}>
+                  <span>
+                    {line.trim()}
+                    {index !== array.length - 1 ? "?" : ""}
+                    {index !== array.length - 1 &&
+                    array[index + 1].trim() !== "" ? (
+                      <>
+                        <br />
+                      </>
+                    ) : (
+                      ""
+                    )}
+                  </span>
+                  {index !== array.length - 1 && <br />}
+                </div>
+              ))}
+          </p>
         </div>
 
         <div className="category" data-testid="category">

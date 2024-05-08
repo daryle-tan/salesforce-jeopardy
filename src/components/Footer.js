@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import { MdOutlineConnectWithoutContact } from "react-icons/md"
 
-function Footer() {
+function Footer({ isVisible }) {
   return (
     <div id="footer" data-testid="response">
       <Link
@@ -10,6 +10,7 @@ function Footer() {
         to="/contact"
         target="_blank"
         title="Get In Touch"
+        isVisible={isVisible}
       >
         <MdOutlineConnectWithoutContact size={30} />
         Get In Touch{" "}

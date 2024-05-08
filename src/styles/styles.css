@@ -598,3 +598,25 @@ body.active-modal {
   font-size: 24px;
   margin-top: 2rem;
 }
+
+.error-message {
+  display: flex;
+  color: whitesmoke;
+  font-size: 30px;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  padding: 0px 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.h1-error-message {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}

@@ -465,8 +465,9 @@ body.active-modal {
 
 #name {
   width: 100%;
-  height: 20px;
+  height: 25px;
   margin-bottom: 15px;
+  border-radius: 5px;
 }
 #name-label {
   width: 100%;
@@ -474,7 +475,8 @@ body.active-modal {
 
 #email {
   width: 100%;
-  height: 20px;
+  height: 25px;
+  border-radius: 5px;
 }
 #email-label {
   width: 100%;
@@ -486,7 +488,8 @@ body.active-modal {
 }
 .dropdown {
   width: 101.5%;
-  height: 25px;
+  height: 30px;
+  border-radius: 5px;
 }
 
 .p-comment {
@@ -497,6 +500,7 @@ body.active-modal {
   width: 100%;
   height: 150px;
   resize: none;
+  border-radius: 5px;
 }
 
 .form-button-container {

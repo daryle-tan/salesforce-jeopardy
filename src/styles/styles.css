@@ -621,6 +621,9 @@ body.active-modal {
 .h1-error-message {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
+}
+
+input {
+  padding: 0px 5px;
 }

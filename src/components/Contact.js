@@ -111,7 +111,7 @@ function Contact() {
                     id="name"
                     type="text"
                     name="name"
-                    placeholder="Enter your name"
+                    placeholder="Wing Jack"
                     required
                   />
                 </div>
@@ -121,7 +121,7 @@ function Contact() {
                     id="email"
                     type="email"
                     name="email"
-                    placeholder="Enter your email"
+                    placeholder="you@email.com"
                     required
                   />
                 </div>

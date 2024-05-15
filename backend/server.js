@@ -1,8 +1,8 @@
 import express from "express"
 import bodyParser from "body-parser"
-import nodemailer from "nodemailer"
 import cors from "cors"
 import dotenv from "dotenv"
+import EmailSender from "./sendEmail.js"
 import pkg from "pg"
 const { Pool } = pkg
 
@@ -74,6 +74,16 @@ app.get("/api/clues/:id", (req, res, next) => {
       }
     })
     .catch(next)
+})
+
+app.post("/send", async (req, res) => {
+  try {
+    const { fullName, email, subject, message } = req.body
+    EmailSender({ fullName, email, subject, message })
+    res.json({ msg: "Your message sent successfully" })
+  } catch (error) {
+    res.status(404).json({ msg: "Error ❌" })
+  }
 })
 
 app.use((err, req, res, next) => {

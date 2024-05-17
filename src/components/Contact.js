@@ -5,6 +5,11 @@ import DesktopView from "./DesktopView.js"
 function Contact() {
   const [contactFormSubmitted, setContactFormSubmitted] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [interest, setInterest] = useState("")
+  const [message, setMessage] = useState("")
+
   const formRef = useRef(null)
 
   useEffect(() => {
@@ -28,31 +33,55 @@ function Contact() {
 
   const onSubmitContact = async (event) => {
     event.preventDefault()
-    const formData = new FormData(event.target)
 
-    formData.append("access_key", "ef710176-f7e9-44b5-a5f3-c39c6e38fdd9")
+    const baseUrl = "http://localhost:3000"
 
-    const object = Object.fromEntries(formData)
-    const json = JSON.stringify(object)
-
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: json,
-      }).then((res) => res.json())
-
-      if (res.success) {
-        console.log("Success", res)
-        formRef.current.reset()
-        setContactFormSubmitted(true)
-      }
-    } catch (error) {
-      console.error("An error occurred:", error)
+    let dataSend = {
+      email: email,
+      subject: interest,
+      message: message,
     }
+
+    const res = await fetch(`${baseUrl}/email/sendEmail`, {
+      method: "POST",
+      body: JSON.stringify(dataSend),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      console.log(res)
+      formRef.current.reset()
+      setContactFormSubmitted(true)
+      if (res.status > 199 && res.status < 300) {
+        alert("Send Successfully !")
+      }
+    })
+    //   const formData = new FormData(event.target)
+
+    //   formData.append("access_key", "ef710176-f7e9-44b5-a5f3-c39c6e38fdd9")
+
+    //   const object = Object.fromEntries(formData)
+    //   const json = JSON.stringify(object)
+
+    //   try {
+    //     const res = await fetch("https://api.web3forms.com/submit", {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //         Accept: "application/json",
+    //       },
+    //       body: json,
+    //     }).then((res) => res.json())
+
+    //     if (res.success) {
+    //       console.log("Success", res)
+    //       formRef.current.reset()
+    //       setContactFormSubmitted(true)
+    //     }
+    //   } catch (error) {
+    //     console.error("An error occurred:", error)
+    //   }
   }
 
   const closeConfirmationModal = () => {
@@ -111,7 +140,8 @@ function Contact() {
                     id="name"
                     type="text"
                     name="name"
-                    placeholder="Wing Jack"
+                    placeholder="Wing Bo"
+                    onChange={(event) => setName(event.target.value)}
                     required
                   />
                 </div>
@@ -122,6 +152,7 @@ function Contact() {
                     type="email"
                     name="email"
                     placeholder="you@email.com"
+                    onChange={(event) => setEmail(event.target.value)}
                     required
                   />
                 </div>
@@ -131,7 +162,12 @@ function Contact() {
                     Which option best describes your reason for getting in
                     touch?
                   </p>
-                  <select className="dropdown" name="interest" required>
+                  <select
+                    className="dropdown"
+                    name="interest"
+                    onChange={(e) => setInterest(e.target.value)}
+                    required
+                  >
                     <option value="" disabled selected hidden>
                       Select your interest
                     </option>
@@ -153,6 +189,7 @@ function Contact() {
                     className="input-textarea"
                     name="message"
                     placeholder="Enter your message here..."
+                    onChange={(event) => setMessage(event.target.value)}
                     required
                   ></textarea>
                 </div>

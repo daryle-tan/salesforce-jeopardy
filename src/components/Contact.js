@@ -66,7 +66,7 @@ function Contact() {
           <Link className="homeLink" to="/" title="Home Page" target="_blank">
             <div id="contactNavBar">
               <img
-                src="/Cerforce2.webp"
+                src="/certforcep.webp"
                 alt="Certforce Logo"
                 className="logo"
               ></img>

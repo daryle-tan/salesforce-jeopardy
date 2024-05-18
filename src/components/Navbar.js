@@ -3,7 +3,7 @@ import React from "react"
 function Navbar() {
   return (
     <div className="navbarContainer">
-      <img src="/Cerforce2.webp" alt="Certforce Logo" className="logo"></img>
+      <img src="/certforcep.webp" alt="Certforce Logo" className="logo"></img>
 
       <div className="tabs">
         <div className="certTab active">

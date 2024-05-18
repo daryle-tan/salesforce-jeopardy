@@ -438,6 +438,7 @@ body.active-modal {
   z-index: 1000;
   width: 50vw;
   height: 79%;
+  max-height: 645px;
   display: flex;
   flex-wrap: wrap;
   border: 1px solid black;
@@ -501,6 +502,7 @@ body.active-modal {
   height: 150px;
   resize: none;
   border-radius: 5px;
+  padding: 3px 5px;
 }
 
 .form-button-container {
@@ -626,4 +628,8 @@ body.active-modal {
 
 input {
   padding: 0px 5px;
+}
+
+.homeLink {
+  height: 120px;
 }

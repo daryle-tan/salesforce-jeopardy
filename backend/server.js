@@ -29,7 +29,7 @@ const pool = new Pool({
   allowExitOnIdle: false,
 })
 
-function sendEmail({ email, subject, message }) {
+function sendEmail({ name, email, subject, message }) {
   return new Promise((resolve, reject) => {
     var transporter = nodemailer.createTransport({
       service: "gmail",
@@ -40,10 +40,16 @@ function sendEmail({ email, subject, message }) {
     })
 
     var mailOptions = {
-      from: process.env.SMTP_MAIL,
-      to: email,
+      name: name,
+      from: email,
+      to: process.env.SMTP_MAIL,
       subject: subject,
-      text: message,
+      html: `
+      <p>${name}</p>
+      <p>${email}</p>
+      <p>${subject}</p>
+      <p>${message}</p>
+      `,
     }
 
     transporter.sendMail(mailOptions, function (error, info) {

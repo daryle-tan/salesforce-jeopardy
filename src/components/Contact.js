@@ -1,13 +1,14 @@
 import { useRef, useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import DesktopView from "./DesktopView.js"
+import axios from "axios"
 
 function Contact() {
   const [contactFormSubmitted, setContactFormSubmitted] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
-  const [interest, setInterest] = useState("")
+  const [subject, setSubject] = useState("")
   const [message, setMessage] = useState("")
 
   const formRef = useRef(null)
@@ -34,54 +35,22 @@ function Contact() {
   const onSubmitContact = async (event) => {
     event.preventDefault()
 
-    const baseUrl = "http://localhost:3000"
-
-    let dataSend = {
-      email: email,
-      subject: interest,
-      message: message,
-    }
-
-    const res = await fetch(`${baseUrl}/email/sendEmail`, {
-      method: "POST",
-      body: JSON.stringify(dataSend),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-    }).then((res) => {
-      console.log(res)
-      formRef.current.reset()
-      setContactFormSubmitted(true)
-      if (res.status > 199 && res.status < 300) {
-        alert("Send Successfully !")
-      }
-    })
-    //   const formData = new FormData(event.target)
-
-    //   formData.append("access_key", "ef710176-f7e9-44b5-a5f3-c39c6e38fdd9")
-
-    //   const object = Object.fromEntries(formData)
-    //   const json = JSON.stringify(object)
-
-    //   try {
-    //     const res = await fetch("https://api.web3forms.com/submit", {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         Accept: "application/json",
-    //       },
-    //       body: json,
-    //     }).then((res) => res.json())
-
-    //     if (res.success) {
-    //       console.log("Success", res)
-    //       formRef.current.reset()
-    //       setContactFormSubmitted(true)
-    //     }
-    //   } catch (error) {
-    //     console.error("An error occurred:", error)
-    //   }
+    axios
+      .get("http://localhost:3001/", {
+        params: {
+          name: name,
+          email: email,
+          subject: subject,
+          message: message,
+        },
+      })
+      .then(() => {
+        console.log("success")
+        setContactFormSubmitted(true)
+      })
+      .catch(() => {
+        console.log("failure")
+      })
   }
 
   const closeConfirmationModal = () => {
@@ -164,8 +133,8 @@ function Contact() {
                   </p>
                   <select
                     className="dropdown"
-                    name="interest"
-                    onChange={(e) => setInterest(e.target.value)}
+                    name="subject"
+                    onChange={(e) => setSubject(e.target.value)}
                     required
                   >
                     <option value="" disabled selected hidden>

@@ -187,6 +187,7 @@ body {
 
 .category {
   margin-left: 45px;
+  text-align: initial;
 }
 
 .categoryTitle,
@@ -552,8 +553,12 @@ body.active-modal {
   font-family: "ITC Korinna";
   font-size: 20px;
   text-align: center;
-  height: 30%;
-  margin-bottom: 75px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.resourceLogo {
+  border-radius: 5px;
+  margin-bottom: 60px;
 }
 
 .contactLink,

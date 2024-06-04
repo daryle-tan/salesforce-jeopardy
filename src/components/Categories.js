@@ -52,7 +52,7 @@ const Categories = ({ setScore, setCluesAnswered, category, setCategory }) => {
 
   const getClues = async (id) => {
     try {
-      const response2 = await fetch("http://localhost:3001/api/clues")
+      // const response2 = await fetch("http://localhost:3001/api/clues")
       // const data2 = await response2.json()
 
       const indexMap = {

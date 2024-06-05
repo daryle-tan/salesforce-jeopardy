@@ -4,6 +4,8 @@ import cors from "cors"
 import dotenv from "dotenv"
 import nodemailer from "nodemailer"
 import pkg from "pg"
+import path from "path"
+
 const { Pool } = pkg
 
 dotenv.config()
@@ -16,6 +18,12 @@ app.use(express.json())
 app.use(bodyParser.json())
 app.use(cors())
 app.use(express.static("public"))
+
+app.use(express.static(path.join(__dirname, "build")))
+
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"))
+})
 
 const pool = new Pool({
   user: "daryletan",

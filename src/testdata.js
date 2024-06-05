@@ -417,3 +417,10 @@ export const categories = [
     ],
   },
 ]
+
+// "start": "react-scripts start",
+// "predeploy": "npm run build",
+// "deploy": "gh-pages -d build",
+// "build": "react-scripts build",
+// "test": "react-scripts test",
+// "eject": "react-scripts eject"

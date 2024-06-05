@@ -36,7 +36,10 @@ const Category = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/clues")
+        // const response = await fetch("http://localhost:3001/api/clues")
+        const response = await fetch(
+          "https://salesforce-jeopardy-1.onrender.com/api/clues",
+        )
         const data = await response.json()
         setCategories(data)
 
@@ -75,9 +78,6 @@ const Category = ({
     } else {
       setIncorrectAnswer(true)
     }
-    // console.log("selectedOption Length", selectedOption.length)
-    // console.log("selectedOption", selectedOption)
-    // console.log("isAnswerCorrect", isAnswerCorrect)
 
     setCluesAnswered((prev) => prev + 1)
     setHasBeenAnswered((prev) => {

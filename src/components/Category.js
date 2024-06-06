@@ -40,7 +40,7 @@ const Category = ({
         //   mode: "cors",
         // })
         const response = await fetch(
-          "https://salesforce-jeopardy.onrender.com/api/clues",
+          "https://salesforce-jeopardy.onrender.com/clues",
           {
             mode: "cors",
           },

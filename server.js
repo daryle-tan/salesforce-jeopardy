@@ -28,7 +28,7 @@ app.use(express.static("public"))
 const pool = new Pool({
   user: "daryletan",
   // host: "localhost",
-  host: "dpg-cpdpbb5ds78s73emb2n0-a",
+  host: "https://salesforce-jeopardy.onrender.com",
   database: "certforce",
   password: pw,
   port: 5432,

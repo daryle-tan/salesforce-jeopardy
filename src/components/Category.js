@@ -36,9 +36,9 @@ const Category = ({
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/clues", {
-          mode: "cors",
-        })
+        // const response = await fetch("http://localhost:3001/api/clues", {
+        //   mode: "cors",
+        // })
         // const response = await fetch(
         //   "https://salesforce-jeopardy.onrender.com/api/clues",
         // )

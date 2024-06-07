@@ -4,3 +4,4 @@ package_lock.json
 .DS_Store
 bundle.js
 build/
+testdata.js

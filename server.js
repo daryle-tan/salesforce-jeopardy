@@ -5,6 +5,8 @@ import dotenv from "dotenv"
 import nodemailer from "nodemailer"
 import pkg from "pg"
 import path from "path"
+import { fileURLToPath } from "url"
+import { dirname } from "path"
 
 const { Pool } = pkg
 
@@ -13,6 +15,9 @@ dotenv.config()
 const app = express()
 
 const { PORT, pw, DATABASE_URL } = process.env
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 app.use(express.json())
 app.use(bodyParser.json())

@@ -29,13 +29,12 @@ app.use(express.static(path.join(__dirname, "build")))
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"))
 })
-
 const pool = new Pool({
-  user: "daryletan",
+  user: "certforcedb_user",
   // host: "localhost",
-  host: DATABASE_URL,
-  database: "certforce",
-  password: pw,
+  host: "dpg-cpdpbb5ds78s73emb2n0-a",
+  database: "certforcedb",
+  password: "suu54aI6dFkjoVViCxQZlo4TJjrtLRBe",
   port: 5432,
   max: 5,
   ssl: { rejectUnauthorized: false },
@@ -43,6 +42,19 @@ const pool = new Pool({
   idleTimeoutMillis: 20000,
   allowExitOnIdle: false,
 })
+// const pool = new Pool({
+//   user: "daryletan",
+//   // host: "localhost",
+//   host: DATABASE_URL,
+//   database: "certforce",
+//   password: pw,
+//   port: 5432,
+//   max: 5,
+//   ssl: { rejectUnauthorized: false },
+//   connectionTimeoutMillis: 20000,
+//   idleTimeoutMillis: 20000,
+//   allowExitOnIdle: false,
+// })
 
 function sendEmail({ name, email, subject, message }) {
   return new Promise((resolve, reject) => {

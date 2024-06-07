@@ -29,18 +29,19 @@ app.use(express.static(path.join(__dirname, "build")))
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"))
 })
-const pool = new Pool({
-  user: "certforcedb_user",
-  host: "dpg-cpdpbb5ds78s73emb2n0-a",
-  database: "certforcedb",
-  password: "suu54aI6dFkjoVViCxQZlo4TJjrtLRBe",
-  port: 5432,
-  max: 5,
-  ssl: { rejectUnauthorized: false },
-  connectionTimeoutMillis: 20000,
-  idleTimeoutMillis: 20000,
-  allowExitOnIdle: false,
-})
+const pool = new Pool(DATABASE_URL)
+//   {
+//   user: "certforcedb_user",
+//   host: "dpg-cpdpbb5ds78s73emb2n0-a",
+//   database: "certforcedb",
+//   password: "suu54aI6dFkjoVViCxQZlo4TJjrtLRBe",
+//   port: 5432,
+//   max: 5,
+//   ssl: { rejectUnauthorized: false },
+//   connectionTimeoutMillis: 20000,
+//   idleTimeoutMillis: 20000,
+//   allowExitOnIdle: false,
+// }
 // const pool = new Pool({
 //   user: "daryletan",
 //   // host: "localhost",

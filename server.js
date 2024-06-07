@@ -89,11 +89,11 @@ function sendEmail({ name, email, subject, message }) {
   })
 }
 
-// app.get("/", (req, res) => {
-//   sendEmail(req.query)
-//     .then((response) => res.send(response.message))
-//     .catch((error) => res.status(500).send(error.message))
-// })
+app.get("/sendEmail", (req, res) => {
+  sendEmail(req.query)
+    .then((response) => res.send(response.message))
+    .catch((error) => res.status(500).send(error.message))
+})
 
 app.get("/api/categories", (req, res, next) => {
   pool

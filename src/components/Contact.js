@@ -36,7 +36,8 @@ function Contact() {
     event.preventDefault()
 
     axios
-      .get("http://localhost:3001/", {
+      // .get("http://localhost:3001/", {
+      .get("https://salesforce-jeopardy.onrender.com/sendEmail", {
         params: {
           name: name,
           email: email,

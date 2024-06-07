@@ -31,7 +31,6 @@ app.get("/", function (req, res) {
 })
 const pool = new Pool({
   user: "certforcedb_user",
-  // host: "localhost",
   host: "dpg-cpdpbb5ds78s73emb2n0-a",
   database: "certforcedb",
   password: "suu54aI6dFkjoVViCxQZlo4TJjrtLRBe",

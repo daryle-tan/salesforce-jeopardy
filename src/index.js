@@ -12,7 +12,10 @@ ReactDOM.render(
       <RecoilRoot>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="https://salesforce-jeopardy-1.onrender.com/contact"
+            element={<Contact />}
+          />
         </Routes>
       </RecoilRoot>
     </Router>

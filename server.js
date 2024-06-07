@@ -12,23 +12,23 @@ dotenv.config()
 
 const app = express()
 
-const { PORT, pw } = process.env
+const { PORT, pw, DATABASE_URL } = process.env
 
 app.use(express.json())
 app.use(bodyParser.json())
 app.use(cors())
 app.use(express.static("public"))
 
-// app.use(express.static(path.join(__dirname, "build")))
+app.use(express.static(path.join(__dirname, "build")))
 
-// app.get("/", function (req, res) {
-//   res.sendFile(path.join(__dirname, "build", "index.html"))
-// })
+app.get("/", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"))
+})
 
 const pool = new Pool({
   user: "daryletan",
   // host: "localhost",
-  host: "https://salesforce-jeopardy.onrender.com",
+  host: DATABASE_URL,
   database: "certforce",
   password: pw,
   port: 5432,
@@ -72,11 +72,11 @@ function sendEmail({ name, email, subject, message }) {
   })
 }
 
-app.get("/", (req, res) => {
-  sendEmail(req.query)
-    .then((response) => res.send(response.message))
-    .catch((error) => res.status(500).send(error.message))
-})
+// app.get("/", (req, res) => {
+//   sendEmail(req.query)
+//     .then((response) => res.send(response.message))
+//     .catch((error) => res.status(500).send(error.message))
+// })
 
 app.get("/api/categories", (req, res, next) => {
   pool

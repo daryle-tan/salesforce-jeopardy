@@ -38,9 +38,9 @@ const pool = new Pool({
   port: DB_PORT,
   max: 5,
   ssl: { rejectUnauthorized: false },
-  connectionTimeoutMillis: 20000,
-  idleTimeoutMillis: 20000,
-  allowExitOnIdle: false,
+  // connectionTimeoutMillis: 20000,
+  // idleTimeoutMillis: 20000,
+  // allowExitOnIdle: false,
 })
 // const pool = new Pool({
 //   user: "daryletan",

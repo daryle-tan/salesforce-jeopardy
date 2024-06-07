@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "build")))
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"))
 })
-const pool = new Pool(DATABASE_URL)
+const pool = new Pool({ DATABASE_URL })
 //   {
 //   user: "certforcedb_user",
 //   host: "dpg-cpdpbb5ds78s73emb2n0-a",

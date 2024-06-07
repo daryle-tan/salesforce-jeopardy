@@ -14,7 +14,8 @@ dotenv.config()
 
 const app = express()
 
-const { PORT, pw, DATABASE_URL } = process.env
+const { PORT, DB_USER, DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DATABASE_URL } =
+  process.env
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
@@ -29,19 +30,18 @@ app.use(express.static(path.join(__dirname, "build")))
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"))
 })
-const pool = new Pool({ DATABASE_URL })
-//   {
-//   user: "certforcedb_user",
-//   host: "dpg-cpdpbb5ds78s73emb2n0-a",
-//   database: "certforcedb",
-//   password: "suu54aI6dFkjoVViCxQZlo4TJjrtLRBe",
-//   port: 5432,
-//   max: 5,
-//   ssl: { rejectUnauthorized: false },
-//   connectionTimeoutMillis: 20000,
-//   idleTimeoutMillis: 20000,
-//   allowExitOnIdle: false,
-// }
+const pool = new Pool({
+  user: DB_USER,
+  host: DB_HOST,
+  database: DB_NAME,
+  password: DB_PASSWORD,
+  port: DB_PORT,
+  max: 5,
+  ssl: { rejectUnauthorized: false },
+  connectionTimeoutMillis: 20000,
+  idleTimeoutMillis: 20000,
+  allowExitOnIdle: false,
+})
 // const pool = new Pool({
 //   user: "daryletan",
 //   // host: "localhost",

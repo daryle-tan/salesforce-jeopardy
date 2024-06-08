@@ -24,8 +24,16 @@ app.use(express.json())
 app.use(bodyParser.json())
 app.use(cors())
 app.use(express.static("public"))
-
+const allowedHosts = process.env.ALLOWED_HOSTS.split(",")
 app.use(express.static(path.join(__dirname, "build")))
+
+app.use((req, res, next) => {
+  if (allowedHosts.includes(req.headers.host)) {
+    next()
+  } else {
+    res.status(400).send("Invalid Host header")
+  }
+})
 
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"))

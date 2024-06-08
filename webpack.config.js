@@ -1,24 +1,30 @@
-const path = require('path');
-const SRC_DIR = path.join(__dirname, '/client');
-const DIST_DIR = path.join(__dirname, '/dist');
+const path = require("path")
+const SRC_DIR = path.join(__dirname, "/client")
+const DIST_DIR = path.join(__dirname, "/dist")
 module.exports = {
   entry: `${SRC_DIR}/index.js`,
   output: {
-  filename: 'bundle.js',
-  path: DIST_DIR
-},
-  module : {
-    rules : [
+    filename: "bundle.js",
+    path: DIST_DIR,
+  },
+  module: {
+    rules: [
       {
-        test : /\.js?/,
-        include : SRC_DIR,
-        loader : 'babel-loader',
-      }, 
+        test: /\.js?/,
+        include: SRC_DIR,
+        loader: "babel-loader",
+      },
       {
         test: /\.css?/,
-        include : SRC_DIR,
-        use: ['style-loader', 'css-loader'],
-      }
-    ]
-  }
-};
+        include: SRC_DIR,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
+  },
+  devServer: {
+    allowedHosts: [
+      // '.example.com',  // Allow subdomains
+      "https://salesforce-jeopardy.onrender.com", // Allow Render domain
+    ],
+  },
+}

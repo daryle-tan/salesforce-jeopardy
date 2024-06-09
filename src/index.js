@@ -12,8 +12,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        {/* <App path="/" /> */}
-        <Route path="/" element={<App />} />
+        <Route path="/app" element={<App />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

@@ -10,11 +10,10 @@ const root = createRoot(container)
 
 root.render(
   <React.StrictMode>
-    <App />
     <Router>
       <Routes>
         {/* <App path="/" /> */}
-        {/* <Route path="/" element={<App />} /> */}
+        <Route path="/" element={<App />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

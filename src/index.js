@@ -6,7 +6,8 @@ import Contact from "./components/Contact.js"
 import { RecoilRoot } from "recoil"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
-ReactDOM.render(
+const root = ReactDOM.createRoo(document.getElementById("root"))
+root.render(
   <React.StrictMode>
     <Router>
       <RecoilRoot>
@@ -17,5 +18,4 @@ ReactDOM.render(
       </RecoilRoot>
     </Router>
   </React.StrictMode>,
-  document.getElementById("root"),
 )

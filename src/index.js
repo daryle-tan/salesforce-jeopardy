@@ -5,7 +5,7 @@ import Contact from "./components/Contact.js"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { createRoot } from "react-dom/client"
 
-const container = document.getElementById("root")
+const container = document.getElementById("app")
 const root = createRoot(container)
 
 root.render(

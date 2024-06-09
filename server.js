@@ -28,7 +28,7 @@ app.use(express.static("public"))
 
 app.use(express.static(path.join(__dirname, "build")))
 
-app.get("*", function (req, res) {
+app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"))
 })
 
@@ -91,7 +91,7 @@ function sendEmail({ name, email, subject, message }) {
   })
 }
 
-app.get("/sendEmail", (req, res) => {
+app.get("/contact", (req, res) => {
   sendEmail(req.query)
     .then((response) => res.send(response.message))
     .catch((error) => res.status(500).send(error.message))

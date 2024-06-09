@@ -32,6 +32,10 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"))
 })
 
+app.get("/contact", (req, res) => {
+  res.sendFile(path.join(__dirname, "build", "index.html"))
+})
+
 const pool = new Pool({
   user: DB_USER,
   host: DB_HOST,
@@ -91,7 +95,7 @@ function sendEmail({ name, email, subject, message }) {
   })
 }
 
-app.get("/contact", (req, res) => {
+app.get("/sendEmail", (req, res) => {
   sendEmail(req.query)
     .then((response) => res.send(response.message))
     .catch((error) => res.status(500).send(error.message))

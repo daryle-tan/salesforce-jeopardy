@@ -5,7 +5,7 @@ import Contact from "./components/Contact.js"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { createRoot } from "react-dom/client"
 
-const container = document.getElementById("app")
+const container = document.getElementById("root")
 const root = createRoot(container)
 
 root.render(
@@ -13,7 +13,7 @@ root.render(
     <Router>
       <Routes>
         {/* <App path="/" /> */}
-        <Route path="/" element={<App />} />
+        <Route path="/app" element={<App />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

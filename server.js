@@ -28,15 +28,7 @@ app.use(express.static("public"))
 
 app.use(express.static(path.join(__dirname, "build")))
 
-// app.use((req, res, next) => {
-//   if (allowedHosts.includes(req.headers.host)) {
-//     next()
-//   } else {
-//     res.status(400).send("Invalid Host header")
-//   }
-// })
-
-app.get("*", function (req, res) {
+app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "build", "index.html"))
 })
 const pool = new Pool({

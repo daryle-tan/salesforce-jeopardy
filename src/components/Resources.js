@@ -17,11 +17,18 @@ const Resources = ({ score }) => {
             learning. Let's run it back! If you're looking for more resources to
             help you successfully pass your certification, take a look at this:{" "}
           </p>
-          <img
-            src="/focusonforce.webp"
-            alt="Focus on Force Logo"
-            className="resourceLogo"
-          ></img>
+          <a
+            href="https://focusonforce.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Focus on Force Page"
+          >
+            <img
+              src="/focusonforce.webp"
+              alt="Focus on Force Logo"
+              className="resourceLogo"
+            ></img>
+          </a>
           <button onClick={handleRefresh} className="submit-button">
             Restart Game
           </button>
@@ -35,11 +42,18 @@ const Resources = ({ score }) => {
             Good Job! You're on track to successfully pass the exam! Here are
             more resources to help you grow your knowledge and skills:{" "}
           </p>
-          <img
-            src="/focusonforce.webp"
-            alt="Focus on Force Logo"
-            className="resourceLogo"
-          ></img>
+          <a
+            href="https://focusonforce.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Focus on Force Page"
+          >
+            <img
+              src="/focusonforce.webp"
+              alt="Focus on Force Logo"
+              className="resourceLogo"
+            ></img>
+          </a>
           <button onClick={handleRefresh} className="submit-button">
             Restart Game
           </button>

@@ -14,7 +14,7 @@ import { createRoot } from "react-dom/client"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path="/*" element={<App />}>
       <Route path="/contact" element={<Contact />} />
     </Route>,
   ),

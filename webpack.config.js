@@ -21,10 +21,10 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    allowedHosts: [
-      // '.example.com',  // Allow subdomains
-      "https://salesforce-jeopardy.onrender.com", // Allow Render domain
-    ],
-  },
+  // devServer: {
+  //   allowedHosts: [
+  //     // '.example.com',  // Allow subdomains
+  //     "https://salesforce-jeopardy.onrender.com", // Allow Render domain
+  //   ],
+  // },
 }

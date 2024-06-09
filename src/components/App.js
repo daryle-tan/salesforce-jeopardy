@@ -6,7 +6,7 @@ import "../styles/styles.css"
 import Navbar from "./Navbar.js"
 import DesktopView from "./DesktopView.js"
 
-export default function App() {
+function App() {
   const [score, setScore] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -52,3 +52,5 @@ export default function App() {
     </>
   )
 }
+
+export default App

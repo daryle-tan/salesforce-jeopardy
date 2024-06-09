@@ -5,8 +5,11 @@ import App from "./components/App.js"
 import Contact from "./components/Contact.js"
 import { RecoilRoot } from "recoil"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { createRoot } from "react-dom/client"
 
-const root = ReactDOM.createRoo(document.getElementById("root"))
+const container = document.getElementById("root")
+const root = createRoot(container)
+
 root.render(
   <React.StrictMode>
     <Router>

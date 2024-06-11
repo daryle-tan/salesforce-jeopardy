@@ -17,7 +17,7 @@ function Contact() {
     const checkViewportSize = () => {
       const viewportWidth = window.innerWidth
       const viewportHeight = window.innerHeight
-      const isBelowThreshold = viewportWidth < 735 || viewportHeight < 775
+      const isBelowThreshold = viewportWidth < 735 && viewportHeight < 775
       setIsVisible(isBelowThreshold)
 
       console.log("viewportWidth", viewportWidth)

@@ -413,8 +413,8 @@ body.active-modal {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     to bottom right,
     rgb(56, 169, 163),
@@ -430,17 +430,12 @@ body.active-modal {
   justify-content: center;
 }
 #contactContainer {
-  /* position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   background-color: rgb(255, 255, 255);
   color: rgb(41, 80, 146);
   padding: 10px 10px;
-  /* z-index: 1000; */
   width: 50vw;
-  height: 80%;
-  min-height: 780px;
+  /* height: 80%; */
+  min-height: 650px;
   display: flex;
   flex-wrap: wrap;
   border: 1px solid black;
@@ -450,7 +445,6 @@ body.active-modal {
   align-items: center;
   font-size: 20px;
   overflow: auto;
-  /* margin: 3.5rem 0rem; */
 }
 
 .header {
@@ -638,4 +632,5 @@ input {
 
 .homeLink {
   height: 120px;
+  margin-bottom: 10px;
 }

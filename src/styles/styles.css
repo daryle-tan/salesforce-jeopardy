@@ -433,6 +433,7 @@ body.active-modal {
   background-color: rgb(255, 255, 255);
   color: rgb(41, 80, 146);
   padding: 10px 10px;
+  margin-bottom: 20px;
   width: 50vw;
   /* height: 80%; */
   min-height: 650px;

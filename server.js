@@ -40,12 +40,9 @@ const pool = new Pool({
   database: DB_NAME,
   password: DB_PASSWORD,
   port: DB_PORT,
-  // max: 5,
   ssl: { rejectUnauthorized: false },
-  // connectionTimeoutMillis: 20000,
-  // idleTimeoutMillis: 20000,
-  // allowExitOnIdle: false,
 })
+
 // const pool = new Pool({
 //   user: "daryletan",
 //   // host: "localhost",
@@ -53,11 +50,8 @@ const pool = new Pool({
 //   database: "certforce",
 //   password: pw,
 //   port: 5432,
-//   max: 5,
 //   ssl: { rejectUnauthorized: false },
 //   connectionTimeoutMillis: 20000,
-//   idleTimeoutMillis: 20000,
-//   allowExitOnIdle: false,
 // })
 
 function sendEmail({ name, email, subject, message }) {

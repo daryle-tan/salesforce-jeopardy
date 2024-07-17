@@ -72,8 +72,7 @@ Choose 1 answer.', 'Create a many-to-many relationship by creating a new junctio
  
 
     -- User Interface
-    (4, 200, ARRAY['Chatter feed tracking must be enabled for the case object.'], 'An administrator at Ursa Major Solar is setting up case feed.
-What should the administrator consider?', 'Universal case feed must be enabled.', 'Email-to-Case must be enabled for the organization.', 'Chatter feed tracking must be enabled for the case object.', 'Case escalation rules must be configured.', 'Enabling Case Feed actions and feed items gives your users access to both standard actions they’ll need when working with cases, such as Email and Change Status, and to feed items related to those actions.'),
+    (4, 200, ARRAY['Modify the Contact compact page layout properties'], 'A Salesforce developer is asked to include the Birthdate field in the Contact hover details layout. What is the best way to achieve this requirement in Lightning Experience? Choose 1 answer.', 'Modify the Contact compact page layout properties', 'Modify the properties of the Contact Mini Page layout', 'Modify the Search Layout', 'Design a Visualforce page with a Standard Controller', 'In Lightning Experience, the first few fields added to a compact layout appear in the expanded lookup card displayed when hovering over a lookup field in record details.'),
     (4, 400, ARRAY['Enable Case Comment Notification to Contacts.'], 'Customers complain that they do not know when Comments have been added to their Cases.
 Which configuration can a System Administrator implement to address this concern?',
 'Configure workflow rules to send email notifications for new comments on cases.', 'Enable Case Comment Notification to Internal Users Only.','Create a custom field on the Case object to track comments.', 'Enable Case Comment Notification to Contacts.', 'Enabling case comment notifications to contacts notifies contacts when a case comment has been modified or added to a case.'),

@@ -73,9 +73,8 @@ Choose 1 answer.', 'Create a many-to-many relationship by creating a new junctio
 
     -- User Interface
     (4, 200, ARRAY['Modify the Contact compact page layout properties'], 'A Salesforce developer is asked to include the Birthdate field in the Contact hover details layout. What is the best way to achieve this requirement in Lightning Experience? Choose 1 answer.', 'Modify the Contact compact page layout properties', 'Modify the properties of the Contact Mini Page layout', 'Modify the Search Layout', 'Design a Visualforce page with a Standard Controller', 'In Lightning Experience, the first few fields added to a compact layout appear in the expanded lookup card displayed when hovering over a lookup field in record details.'),
-    (4, 400, ARRAY['Enable Case Comment Notification to Contacts.'], 'Customers complain that they do not know when Comments have been added to their Cases.
-Which configuration can a System Administrator implement to address this concern?',
-'Configure workflow rules to send email notifications for new comments on cases.', 'Enable Case Comment Notification to Internal Users Only.','Create a custom field on the Case object to track comments.', 'Enable Case Comment Notification to Contacts.', 'Enabling case comment notifications to contacts notifies contacts when a case comment has been modified or added to a case.'),
+    (4, 400, ARRAY['Related List Layouts', 'Field Layouts'], 'Which of the following are configurable through a Salesforce object detail page? Choose 2 answers.',
+'Related List Layouts', 'Field Layouts','Sidebar Layout', 'List Views', 'List Views and Sidebar layout are not part of a detail page layout.'),
     (4, 600, ARRAY['Assignment rules'], 'Which feature should Ursa Major Solar use if they want their support agents who are
 skilled in a particular product line to own cases directly after customers log them from an automated channel?', 
 'Assignment rules', 'Workflow rules', 'Approval processes', 'Sharing rules', 'Assignment rules automate your organization`s lead generation and support processes. Use lead

@@ -75,10 +75,8 @@ Choose 1 answer.', 'Create a many-to-many relationship by creating a new junctio
     (4, 200, ARRAY['Modify the Contact compact page layout properties'], 'A Salesforce developer is asked to include the Birthdate field in the Contact hover details layout. What is the best way to achieve this requirement in Lightning Experience? Choose 1 answer.', 'Modify the Contact compact page layout properties', 'Modify the properties of the Contact Mini Page layout', 'Modify the Search Layout', 'Design a Visualforce page with a Standard Controller', 'In Lightning Experience, the first few fields added to a compact layout appear in the expanded lookup card displayed when hovering over a lookup field in record details.'),
     (4, 400, ARRAY['Related List Layouts', 'Field Layouts'], 'Which of the following are configurable through a Salesforce object detail page? Choose 2 answers.',
 'Related List Layouts', 'Field Layouts','Sidebar Layout', 'List Views', 'List Views and Sidebar layout are not part of a detail page layout.'),
-    (4, 600, ARRAY['Assignment rules'], 'Which feature should Ursa Major Solar use if they want their support agents who are
-skilled in a particular product line to own cases directly after customers log them from an automated channel?', 
-'Assignment rules', 'Workflow rules', 'Approval processes', 'Sharing rules', 'Assignment rules automate your organization`s lead generation and support processes. Use lead
-assignment rules to specify how leads are assigned to users or queues.'),
+    (4, 600, ARRAY['Opportunity', 'Activity'], 'Which of the following supports custom buttons in Salesforce? Choose 2 answers.', 
+'Opportunity', 'Activity', 'User', 'Web-to-Lead', 'Custom buttons and links are available for the Opportunity object and Activities under the individual setup links for Tasks and Events.'),
     (4, 800, ARRAY['Web-to-case','Email-to-case', 'Process Builder'], 'Ursa Major Solar needs a case to be automatically created.
 Which three features can an administrator use to accomplish this goal?
 Choose 3 options.', 'Web-to-case', 'Email-to-case', 'Process Builder', 'Escalation Rule', 'Setup Web-to-Case or Email-to-Case to automatically capture cases from your website and customer

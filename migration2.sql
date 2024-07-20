@@ -77,11 +77,9 @@ Choose 1 answer.', 'Create a many-to-many relationship by creating a new junctio
 'Related List Layouts', 'Field Layouts','Sidebar Layout', 'List Views', 'List Views and Sidebar layout are not part of a detail page layout.'),
     (4, 600, ARRAY['Opportunity', 'Activity'], 'Which of the following supports custom buttons in Salesforce? Choose 2 answers.', 
 'Opportunity', 'Activity', 'User', 'Web-to-Lead', 'Custom buttons and links are available for the Opportunity object and Activities under the individual setup links for Tasks and Events.'),
-    (4, 800, ARRAY['Web-to-case','Email-to-case', 'Process Builder'], 'Ursa Major Solar needs a case to be automatically created.
-Which three features can an administrator use to accomplish this goal?
-Choose 3 options.', 'Web-to-case', 'Email-to-case', 'Process Builder', 'Escalation Rule', 'Setup Web-to-Case or Email-to-Case to automatically capture cases from your website and customer
-emails. 
-Configure a process to create records automatically with process builder'),
+    (4, 800, ARRAY['Create a Record','Log a Call', 'Update a Record'], 'Which of the following action types can be used to define quick actions in a Salesforce object?
+Choose 3 answers.', 'Create a Record','Log a Call', 'Update a Record', 'Submit Approval Request', 'The following are the available action types when configuring an object-specific quick action: 
+Create a Record, Update a Record, Send Email, Log a Call, Custom Visualforce, Lightning Component, Lightning Web Component, and Flow'),
     (4, 1000, ARRAY['Records can be placed in a queue via an assignment rule or manually', 'Custom object records can be assigned to a queue', 'A list view is automatically created when a queue is created for Cases, Leads, or custom objects'], 'What is true regarding queues? Choose 3 options.', 'Records can be placed in a queue via an assignment rule or manually', 'Custom object records can be assigned to a queue', 'A list view is automatically created when a queue is created for Cases, Leads, or custom objects', 'Records are removed from queues if not assigned within 60 days', 'Standard objects such as Cases, Leads, Orders, Service Contracts, and Knowledge Article Versions, as well as custom objects, can be assigned to queues. List views are automatically created for Cases, Leads, and custom objects when a queue is created for those objects. Records can be placed in a queue manually by a user. For leads and cases, assignment rules can be created to automate this process based on records meeting defined criteria. Only members of a queue can accept records from that queue and take ownership.'),
 
     -- App Deployment

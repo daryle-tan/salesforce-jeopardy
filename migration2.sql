@@ -85,9 +85,7 @@ Create a Record, Update a Record, Send Email, Log a Call, Custom Visualforce, Li
 
     -- App Deployment
     (5, 200, ARRAY['Full Copy Sandbox'], 'You need to do perfomance testing prior to go-live of an upgrade project. Which environment would you use to conduct the perfomance testing? Choose 1 answer.', 'Full Copy Sanbox', 'Developer Sandbox', 'Developer Pro Sandbox','Production Org', 'The full copy sandbox is an environment with a replica of your entire production organization and all its data. It is ideal for performance tests.'),
-    (5, 400, ARRAY['Search the AppExchange for free adoption report apps.'], 'The managers at Ursa Major Solar asked the administrator to quickly provide
-access to sales reports and dashboards.
-How can this be done?', 'Search the AppExchange for free adoption report apps.', 'Use Lightning Web Components to build custom sales reports and dashboards', 'Grant access to individual reports and dashboards based on user roles.', 'Create a custom Visualforce page to display the required reports and dashboards for managers.', 'The Salesforce Adoption Dashboards app can be found on the AppEschange.'),
+    (5, 400, ARRAY['Account records'], 'When using change sets, which one of the following cannot be transferred from one Salesforce org to another? Choose 1 answer.', 'Account records.', 'Sharing rules', 'Apex class', 'Contact fields sets', '.Account records represent data, not metadata. Change sets are use only to transfer metadata such as information about the org configuration.'),
     (5, 600, ARRAY['Opportunity Dashboard', 'Chatter groups'], 'Sales representatives at Ursa Major Solar are working on opportunities and need to see
 how their colleagues have effectively managed other opportunities with comparable products, competing against the same competitors.
 Which two features should an administrator use to allow for this?

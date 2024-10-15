@@ -18,7 +18,7 @@ const Resources = ({ score }) => {
             help you successfully pass your certification, take a look at this:{" "}
           </p>
           <a
-            href="https://focusonforce.com/"
+            href="https://focusonforce.com?ref=277520"
             rel="noopener noreferrer"
             target="_blank"
             title="Focus on Force Page"
@@ -43,7 +43,7 @@ const Resources = ({ score }) => {
             more resources to help you grow your knowledge and skills:{" "}
           </p>
           <a
-            href="https://focusonforce.com/"
+            href="https://focusonforce.com?ref=277520"
             rel="noopener noreferrer"
             target="_blank"
             title="Focus on Force Page"
@@ -68,7 +68,7 @@ const Resources = ({ score }) => {
             Here are more resources to help you grow your knowledge and skills:{" "}
           </p>
           <a
-            href="https://focusonforce.com/"
+            href="https://focusonforce.com?ref=277520"
             rel="noopener noreferrer"
             target="_blank"
             title="Focus on Force Page"
